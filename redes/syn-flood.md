@@ -10,20 +10,13 @@ O ataque então faz o seguinte: nós enviamos pacotes SYN sem parar, não import
 
 Para isso, usaremos uma ferramenta chamada Hping3:
 
-```
+```text
 sudo hping3 -c <quantidade de pacotes> -d <tamanho do pacote> -S -p <porta alvo> -i u<tempo> --flood <ip do alvo>
 ```
----
--c <quantidade> : Quantidade de pacotes a serem enviados
--d <tamanho do pacote> : Tamanho de cada pacote a ser enviado -S: Usar a flag SYN do TCP
--p <porta alvo> : Porta da máquina destino (em geral não importa, desde que seja uma porta onde há um socket em modo LISTEN) 
--i u <tempo> : tempo entre envios (em milissegundos: u100 == 100 milissegundos entre pacotes) --flood: Envia pacotes o mais rápido possível
 
----
+-c  : Quantidade de pacotes a serem enviados -d  : Tamanho de cada pacote a ser enviado -S: Usar a flag SYN do TCP -p  : Porta da máquina destino \(em geral não importa, desde que seja uma porta onde há um socket em modo LISTEN\) -i u  : tempo entre envios \(em milissegundos: u100 == 100 milissegundos entre pacotes\) --flood: Envia pacotes o mais rápido possível
 
 Referências:
 
-[RFC sobre SYN flood](https://tools.ietf.org/html/rfc4987)
-[Arigo sobre SYN Flood da Phrack Magazine](http://phrack.org/issues/48/13.html#article)
-[Repositório do Hping3 no Github](https://github.com/antirez/hping)
-[Wiki do Hping3](http://wiki.hping.org/)
+[RFC sobre SYN flood](https://tools.ietf.org/html/rfc4987) [Arigo sobre SYN Flood da Phrack Magazine](http://phrack.org/issues/48/13.html#article) [Repositório do Hping3 no Github](https://github.com/antirez/hping) [Wiki do Hping3](http://wiki.hping.org/)
+
