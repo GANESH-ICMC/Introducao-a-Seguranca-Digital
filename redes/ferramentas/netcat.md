@@ -22,23 +22,34 @@ O Netcat é uma ferramenta capaz de receber e enviar dados em conexões usando T
 
 -v -&gt; Controla o nível de mensagens mostradas na tela
 
--w -&gt; Limita o tempo máximo para que uma conexão seja estabelecida;
+-w -&gt; Limita o tempo máximo para que uma conexão seja estabelecida
 
 ## Funcionamento básico
 
-`$ nc <ip alvo> <porta>` Conecta-se em uma  arbitrária no 
+`$ nc <ip alvo> <porta>`
 
-`$ nc -l -p <porta local>` Cria um "ouvinte netcat" na 
+Conecta-se em uma porta arbitrária no ip alvo.
+
+`$ nc -l -p <porta local>`
+
+Cria um ouvinte na porta local.
 
 ## Enviar arquivo do cliente para o ouvinte
 
-`$ nc -l -p <porta local> > <arquivo de saida>` ouve na porta  e armazena resultado no 
+`$ nc -l -p <porta local> > <arquivo de saida>`
 
-`$ nc -w3 <ip alvo> <porta> < <arquivo de entrada>` envia o  para o  em uma \`
+Ouve na porta porta local e armazena resultado no arquivo de saida.
+
+`$ nc -w3 <ip alvo> <porta> < <arquivo de entrada>`
+
+Envia o arquivo de entrada para o ip alvo em uma porta.
 
 ## Receber arquivo do ouvinte para o cliente
 
-`$ nc -l -p <porta local> > <arquivo de entrada>` ouve em uma  e prepara para enviar o arquivo de entrada\`
+`$ nc -l -p <porta local> > <arquivo de entrada>`
 
-`$ nc -w3 <ip alvo> <porta> > <arquivo de saida>` conecta com o  em uma  e envia o \`
+Ouve em uma porta local e prepara para enviar o arquivo de entrada.
 
+`$ nc -w3 <ip alvo> <porta> > <arquivo de saida>`
+
+Conecta com o ip alvo em uma porta e envia o arquivo de saída.
