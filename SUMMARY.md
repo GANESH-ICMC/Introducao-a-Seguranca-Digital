@@ -6,6 +6,7 @@
   * [Three-way Handshake](redes/three-way-handshake.md)
   * [Ferramentas](redes/ferramentas/README.md)
     * [Netcat](redes/ferramentas/netcat.md)
+    * [Nmap](redes/ferramentas/nmap.md)
   * [SYN Flood](redes/syn-flood.md)
   * [Write-ups](redes/write-ups/README.md)
     * [Origem das Batatas](redes/write-ups/origem-das-batatas.md)
