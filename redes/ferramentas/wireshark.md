@@ -56,3 +56,17 @@ A segunda maneira de visualizar os dados é mostrando os bytes crus. Temos acess
 
 ![](https://jvns.ca/images/wireshark_packet_details.png)
 
+## Seguindo uma única conexão
+
+Muitas vezes aparecem dados de diversas conexões TCP, mas estamos querendo ver somente uma. Para isso, o wireshark fornece uma forma simples de acompanhar uma conexão específica, basta clicar com o botão direito no pacote e selecionar "Conversation filter" -> "TCP".
+
+![](https://jvns.ca/images/wireshark_filter.png)
+
+## Aplicando filtros
+
+O wireshark também permite que você utilize filtros para especificar aspectos dos pacotes mostrados. Alguns exemplos são mostrados abaixo, mas existem muitos outros que vocÊ aprenderá conforme for utilizando o wireshark.
+
+- `frame contains "mozilla"`: filtra por pacotes que contenham a string "mozilla";
+- `tcp.port == 443`: filtra por pacotes cuja porta de destino é a 443 (https);
+- `dns.resp.len > 0`: mostra todas as respostas DNS;
+- `ip.addr == 192.168.15.1`: mostra todos os pacotes com *ip* de origem ou destino igual a `192.168.15.1`.
