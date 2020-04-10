@@ -10,7 +10,7 @@ Os métodos criptográficos desenvolvem-se conforme a necessidade e tecnologia d
 
 Em todo método criptográfico há sempre três fatores:
 
-  O *texto plano*, que é o texto a ser criptografado; *O domínio*.
+  	O *texto plano*, que é o texto a ser criptografado; *O domínio*.
   
 	O *método*, que é a descrição do processo de criptografia; *A função*.
   
