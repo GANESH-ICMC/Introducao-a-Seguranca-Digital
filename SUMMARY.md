@@ -4,7 +4,7 @@
 * [Criptografia](criptografia/README.md)
     * [Introdução](criptografia/Introdução.md)
     * [Definições](criptografia/Definições.md)
-    * [Tipos de Criptografia](criptografia/TiposdeCriptografia.md)
+    * [Tipos de Criptografia](criptografia/Tipos%20de%20Criptografia.md)
 * [Redes](redes/README.md)
   * [Pacote & Protocolo](redes/pacote-and-protocolo.md)
   * [Three-way Handshake](redes/three-way-handshake.md)
