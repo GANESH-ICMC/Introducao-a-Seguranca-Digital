@@ -122,7 +122,9 @@ Segundo David Kahn, a criptografia moderna teve origem com os árabes, que foram
 
 Textos cifrados feitos por uma cifra clássica podem revelar informações estatísticas sobre o plaintext, o que pode ser usado para quebrar a cifra usada. Com a descoberta da análise por frequência, pelo matemático árabe Al-Kindi no século IX, quase todas as cifras poderiam ser quebradas com métodos baseados nessa forma de análise. A frequência de uso de letras em um alfabeto, por exemplo, é uma forma de explorar a previsibilidade de tais cifras. 
 
-Ex no alfabeto da língua portuguesa:![](https://i.imgur.com/LxBGNea.png)
+Ex no alfabeto da língua portuguesa:
+
+![](https://i.imgur.com/LxBGNea.png)
 
 A análise de frequência foi uma forma eficiente de quebrar a proteção de mensagens até a criação das cifras polialfabéticas, sendo descrita pela primeira vez no trabalho de Al-Qalqashandi (1355–1418), baseado nos estudos de Ibn al-Durayhim (1312–1359), descrevendo uma cifra polialfabética na qual cada plaintext é relacionado com mais de um substituto. Também foi descrita por Leon Battista Alberti em, aproximadamente, 1467, sendo que ele também inventou o que, possivelmente, foi o primeiro dispositivo automático para gerar cifras.
 
