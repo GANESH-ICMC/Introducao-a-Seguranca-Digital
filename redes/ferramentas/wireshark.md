@@ -44,4 +44,35 @@ Agora que todos os pacotes estão na tela, você pode querer analisá-los, ou de
 wireshark file.pcap
 ```
 
+## Lendo pacotes
 
+Agora que já capturamos alguns pacotes, está na hora de analisá-los. Vamos ver juntos um exemplo de pacote, no caso, o primeiro pacote enviado quando há uma conexão SSL (faz a criptografia dos dados enviados). Nesse pacote inicial, o cliente envia um "oi" para o servidor dizendo que quer iniciar a conexão.
+
+Nós temos duas opções de visualizações de pacotes, a primeira é a mostrada abaixo. Nela o programa nos mostra as camadas do pacote e os respectivos dados de cada uma de uma maneira bastante organizada e simples. Vemos que este conjunto de dados é um *frame*, o quadro da camada de enlace. Ele engloba os dados e cabeçalhos de todas as outras camadas, mas o wireshark permite ver as informações de cada cabeçalho separadamente. Isto é, podemos ver que temos o protocolo Ethernet com os MAC's de origem e destino, em seguida, o protocolo IP com os ip's de origem e destino, então o protocolo TCP com as portas de origem e destino e algumas outras informações do protocolo e finalmente o protocolo TLS que envia o `"Client Hello"`. 
+
+![](https://jvns.ca/images/wireshark_packet_details_list.png)
+
+A segunda maneira de visualizar os dados é mostrando os bytes crus. Temos acesso aos bytes de dados enviados ao lado esquerdo e aos valores decodificados para caracteres à direita. Então é possível passar o mouse sobre os caracteres e o wireshark indica os bytes correspondentes e vice-versa, e ainda indica a qual campo o dado pertence. No exemplo abaixo, `tiles.services.mozilla.com` corresponde ao campo "Server Name".
+
+![](https://jvns.ca/images/wireshark_packet_details.png)
+
+## Seguindo uma única conexão
+
+Muitas vezes aparecem dados de diversas conexões TCP, mas estamos querendo ver somente uma. Para isso, o wireshark fornece uma forma simples de acompanhar uma conexão específica, basta clicar com o botão direito no pacote e selecionar "Conversation filter" -> "TCP".
+
+![](https://jvns.ca/images/wireshark_filter.png)
+
+## Aplicando filtros
+
+O wireshark também permite que você utilize filtros para especificar aspectos dos pacotes mostrados. Alguns exemplos são mostrados abaixo, mas existem muitos outros que vocÊ aprenderá conforme for utilizando o wireshark.
+
+- `frame contains "mozilla"`: filtra por pacotes que contenham a string "mozilla";
+- `tcp.port == 443`: filtra por pacotes cuja porta de destino é a 443 (https);
+- `dns.resp.len > 0`: mostra todas as respostas DNS;
+- `ip.addr == 192.168.15.1`: mostra todos os pacotes com *ip* de origem ou destino igual a `192.168.15.1`.
+
+## Links extras
+- [Página oficidial do wireshark](https://www.wireshark.org/)
+- [Guia do usuário oficial em PDF](https://www.wireshark.org/download/docs/user-guide.pdf)
+- [FAQ oficial](https://www.wireshark.org/faq.html)
+- [Publicação em que este tutorial foi baseado](https://jvns.ca/blog/2018/06/19/what-i-use-wireshark-for/) 
