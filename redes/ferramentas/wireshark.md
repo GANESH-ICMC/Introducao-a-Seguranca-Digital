@@ -14,21 +14,21 @@ Na maioria das distribuições, o programa está nos repositórios padrões, ent
 
 ### Debian/Ubuntu
 
-Aqui é o exemplo de instalação no Debian:
+Aqui é o exemplo de instalação no Debian (execute o comando como superusuário - root):
 
 ```
-# apt install wireshark
+apt install wireshark
 ```
 
 No caso do Ubuntu, temos que utilizar o `sudo`:
 
 ```
-$ sudo apt install wireshark
+sudo apt install wireshark
 ```
 
 ## Funcionamento Básico
 
-Para ver as informações que estão saindo do seu computador, basta iniciaro wireshark e selecionar de qual interface de rede capturará as informações. Essa [a interface de rede] é a porta de saída para os programas enviarem informações para a rede, ela pode ser cabeada (normalmente chamada de `eth0` ou `enp3s0`), ou wireless (então é `wlan0` ou `wlp3s0`), mas cada SO pode atribuir um nome específico. Para checar as interfaces, digite o seguinte comando:
+Para ver as informações que estão saindo do seu computador, basta iniciar o wireshark e selecionar de qual interface de rede capturará as informações. Essa [a interface de rede] é a porta de saída para os programas enviarem informações para a rede, ela pode ser cabeada (normalmente chamada de `eth0` ou `enp3s0`), ou wireless (então é `wlan0` ou `wlp3s0`), mas cada SO pode atribuir um nome específico. Para checar as interfaces, digite o seguinte comando:
 
 ```
 ip address show
