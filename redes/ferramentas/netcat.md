@@ -53,3 +53,4 @@ Ouve em uma porta local e prepara para enviar o arquivo de entrada.
 `$ nc -w3 <ip alvo> <porta> > <arquivo de saida>`
 
 Conecta com o ip alvo em uma porta e envia o arquivo de saída.
+
