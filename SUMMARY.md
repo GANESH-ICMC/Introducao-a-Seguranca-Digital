@@ -24,4 +24,5 @@
 * [Engenharia Reversa](engenharia-reversa/README.md)
   * [Registradores e tipos de dados](engenharia-reversa/registradores-e-tipos-de-dados.md)
   * [Hello World em x86](engenharia-reversa/hello-world-em-x86.md)
+  * [GDB](engenharia-reversa/gdb.md)
 
