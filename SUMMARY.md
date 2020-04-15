@@ -5,6 +5,7 @@
   * [Introdução](criptografia/introducao.md)
   * [Definições](criptografia/definicoes.md)
   * [Tipos de Criptografia](criptografia/tipos-de-criptografia.md)
+  * [Guia de Python para criptografia](criptografia/guia-de-python-para-criptografia.md)
   * [Write-Ups](criptografia/writeups/README.md)
     * [Chall](criptografia/writeups/writeups.md)
 * [Redes](redes/README.md)
