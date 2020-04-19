@@ -2,7 +2,8 @@
 
 ## **Introdução**
 
-Python está entre as linguagens de programação mais utilizadas da atualidade, dentre os principais motivos estão: legibilidade, simplicidade e flexibilidade. Especialmente para criptografia, Python inclui, por padrão, muitas funções e ferramentas que facilitam o trabalho do programador/aventureiro. O objetivo deste guia será introduzir os principais conceitos dessa linguagem tendo como público-alvo pessoas que já possuam experiência em outras linguagens, como C/C++. Para informações mais detalhadas e ferramentas não mencionadas neste guia, favor consultar a documentação oficial do Python em: [https://docs.python.org/3/](https://docs.python.org/3/)  
+    Python está entre as linguagens de programação mais utilizadas da atualidade, dentre os principais motivos estão: legibilidade, simplicidade e flexibilidade. Especialmente para criptografia, Python inclui, por padrão, muitas funções e ferramentas que facilitam o trabalho do programador/aventureiro.
+    O objetivo deste guia será introduzir os principais conceitos dessa linguagem tendo como público-alvo pessoas que já possuam experiência em outras linguagens, como C/C++. Para informações mais detalhadas e ferramentas não mencionadas neste guia, favor consultar a documentação oficial do Python em: https://docs.python.org/3/  
 
 
 ## **Executando códigos**
@@ -48,7 +49,7 @@ print("escopo externo")
 
 ### Mutaveis
 
-    Tipos de dados mutáveis permitem que o valor de seus elementos e sua própria estrutura sejam alterados em qualquer momento da execução do código. Exemplos mais comuns são:
+    Tipos de dados mutáveis permitem que o valor de seus elementos e sua própria estrutura sejam alterados em qualquer momento da execução do código. Os exemplos mais usados para criptografia são:
 
 #### **Listas**
 
@@ -123,11 +124,11 @@ l6 = l1 + l2
 print(l5)
 ```
 
-    Neste exemplo, criamos uma lista L com os tipos String, Integer e Boolean. Qualquer posição da lista pode ser alterada dinamicamente, similarmente ao C. Para informações detalhadas sobre tipos iteráveis, ler a seção 7 deste guia.
+    Neste exemplo, criamos uma lista L com os tipos String, Integer e Boolean. Qualquer posição da lista pode ser alterada dinamicamente, similarmente ao C. Para informações detalhadas sobre tipos iteráveis, ler a seção 8 deste guia.
 
 #### **Dicionários**
 
-Dicionários são análogos ao map do C++, ou seja, é um tipo que associa pares chave-valor. As chaves devem ser únicas, porém os valores podem se repetir.
+    Dicionários são análogos ao map do C++, ou seja, é um tipo que associa pares chave-valor. As chaves devem ser únicas, porém os valores podem se repetir.
 
 ```python
 d1 = {'grupo': 'Ganesh', 'membros': 54}
@@ -162,7 +163,7 @@ d4 = dict()    #
 
 #### **Bytearrays**
 
-    Juntamente com o tipo bytes \(explicado na seção 4.2.c\), o bytearray é especialmente importante para criptografia por facilitar o processo de encriptação e decriptação de mensagens e exibição de ciphertexts. Um bytearray pode ser visto como uma “lista de bytes”, onde cada elemento assume um valor entre 0 e 255 \(um byte\). Sua representação na função print\(\) é feita através de caracteres de “byte puro” em hexadecimal quando estes não são imprimíveis, ou de caracteres ascii quando são; ou seja, “\x02” é o terceiro caractere não imprimível \(incluindo o zero\), “\x03” é o quarto, etc. A seção 6 deste guia tratará com mais detalhes esse tipo de representação. Porém, ao ser referenciado individualmente, um elemento de bytearray é exibido como inteiro decimal.
+    Juntamente com o tipo bytes \(explicado na seção 4.2.c\), o bytearray é especialmente importante para criptografia por facilitar o processo de encriptação e decriptação de mensagens e exibição de ciphertexts. Um bytearray pode ser visto como uma “lista de bytes”, onde cada elemento assume um valor entre 0 e 255 \(um byte\). Sua representação na função print\(\) é feita através de caracteres de “byte puro” em hexadecimal quando estes não são imprimíveis, ou de caracteres ascii quando são; ou seja, “\x02” é o terceiro caractere não imprimível \(incluindo o zero\), “\x03” é o quarto, etc. A seção 6 deste guia tratará com mais detalhes esse tipo de representação. Porém, ao ser referenciado individualmente, um elemento de bytearray é exibido como inteiro decimal entre 0 e 255 (um byte).
 
 ```python
 # cria um bytearray com os elementos da lista
@@ -200,7 +201,22 @@ b3 = bytearray.fromhex(h)
 print(b3)
 ```
 
-    A habilidade de transformar bytearrays em uma string de hexadecimais é interessante quando se deseja imprimir um ciphertext na tela. A maioria dos bytes de um ciphertext não se encontram no intervalo de caracteres imprimíveis da tabela ASCII, portanto a representação hexadecimal ajuda nessa tarefa. Além disso, a operação de xor entre duas strings é facilitada utilizando esse tipo, e será ensinada com mais detalhes na seção 7.2 deste guia.  
+    A habilidade de transformar bytearrays em uma string de hexadecimais é interessante quando se deseja imprimir um ciphertext na tela. A maioria dos bytes de um ciphertext não se encontram no intervalo de caracteres imprimíveis da tabela ASCII, portanto a representação hexadecimal ajuda nessa tarefa. Além disso, a operação de xor entre duas strings é facilitada utilizando esse tipo, e será ensinada com mais detalhes na seção 8.2 deste guia.
+    O construtor (função que cria o objeto) do tipo bytearray necessita receber um objeto iterável ou um inteiro como argumento. No primeiro caso, cria-se um bytearray com todos os elementos do iterável. No segundo caso, cria-se um bytearray com n elementos iguais a zero, onde n é o inteiro fornecido como argumento. Portanto caso se deseje criar um bytearray com um único elemento, é necessário incluí-lo dentro de uma lista ou tupla:
+
+```python
+# cria um bytearray com 1 único elemento de valor 42
+b1 = bytearray([42])
+
+# utilizando uma tupla, produz o mesmo resultado
+b2 = bytearray((42,))
+
+# cria um objeto com 4 bytes iguais a zero
+b3 = bytearray(4)
+
+# imprime bytearray(b'\x00\x00\x00\x00')
+print(b3)
+```
 
 
 ### **Imutáveis**
@@ -320,6 +336,22 @@ b = bytearray(x)
 y = bytes(b)
 ```
 
+    As mesmas regras de construção do bytearray também se aplica ao tipo bytes:
+
+```python
+# cria um bytes com 1 único elemento de valor 42
+b1 = bytes([42])
+
+# utilizando uma tupla, produz o mesmo resultado
+b2 = bytes((42,))
+
+# cria um objeto com 4 bytes iguais a zero
+b3 = bytes(4)
+
+# imprime b'\x00\x00\x00\x00'
+print(b3)
+```
+
 ## **Conversões entre bases** 
 
     Dada uma string representando um número em uma base qualquer, é possível convertê-la em decimal utilizando a função int\(\), onde o primeiro argumento é a string e o segundo argumento indica a base onde essa string está codificada:
@@ -384,7 +416,7 @@ b = bytes.fromhex(hexa)
 
     Por padrão, o Python utiliza a codificação utf-8, isso significa que podemos armazenar strings com caracteres especiais \(incluindo acentuação, por exemplo\).
 
-Os caracteres de uma string que estão contidos na tabela ascii são codificados como ascii \(pois eles coincidem com o utf-8\) e utilizam apenas 1 byte por caractere, porém os caracteres especiais necessitam de mais bytes para serem representados. Por conta disso, se armazenarmos uma string com caracteres especiais em um objeto do tipo bytes e utilizarmos a função print\(\) nesse objeto, esses caracteres não serão imprimidos na tela, ao invés disso os seus bytes individuais serão imprimidos com o prefixo ‘\x’, isso indica que eles são caracteres fora da tabela ascii e possuem o valor em hexadecimal representado após o ‘\x’.
+    Os caracteres de uma string que estão contidos na tabela ascii são codificados como ascii \(pois eles coincidem com o utf-8\) e utilizam apenas 1 byte por caractere, porém os caracteres especiais necessitam de mais bytes para serem representados. Por conta disso, se armazenarmos uma string com caracteres especiais em um objeto do tipo bytes e utilizarmos a função print\(\) nesse objeto, esses caracteres não serão imprimidos na tela, ao invés disso os seus bytes individuais serão imprimidos com o prefixo ‘\x’, isso indica que eles são caracteres fora da tabela ascii e possuem o valor em hexadecimal representado após o ‘\x’.
 
 ```python
 # armazena a string 'é' em um objeto do tipo bytes, é necessário indicar que a string está codificada em utf-8 no segundo argumento
@@ -423,6 +455,29 @@ c = 'b'
 c = chr(ord(c) - 1)
 ```
 
+## **Operadores**
+
+    Os operadores mais usados em criptografia são o XOR e o módulo. O primeiro é muito utilizado para encriptar e decriptar mensagens, e o segundo é utilizado para garantir que um cálculo específico não ultrapasse determinado valor, geralmente o intervalo de um byte \(de 0 a 255\).
+
+### **XOR**
+
+    Assim como em C, o operador XOR \(^\) opera sobre dois inteiros e retorna o resultado de aplicar ou-exclusivo \(eXclusive-OR\) sobre eles, bit a bit \(bitwise\).
+    
+```python
+# xor entre 4 (100) e 6 (110), que resulta em 2 (010)
+print(4 ^ 6)
+```
+
+### **Módulo**
+
+    Assim como em C, o operador módulo \(%\) opera sobre dois inteiros e retorna o resto da divisão do primeiro pelo segundo, ou seja, X % Y retorna o resto da divisão de X por Y.
+
+```python
+# imprime 257 módulo 256, que resulta em 1
+print(257 % 256)
+```
+
+
 ## **Loops e iteradores**
 
 ### **For**
@@ -433,7 +488,7 @@ c = chr(ord(c) - 1)
 
     A sintaxe do for é, de forma genérica, for {variável} in {iterador}, sem os colchetes, e como resultado faz com que, a cada iteração, “variável” receba o valor de cada elemento presente no objeto “iterador”.
 
-Para utilizar o for do Python da mesma forma que utilizamos em C, fazemos uso da função range\(\) que recebe como argumento 3 valores \(start, stop e step\) e retorna um iterador contendo todos os valores entre start e \(stop - 1\), separados por step. Então ao executarmos for i in range\(0, 10, 1\), o valor de i receberá, a cada iteração, os valores de 0 a 9, separados de 1 em 1. Contudo, os argumentos start e step são opcionais e, caso não sejam fornecidos, são definidos como 0 e 1, respectivamente.
+    Para utilizar o for do Python da mesma forma que utilizamos em C, fazemos uso da função range\(\) que recebe como argumento 3 valores \(start, stop e step\) e retorna um iterador contendo todos os valores entre start e \(stop - 1\), separados por step. Então ao executarmos for i in range\(0, 10, 1\), o valor de i receberá, a cada iteração, os valores de 0 a 9, separados de 1 em 1. Contudo, os argumentos start e step são opcionais e, caso não sejam fornecidos, são definidos como 0 e 1, respectivamente.
 
 ```python
 # imprime todos os números de 0 a 9
@@ -482,7 +537,7 @@ for elem1, elem2 in zip(l1, l2):
 # 3 6
 ```
 
-    Outro método de iteração simultanea é utilizando a função enumerate\(\) que recebe apenas 1 objeto de tamanho n e retorna n tuplas, cada uma contendo a posição e o valor de cada elemento do objeto.
+    Outro método de iteração simultânea é utilizando a função enumerate\(\) que recebe apenas 1 objeto de tamanho n e retorna n tuplas, cada uma contendo a posição e o valor de cada elemento do objeto.
 
 ```python
 # a cada iteração, i recebe a posição e elem recebe o valor da lista
@@ -500,6 +555,13 @@ for i, elem in enumerate([7, 8, 9])
     Agora que sabemos o funcionamento do for e do bytes, podemos finalmente implementar um código que realiza a operação xor entre dois objetos bytes quaisquer. Operação essa que é muito útil para diversos algoritmos de criptografia. Lembrando que o operador xor é representado pelo circunflexo \(^\) e sempre opera sobre dois decimais inteiros.
 
 ```python
+# xor entre dois bytes (12 e 30)
+result = 12 ^ 30
+
+# imprime o resultado (18)
+print(result)
+
+# agora vamos encriptar um plaintext em formato de bytes
 plaintext = b'um plaintext muito bonito'
 chave = b'uma chave maior do que o plaintext'
 
@@ -522,6 +584,7 @@ print(ciphertext.hex())
     Generators são um tipo especial de iterador. Além de possuírem uma sintaxe bastante compacta, sua principal característica que os diferem de outros iteradores é que eles não armazenam elementos em sua estrutura e portanto quase não consomem espaço na memória RAM, ao invés disso, ao se solicitar o próximo elemento de um generator ele faz o cálculo e devolve o resultado requisitado sob demanda.
 
     Existem 2 tipos principais de generators: o primeiro utiliza a sintaxe {expressão} for {variável} in {iterador}, sem os colchetes. Nesse caso, “variável” itera sobre cada elemento do “iterador”, e este generator retorna o resultado de “expressão” \(possui acesso ao conteúdo de “variável”\), sob demanda, a cada requisição de uma nova iteração. Essa sintaxe pode ser atribuída a uma variável, a qual será do tipo generator e poderá ser utilizada para solicitar novos valores, ou pode ser utilizada para construir outros tipos, como listas, tuplas e bytes.
+    O segundo tipo utiliza funções e será explicado na seção 9.1.
 
 ```python
 # cria uma variável generator que retorna o dobro de todos os números entre 0 e 5
@@ -556,7 +619,6 @@ l3 = [p ^ c for p, c in zip(l1, l2)]
 ciphertext = bytes([p ^ k for p, k in zip(plaintext, chave)])
 ```
 
-    O segundo tipo de generator utiliza funções e será explicado na seção de funções.
 
 ### **Slices**
 
@@ -582,9 +644,43 @@ print(l1[2:9:2]
 print(l1[::2]
 ```
 
-## **Funções, classes e métodos**
+## **Funções**
 
-**//todo**
+    As funções no Python são semelhantes às funções de outras linguagens, com diferença de que o tipo de retorno, assim como tudo Python, não precisa ser especificado. 
+    Para definir uma função utilizamos a keyword def, seguidos pelos parâmetros entre parênteses, e utilizamos a mesma regra de escopo da seção 3 para definir todo o código que pertence à função:
+    
+```python
+# função que recebe um plaintext e uma chave, faz o xor entre ambas e retorna o ciphertext
+def xor(plaintext, chave):
+    ciphertext = bytes([p ^ k for p, k in zip(plaintext, chave)])
+    return ciphertext
+```
+
+### **Generator**
+
+    Como foi citado na seção anterior, é possível criar funções do tipo generator, as quais realizam um cálculo e devolvem a expressão após a keyword yield a cada requisição de uma nova iteração do gerador:
+
+```python
+# cria um gerador que recebe um número e, a cada requisição, devolve o número anterior incrementado de 1, e pode ser utilizada infinitamente (por conta do “while True”)
+def gerador(num):
+    while True:
+        num += 1
+        yield num
+
+g = gerador(5)
+
+# imprime 6
+print(next(g))
+
+# imprime 7
+print(next(g))
+
+# imprime 8
+print(next(g))
+
+# etc
+```
+
 
 ## **Bibliotecas de criptografia**
 
@@ -597,5 +693,4 @@ print(l1[::2]
     A API com todas as ferramentas dessa biblioteca está disponível em [https://www.pycryptodome.org/en/latest/src/api.html](https://www.pycryptodome.org/en/latest/src/api.html).
 
     Exemplos de uso dessa biblioteca podem ser encontrados em [https://www.pycryptodome.org/en/latest/src/examples.html](https://www.pycryptodome.org/en/latest/src/examples.html).  
-
 
