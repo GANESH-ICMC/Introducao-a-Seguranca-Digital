@@ -484,7 +484,7 @@ print(257 % 256)
 
     O for do Python difere consideravelmente do for da linguagem C pois, no Python, este deve sempre iterar sobre outros objetos “iteráveis” \(o nome genérico para esse tipo de loop é for each\).
 
-    Todos os tipos apresentados na seção 4 e os generators, explicados na seção 7.3, são iteráveis, ou seja, seus elementos podem ser acessados invidualmente, em ordem, portanto todos podem ser utilizados no for.
+    Todos os tipos apresentados na seção 4 e os generators, explicados na seção 8.3, são iteráveis, ou seja, seus elementos podem ser acessados invidualmente, em ordem, portanto todos podem ser utilizados no for.
 
     A sintaxe do for é, de forma genérica, for {variável} in {iterador}, sem os colchetes, e como resultado faz com que, a cada iteração, “variável” receba o valor de cada elemento presente no objeto “iterador”.
 
@@ -612,7 +612,7 @@ l2 = list(g)
 l3 = [p ^ c for p, c in zip(l1, l2)]
 ```
 
-    Agora somos capazes de reescrever o mesmo código da seção 7.2 \(xor entre bytes\) utilizando apenas 1 linha:
+    Agora somos capazes de reescrever o mesmo código da seção 8.2 \(xor entre bytes\) utilizando apenas 1 linha:
 
 ```python
 # faz o xor entre plaintext e chave e armazena no ciphertext
