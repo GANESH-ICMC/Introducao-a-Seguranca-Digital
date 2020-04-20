@@ -2,37 +2,42 @@
 
 ![](https://i.imgur.com/JVCnnF0.png)
 
-> The Swiss army knife of hacking tool
+> The Swiss army knife of hacking tools
 
-O Netcat é uma ferramenta capaz de receber e enviar dados em conexões usando TCP e UDP. Se você é responsável pela segurança de uma rede ou de um sistema, é essencial que você saiba utilizar os recursos que o Netcat proporciona. O Netcat pode ser usado como scanner, redirecionador e ouvinte de portas além de muitas outras coisas.
-
-## Flags de comando \(Essenciais\)
-
--l -&gt; Coloca no netcat em estado de escuta \(listening\)
-
--p -&gt; Especifica a porta a ser usada \(sujeito a disponibilidade e a restrições de privilégio\)
-
--u -&gt; Usar UDP ao invés de TCP
-
--n -&gt; Força o netcat a usar apenas endereços de IP numéricos, sem fazer consultas a servidores DNS
-
--e -&gt; Especifica o programa a ser executado depois de a conexão acontecer, ligando entradas e saídas ao programa
-
--s -&gt; Especifica o endereço IP da interface usada para enviar os pacotes. Pode ser usado para spoofing de IPs.
-
--v -&gt; Controla o nível de mensagens mostradas na tela
-
--w -&gt; Limita o tempo máximo para que uma conexão seja estabelecida
+Se você é responsável pela segurança de uma rede ou de um sistema, é essencial que você saiba utilizar os recursos que o Netcat proporciona. O Netcat é um ferramenta simples (mas poderosa) que lê e envia dados através de conexões de rede, usando o protocolo TCP ou UDP.<br /><br />
+Ele foi projetado para ser uma ferramenta de "back-end" confiável que pode ser usada direta e facilmente por outros programas e scripts. Ao mesmo tempo, é uma ferramenta de exploração de rede com muitas funcionabilidades, pois pode criar praticamente qualquer tipo de conexão necessária e possui vários recursos internos interessantes.
 
 ## Funcionamento básico
+
+O uso mais simples (e mais utilizado) do netcat cria uma conexão TCP com a porta especificada no host de destino também especificado. Sua entrada padrão (STDIN) é então enviada ao host e tudo o que retorna através da conexão é enviado à sua saída padrão (STDOUT). Isso continua indefinidamente, até que a conexão seja desligada.
 
 `$ nc <ip alvo> <porta>`
 
 Conecta-se em uma porta arbitrária no ip alvo.
 
+O Netcat também pode funcionar como um servidor, escutando possíveis conexões em portas arbitrárias e, em seguida, fazendo a mesma leitura e escrita descrita acima. 
+
 `$ nc -l -p <porta local>`
 
 Cria um ouvinte na porta local.
+
+## Algumas flags de comando
+
+`-l` : Coloca no netcat em estado de escuta \(listening\)
+
+`-p` : Especifica a porta a ser usada \(sujeito a disponibilidade e a restrições de privilégio\)
+
+`-u` : Usar UDP ao invés de TCP
+
+`-n` : Força o netcat a usar apenas endereços de IP numéricos, sem fazer consultas a servidores DNS
+
+`-e` : Especifica o programa a ser executado depois de a conexão acontecer, ligando entradas e saídas ao programa
+
+`-s` : Especifica o endereço IP da interface usada para enviar os pacotes. Pode ser usado para spoofing de IPs.
+
+`-v` : Controla o nível de mensagens mostradas na tela
+
+`-w` : Limita o tempo máximo para que uma conexão seja estabelecida
 
 ## Enviar arquivo do cliente para o ouvinte
 
