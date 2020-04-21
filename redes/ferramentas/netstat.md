@@ -4,7 +4,7 @@
 
 > The Network statistics tool
 
- Netstat \(Network Statistics\) é uma ferramenta utilizada para monitorar redes e, como o próprio nome diz, gerar estatísticas.
+Netstat \(Network Statistics\) é uma ferramenta utilizada para monitorar redes e, como o próprio nome diz, gerar estatísticas.
 
 Algumas informacoes que conseguimos obter com o netstat são, por exemplo, quais portas de comunicacão TCP e UDP estão abertas na nossa maquina e quais os programas ouvindo nessas portas.
 
@@ -22,8 +22,9 @@ Algumas informacoes que conseguimos obter com o netstat são, por exemplo, quais
 
 `$ netstat -i` Para obter informações de uso das interfaces de rede.
 
-`$ netstat -ie` Para detalhar ainda mais as informações mostradas 
+`$ netstat -ie` Para detalhar ainda mais as informações mostradas
 
-`$ netstat -s` Para obter estatísticas resumidas de cada um dos protocolos de rede (por exemplo, TCP, UDP, ICMP).
+`$ netstat -s` Para obter estatísticas resumidas de cada um dos protocolos de rede \(por exemplo, TCP, UDP, ICMP\).
 
 `$ netstat -rn` Para visualizar a tabela de routing da máquina.
+

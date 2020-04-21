@@ -21,3 +21,4 @@ O IP \(Internet Protocol\) é responsável pelo roteamentro e entrega dos pacote
 O protocolo TCP \(Transmission Control Protocol\) é um serviço de entrega de pacotes que garante a entrega e a integridade do pacote e funciona baseado numa conexão entre dois computadores. Nesse tipo de conexão, ambas as partes entram em acordo sobre a forma de trocarem informações. Quando uma informação é transmitida, mecanismos de verificação de erros e controle de fluxo garantem que a informação seja recebida.
 
 Antes de transmitir os dados, o protocolo TCP estabelece uma conexão entre os computadores, num processo chamado [Three-way handshake](https://es7evam.gitbook.io/ganeshicmc/redes/three-way-handshake).
+

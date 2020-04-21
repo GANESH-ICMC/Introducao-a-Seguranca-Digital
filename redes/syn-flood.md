@@ -2,7 +2,6 @@
 
 ![](https://www.gta.ufrj.br/grad/15_1/dos/images/syn_flood.png)
 
-
 Quando sua máquina conversa com outra através da internet ela quase sempre usa o protocolo TCP. Esse protocolo permite que duas máquinas abram uma conexão, ou seja, um canal de comunicação preestabelecido.
 
 Para que essa conexão seja feita é realizado um procedimento chamado [Three-way handshake](https://es7evam.gitbook.io/ganeshicmc/redes/three-way-handshake), ou, numa tradução livre, Aperto de mão em três vias. O ataque SYN Flood toma vantagem justamente de um comportamento inusitado desse procedimento.
@@ -17,20 +16,19 @@ Isso faz com que a tabela de conexões do alvo fique lotada com as nossas conex�
 
 Para isso, usaremos uma ferramenta chamada Hping3:
 
-`
-sudo hping3 -c <quantidade de pacotes> -d <tamanho do pacote> -S -p <porta alvo> -i u<tempo> --flood <ip do alvo>
-`
+`sudo hping3 -c <quantidade de pacotes> -d <tamanho do pacote> -S -p <porta alvo> -i u<tempo> --flood <ip do alvo>`
 
--c  : Quantidade de pacotes a serem enviados <br/>
--d  : Tamanho de cada pacote a ser enviado -S: Usar a flag SYN do TCP <br/> 
--p  : Porta da máquina destino \(em geral não importa, desde que seja uma porta onde há um socket em modo LISTEN\) <br/>
--i u  : tempo entre envios \(em milissegundos: u100 == 100 milissegundos entre pacotes\) <br/>
---flood: Envia pacotes o mais rápido possível
+-c : Quantidade de pacotes a serem enviados   
+ -d : Tamanho de cada pacote a ser enviado -S: Usar a flag SYN do TCP   
+ -p : Porta da máquina destino \(em geral não importa, desde que seja uma porta onde há um socket em modo LISTEN\)   
+ -i u : tempo entre envios \(em milissegundos: u100 == 100 milissegundos entre pacotes\)   
+ --flood: Envia pacotes o mais rápido possível
 
-#### Referências:
+## Referências:
 
-[RFC sobre SYN flood](https://tools.ietf.org/html/rfc4987)<br/>
-[Artigo sobre SYN Flood da Phrack Magazine](http://phrack.org/issues/48/13.html#article)<br/>
-[Repositório do Hping3 no Github](https://github.com/antirez/hping)<br/>
-[Wiki do Hping3](http://wiki.hping.org/)<br/>
+[RFC sobre SYN flood](https://tools.ietf.org/html/rfc4987)  
+ [Artigo sobre SYN Flood da Phrack Magazine](http://phrack.org/issues/48/13.html#article)  
+ [Repositório do Hping3 no Github](https://github.com/antirez/hping)  
+ [Wiki do Hping3](http://wiki.hping.org/)  
+
 

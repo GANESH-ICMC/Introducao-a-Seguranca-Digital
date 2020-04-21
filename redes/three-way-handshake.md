@@ -52,7 +52,7 @@ O servidor envia ao cliente uma solicitação de sincronização \(SYN\) com nú
 
 ![](https://i.imgur.com/P9Z4x2Q.png)
 
-O servidor envia ao cliente uma solicitação de sincronização \(SYN\) com número de sequência 0 \(Seq=0\), juntamente com a confirmação \(ACK=1\) da solicitação de sincronização enviada anteriormente pelo cliente.
+O cliente \(192.168.43.64\) então confirma a solicitação de sincronização \(SYN\) para o servidor \(186.192.81.25\). Esta confirmação parte da porta 33080 com destino a porta 443, com número de sequência 1 \(Seq=1\).
 
 ## Referências
 
