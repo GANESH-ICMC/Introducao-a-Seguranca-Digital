@@ -10,12 +10,13 @@
 - [Linguagens de Programação (Server Side)](Linguagens_Server_Side.md)
 - [API's e Serviços Rest](APIS_e_Rest.md)
 
-## Bancos de dados, o que são:
+### Bancos de dados, o que são:
 - [Introdução aos Bancos de Dados](Bancos_de_Dados.md)
 
 ### Algumas vulnerabilidades:
 - [SQL Injection](SQL_Injection.md)
 - [Command Injection](Command_Injection.md)
+- [Insecure Direct Object Reference](IDOR.md)
 
 ---
 #### Autores do material:
