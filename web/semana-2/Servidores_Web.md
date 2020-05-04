@@ -22,7 +22,7 @@ Dentre os diferentes tipos de protocolos de comunicação que funcionam na inter
 
 *Obs: A forma utilizada para processar tais requisições irá variar dependendo da arquitetura e também do servidor utilizado, iremos então discutir em um nível abstrato e caso queira se aprofundar basta utilizar os links disponibilizados nas referências.*
 
-![](https://mdn.mozillademos.org/files/8659/web-server.svg) 
+![Estrutura Servidor HTTP](https://i.imgur.com/HHyYUgW.png)
 <p style="text-align: center;">Fonte: developer.mozilla.org</p>
 
 O mecanismo responsável pelo gerenciamento dessas requisições é chamado de Servidor HTTP e a sua função é mapear, por meio das informações recebidas pelo cabeçalho, qual tipo de documento o cliente deseja receber do servidor. Podemos dividir os tipos de conteúdos em duas categorias principais:
