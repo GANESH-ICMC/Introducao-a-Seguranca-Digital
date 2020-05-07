@@ -1,26 +1,31 @@
-# Ganesh - Ping 2020
+# Semana 1
 
 ## Sumário - Aulas Semana 1
 
 ### Conceitos iniciais:
-- [Arquitetura de uma aplicação Web (e a diferença entre Internet e Web)](Arquitetura_web.md)
+
+* [Arquitetura de uma aplicação Web \(e a diferença entre Internet e Web\)](arquitetura_web.md)
 
 ### Estrutura do front-end de uma página Web:
-- [Introdução ao HTML](HTML.md)
-- [Introdução ao CSS](CSS.md)
-- [Introdução ao Javascript](Javascript.md)
+
+* [Introdução ao HTML](html.md)
+* [Introdução ao CSS](css.md)
+* [Introdução ao Javascript](javascript.md)
 
 ### Comunicação na Web:
-- [Entendendo as URLs](URLs.md)
-- [Protocolo HTTP](Protocolo_HTTP.md)
-- [Protocolo HTTPS](Protocolo_HTTPS.md)
-- [Cookies e sessões](Cookies_e_sessoes.md)
+
+* [Entendendo as URLs](urls.md)
+* [Protocolo HTTP](protocolo_http.md)
+* [Protocolo HTTPS](protocolo_https.md)
+* [Cookies e sessões](cookies_e_sessoes.md)
 
 ### Algumas vulnerabilidades:
-- [Cross Site Scripting (XSS)](XSS.md)
-- [XML External Entities (XML) Injection](XXE.md)
 
----
+* [Cross Site Scripting \(XSS\)](xss.md)
+* [XML External Entities \(XML\) Injection](xxe.md)
+
 #### Autores do material:
-- [Marcus Vinícius Castelo Branco](https://github.com/marcuscastelo)
-- [Pedro Guerra Lourenço](https://github.com/Haltz01)
+
+* [Marcus Vinícius Castelo Branco](https://github.com/marcuscastelo)
+* [Pedro Guerra Lourenço](https://github.com/Haltz01)
+
