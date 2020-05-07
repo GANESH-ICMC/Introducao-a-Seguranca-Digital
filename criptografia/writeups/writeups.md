@@ -117,14 +117,14 @@ Nenhuma
 
 ## Resolução:
 
-Como dito no enunciado, foi utilizado uma cifra de substituição simples. Logo, como já foi feita a análise de frequência, basta substituir os caracteres correspondentes, obtendo:
+Como dito no enunciado, foi utilizado uma cifra de substituição simples, portanto é necessário fazer uma análise de frequência sobre cada símbolo e substituí-los pelos caracteres mais frequentes do **inglês** até obter um texto plausível. Por fim, obtendo:
 
-To anthony babbington,
-i agree that you
-can murder queen
-elizabeth after
-getting the signal
-represented by potato.
+To anthony babbington,<br>
+i agree that you<br>
+can murder queen<br>
+elizabeth after<br>
+getting the signal<br>
+represented by potato.<br>
 From Mary.
 
 Assim, vemos que a flag é **potato**.
