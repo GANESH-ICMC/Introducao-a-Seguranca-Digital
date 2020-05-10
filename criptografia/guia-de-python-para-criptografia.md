@@ -222,11 +222,11 @@ print(b3)
 
 ### **Imutáveis**
 
-Tipos imutáveis são caracterizados pelo fato de não permitirem alterações em seus elementos após terem sido declarados, com exceção da função extend ou do operador += \(ambos realizam a inclusão de novos elementos\), a qual é permitida irrestritamente. A vantagem da utilização de tipos imutáveis é que eles são os únicos tipos que permitem o cálculo de hash, de forma que, por exemplo, somente tipos imutáveis podem ser a chave de um dicionário; além disso, elas apresentam uma maior confiabilidade e um maior desempenho de execução em comparação aos mutáveis, por motivos que fogem ao escopo deste guia.
+Tipos imutáveis são caracterizados pelo fato de não permitirem alterações em seus elementos após terem sido declarados, com exceção do método extend\(\) ou do operador += \(ambos realizam a inclusão de novos elementos\), a qual é permitida irrestritamente. A vantagem da utilização de tipos imutáveis é que eles são os únicos tipos que permitem o cálculo de hash, de forma que, por exemplo, somente tipos imutáveis podem ser a chave de um dicionário; além disso, elas apresentam uma maior confiabilidade e um maior desempenho de execução em comparação aos mutáveis, por motivos que fogem ao escopo deste guia.
 
 #### **Strings**
 
-Strings em Python são semelhantes às strings de qualquer linguagem de programação de alto nível, sendo a principal diferença para outras linguagens o fato de elas serem imutáveis. Em outras palavras, podemos concatenar novas strings ao final de outra já existente, mas não podemos alterar qualquer parte dela diretamente; para isso é necessário convertê-la em uma lista e realizar as operações desejadas sobre a lista, e em seguida convertê-la de volta a uma string utilizando o método ‘’.join\(lista\).
+Strings em Python são semelhantes às strings de qualquer linguagem de programação de alto nível, sendo a principal diferença para outras linguagens o fato de elas serem imutáveis. Em outras palavras, podemos concatenar novas strings ao final de outra já existente, mas não podemos alterar qualquer parte dela diretamente; para isso é necessário convertê-la em uma lista e realizar as operações desejadas sobre a lista, e em seguida convertê-la de volta a uma string utilizando o método ''.join\(lista\).
 
 Simplificadamente, o método join de uma string s que recebe como argumento uma lista l retorna uma nova string com os elementos de l separados por s; neste caso, como s é uma string vazia, obteremos uma nova string apenas com os elementos de l. Esse método será mais explorado no exemplo a seguir.
 
