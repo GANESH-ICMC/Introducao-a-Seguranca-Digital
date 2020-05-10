@@ -688,7 +688,8 @@ print(next(g))
 
 PyCryptodome é uma biblioteca que surgiu para substituir a PyCrypto, que foi descontinuada. Atualmente ela possui diversas cifras simétricas e assimétricas \(Salsa20, ChaCha, RSA, entre outras\), funções de Hash e de Assinatura Digital, chaves públicas, gerador de números pseudoaleatórios, entre outros.
 
-Para instalar essa biblioteca no Python, execute no terminal pip install --user pycryptodome, a flag --user realiza a instalação apenas para o usuário logado é importante para garantir que ela não seja instalada em todo o sistema, o que possivelmente pode causar problemas futuros.
+Para instalar essa biblioteca no Python, execute no terminal `pip install --user pycryptodome`, a flag `--user` realiza a instalação apenas para o usuário logado é importante para garantir que ela não seja instalada em todo o sistema, o que possivelmente pode causar problemas futuros.
+**Obs:** Caso você esteja utilizando o comando `python3` para executar códigos, utilize `pip3` para instalar módulos.
 
 A API com todas as ferramentas dessa biblioteca está disponível em [https://www.pycryptodome.org/en/latest/src/api.html](https://www.pycryptodome.org/en/latest/src/api.html).
 
