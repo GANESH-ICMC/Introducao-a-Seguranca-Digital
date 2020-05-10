@@ -222,7 +222,7 @@ print(b3)
 
 ### **Imutáveis**
 
-Tipos imutáveis são caracterizados pelo fato de não permitirem alterações em seus elementos após terem sido declarados, com exceção da função extend \(inclusão de novos elementos, ou o operador +=\), a qual é permitida irrestritamente. A vantagem da utilização de tipos imutáveis é que eles são os únicos tipos que permitem o cálculo de hash, de forma que, por exemplo, somente tipos imutáveis podem ser a chave de um dicionário; além disso, elas apresentam uma maior confiabilidade e um maior desempenho de execução em comparação aos mutáveis, por motivos que fogem ao escopo deste guia.
+Tipos imutáveis são caracterizados pelo fato de não permitirem alterações em seus elementos após terem sido declarados, com exceção da função extend ou do operador += \(ambos realizam a inclusão de novos elementos\), a qual é permitida irrestritamente. A vantagem da utilização de tipos imutáveis é que eles são os únicos tipos que permitem o cálculo de hash, de forma que, por exemplo, somente tipos imutáveis podem ser a chave de um dicionário; além disso, elas apresentam uma maior confiabilidade e um maior desempenho de execução em comparação aos mutáveis, por motivos que fogem ao escopo deste guia.
 
 #### **Strings**
 
