@@ -65,12 +65,19 @@ Com isso, decriptando a mensagem, encontramos: “baconehbomheingurizadaeaflageh
 Esta mensagem foi encontrada no meio dos trabalhos de um grande e conhecido escritor da língua inglesa, mas infelizmente está criptografada. A flag é o nome do ser ao qual a quarta linha se refere.
 
 VALYY LXPFK SQL VAY YCRYP IXPFK BPUYL VAY KIE,
+
 KYRYP SQL VAY UONLS CQLUK XP VAYXL ANCCK QS KVQPY,
+
 PXPY SQL GQLVNC GYP, UQQGYU VQ UXY,
+
 QPY SQL VAY UNLI CQLU QP AXK UNLI VALQPY
+
 XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
+
 QPY LXPF VQ LBCY VAYG NCC, QPY LXPF VQ SXPU VAYG,
+
 QPY LXPF VQ MLXPF VAYG NCC NPU XP VAY UNLIPYKK MXPU VAYG.
+
 XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
 
 ### Dicas:
@@ -82,34 +89,55 @@ XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
 Pela dica \(escritor inglês\) inferimos que se trata de um fragmento de texto escrito em inglês e pelo tamanho das palavras inferimos que se trata de uma cifra de substituição simples, este chall se baseia então em descobrir o que cada caractere significa com tentativa e erro. Comparando a frequência de cada letra do texto com a frequência de letras da língua inglesa inferimos que a letra “Y” do texto deve corresponder à letra “e”, por ser a letra mais comum do alfabeto inglês. O texto passa a ter a forma:
 
 VALee LXPFK SQL VAe eCReP IXPFK BPUeL VAe KIE,
+
 KeReP SQL VAe UONLS CQLUK XP VAeXL ANCCK QS KVQPe,
+
 PXPe SQL GQLVNC GeP, UQQGeU VQ UXe,
+
 QPe SQL VAe UNLI CQLU QP AXK UNLI VALQPe
+
 XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.
+
 QPe LXPF VQ LBCe VAeG NCC, QPe LXPF VQ SXPU VAeG,
+
 QPe LXPF VQ MLXPF VAeG NCC NPU XP VAe UNLIPeKK MXPU VAeG.
+
 XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.
 
 Vemos que logo a primeira palavra do texto termina com “ee”. Existem em torno de 40 palavras em inglês que terminam com “ee” porém poquíssimas delas são comumente usadas. Três destas palavras seriam “three”, “agree” e “melee”, todas as outras são muito mais incomuns quando comparadas às 3 listadas. Podemos descartar a palavra “melee” pois a letra “e” já foi substituída, se usarmos a palavra “agree” a palavra de 3 letras “VAe” se torna “age” e se usarmos “three” se torna “the”. Como é uma palavra de 3 letras que ocorre diversas vezes ao longo do texto é mais provável que se trate de “the” e com isso inferimos as seguintes relações: “V” = “t”, “A” = “h”, “L” = “r”. O texto se torna então:
 
 three rXPFK SQr the eCReP IXPFK BPUer the KIE,
+
 KeReP SQr the UONrS CQrUK XP theXr hNCCK QS KtQPe,
+
 PXPe SQr GQrtNC GeP, UQQGeU tQ UXe,
+
 QPe SQr the UNrI CQrU QP hXK UNrI thrQPe
+
 XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.
+
 QPe rXPF tQ rBCe theG NCC, QPe rXPF tQ SXPU theG,
+
 QPe rXPF tQ MrXPF theG NCC NPU XP the UNrIPeKK MXPU theG.
+
 XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.
 
 Tendo descoberto estas 4 letras é possível inferir várias palavras caso haja familiaridade com a língua inglesa. Alguns exemplos seriam “SQr” = “for”, “QPe” = “one”, “Ohere” = “where”, “thrQPe” = “throne” etc. O texto final deve ser:
 
 three rings for the elven kings under the sky,
+
 seven for the dwarf lords in their halls of stone,
+
 nine for mortal men doomed to die,
+
 one for the dark lord on his dark throne
+
 in the land of mordor where the shadows lie.
+
 one ring to rule them all, one ring to find them,
+
 one ring to bring them all and in the darkness bind them
+
 in the land of mordor where the shadows lie.
 
 Basta agora identificar que se trata da epígrafe de “O Senhor dos Anéis” e o escritor ao qual a dica se refere é J. R. R. Tolkien. O personagem referenciado na quarta linha “... dark lord ...” é Sauron, a flag que soluciona o desafio é então **Sauron**.
