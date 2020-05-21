@@ -230,7 +230,7 @@ Ao redesenhar a stack:
 +------------------+          | +------------------+
 ```
 
-A região marcada por `0x????????` é o lixo de memória que está na região da string, já que ainda nao escrevemos nada nela. Perceba que o ponteiro _char\*\* está escrito de trás para frente. Isso é porque a maioria das arquiteturas hoje em dia seguem o modelo_ little-endian\*, em que se escreve os bytes do byte menos significativo para o mais significativo. Por enquanto não precisam se preocupar com isso, veremos novamente mais para frente.
+A região marcada por `0x????????` é o lixo de memória que está na região da string, já que ainda nao escrevemos nada nela. Perceba que o ponteiro _char\*_ está escrito de trás para frente. Isso é porque a maioria das arquiteturas hoje em dia seguem o modelo _little-endian_, em que se escreve os bytes do byte menos significativo para o mais significativo. Por enquanto não precisam se preocupar com isso, veremos novamente mais para frente.
 
 Por fim, vamos encerrar essa nova função.
 
