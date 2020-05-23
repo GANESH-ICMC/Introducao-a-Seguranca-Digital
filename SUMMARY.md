@@ -60,6 +60,7 @@
     * [Insecure Direct Object Reference \(IDOR\)](web/semana-2/idor.md)
     * [SQL Injection](web/semana-2/sql_injection.md)
     * [Command Injection](web/semana-2/command_injection.md)
+* [CTF](ctf.md)
 * [Engenharia Reversa](engenharia-reversa/README.md)
   * [Registradores e tipos de dados](engenharia-reversa/registradores-e-tipos-de-dados.md)
   * [Hello World em x86](engenharia-reversa/hello-world-em-x86.md)
