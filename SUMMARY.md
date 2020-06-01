@@ -67,6 +67,7 @@
   * [Hello World em x86](engenharia-reversa/hello-world-em-x86.md)
   * [GDB](engenharia-reversa/gdb.md)
   * [Pilha](engenharia-reversa/pilha.md)
+  * [Ghidra](engenharia-reversa/ghidra.md)
 * [Pwning](pwning/README.md)
   * [Buffer Overflow](pwning/buffer-overflow-e-a-stack.md)
 

@@ -1,4 +1,4 @@
-# Stack \(Pilha\)
+# Pilha
 
 A stack, como o nome diz, é uma pilha. Pode-se imaginar como uma pilha de pratos ou uma pilha de caixas. As operações básicas de uma pilha são empilhar, desempilhar e checar seu topo. Para entender a stack, é importante saber essas duas primeiras operações.
 
@@ -32,7 +32,7 @@ Quando uma função é chamada, é possivel ver no assembly da função que a ch
 call <função>
 ```
 
-Nesse caso,  é o endereço dessa função na memória RAM. O endereço pode ser representado pelo rótulo \(nome\) da função em assembly e é o que iremos encontrar na maioria dos casos caso olharmos o assembly do código no GDB.
+Nesse caso, é o endereço dessa função na memória RAM. O endereço pode ser representado pelo rótulo \(nome\) da função em assembly e é o que iremos encontrar na maioria dos casos caso olharmos o assembly do código no GDB.
 
 Essa linha faz duas ações:
 

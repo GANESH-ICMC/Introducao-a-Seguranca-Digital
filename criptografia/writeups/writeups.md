@@ -59,7 +59,6 @@ De início, percebemos que o enunciado é, na verdade, uma mensagem criptografad
 
 Com isso, decriptando a mensagem, encontramos: “baconehbomheingurizadaeaflagehganeshsotemlindx”. Portanto, a flag é **ganeshsotemlindx**.
 
-
 ## Terra média
 
 Esta mensagem foi encontrada no meio dos trabalhos de um grande e conhecido escritor da língua inglesa, mas infelizmente está criptografada. A flag é o nome do ser ao qual a quarta linha se refere.
@@ -142,7 +141,6 @@ in the land of mordor where the shadows lie.
 
 Basta agora identificar que se trata da epígrafe de “O Senhor dos Anéis” e o escritor ao qual a dica se refere é J. R. R. Tolkien. O personagem referenciado na quarta linha “... dark lord ...” é Sauron, a flag que soluciona o desafio é então **Sauron**.
 
-
 ## Maquininha temporizadora
 
 Um criptógrafo inventou uma máquina capaz de automaticamente encriptar mensagens que utilizam letras do alfabeto latino. Cada letra corresponde a um número \(1 para A, 2 para B, …, 26 para Z\). Além disso, algumas letras fazem parte de um conjunto especial \(mantido em segredo\), resultando em um comportamento especial da máquina.
@@ -201,15 +199,14 @@ Nenhuma
 Como dito no enunciado, foi utilizado uma cifra de substituição simples, portanto é necessário fazer uma análise de frequência sobre cada símbolo e substituí-los pelos caracteres mais frequentes do **inglês** até obter um texto plausível. Por fim, obtendo:
 
 To anthony babbington,  
- i agree that you  
- can murder queen  
- elizabeth after  
- getting the signal  
- represented by potato.  
- From Mary.
+i agree that you  
+can murder queen  
+elizabeth after  
+getting the signal  
+represented by potato.  
+From Mary.
 
 Assim, vemos que a flag é **potato**.
-
 
 ## Visitando novas bases 3
 
@@ -217,12 +214,13 @@ Assim, vemos que a flag é **potato**.
 
 ### Dicas:
 
-1.  Símbolo do infinito
+1. Símbolo do infinito
 
 ### Resolução:
 
-O título sugere que a mensagem está codificada em uma base diferente da usual. Ao ver a mensagem, percebemos que ela possui apenas algarismos entre 0 e 7, e estes estão agrupados em grupos de 3. Com isso, tiramos a conclusão de que  a mensagem está codificada em base octal. Decodificando a mensagem, encontramos:
+O título sugere que a mensagem está codificada em uma base diferente da usual. Ao ver a mensagem, percebemos que ela possui apenas algarismos entre 0 e 7, e estes estão agrupados em grupos de 3. Com isso, tiramos a conclusão de que a mensagem está codificada em base octal. Decodificando a mensagem, encontramos:
 
-Parabéns, você realmente é um entendedor de bases numéricas! A flag é **Ganesh{0ct4l}**. 
+Parabéns, você realmente é um entendedor de bases numéricas! A flag é **Ganesh{0ct4l}**.
 
-Obs: Percebe-se que a base é 8 = 2<sup>3</sup>. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados. 
+Obs: Percebe-se que a base é 8 = 23. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados.
+
