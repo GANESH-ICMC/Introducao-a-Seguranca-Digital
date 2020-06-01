@@ -68,5 +68,5 @@
   * [GDB](engenharia-reversa/gdb.md)
   * [Pilha](engenharia-reversa/pilha.md)
 * [Pwning](pwning/README.md)
-  * [Buffer Overflow e a Stack](pwning/buffer-overflow-e-a-stack.md)
+  * [Buffer Overflow](pwning/buffer-overflow-e-a-stack.md)
 
