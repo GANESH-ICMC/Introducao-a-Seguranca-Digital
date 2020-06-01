@@ -6,7 +6,7 @@ O Ghidra é uma ferramenta open source para a engenharia reversa feita pela agê
 
 A ferramenta pode ser baixada pelo [site oficial ](https://ghidra-sre.org/)ou pelo [github](https://github.com/NationalSecurityAgency/ghidra), onde parte do código se encontra.
 
-Uma das grandes vantagens do IDA é a ferramenta de _decompile_, que permite que seja visualizado um código "descompilado" de um binário. Essa ferramenta suporta diversas arquiteturas nativamente e existem alguns plugins para adicionar suporte de outras.
+Uma das grandes vantagens do Ghidra é a ferramenta de _decompile_, que permite que seja visualizado um código "descompilado" de um binário. Essa ferramenta suporta diversas arquiteturas nativamente e existem alguns plugins para adicionar suporte de outras.
 
 Usualmente os binários que serão analisados vão ser das linguagens C/C++, mas também é possível analisar por exemplo binários escritos em Golang, análise que funciona melhor caso tenha plugins específicos para isso.
 
@@ -36,6 +36,36 @@ Clicando duas vezes em uma função entra-se no código dela e Alt+Left volta pa
 Caso queira desfazer alguma operação, o clássico Ctrl+Z é utilizado.
 
 ## Cheatsheet
+Abaixo estão algumas imagens de um cheatsheet (uma "colinha") com as hotkeys mais importantes.
+
+### Load/Import 
+Essa tabela apresenta as hotkeys para criar, abrir e salvar projetos, além de importar e exportar binários.
+
+![Load Project](https://i.imgur.com/eSWJet8.jpg)
 
 
+### Navegação
+Essas são as hotkeys para se movimentar pelo código. (menção pra Alt+Left/Right para voltar ou avançar para locais onde estava anteriormente)
 
+![Navigation](https://imgur.com/T4QtpHj.jpg)
+
+
+### Marcação (Markup)
+Essas hotkeys são muito importantes para deixar o código mais organizado e legível, alterar nome e tipo de variáveis pode deixar um trecho de código bem mais claro.
+
+![Markup1](https://i.imgur.com/FvOjMRF.jpg)
+![Markup2](https://i.imgur.com/nK2ybaX.jpg)
+
+
+### Pesquisa/Busca
+Essas hotkeys são utilizados para fazer buscas no programa, tanto no código (texto), quanto na memória.
+
+![Search](https://i.imgur.com/XLUfpyt.jpg)
+
+### Ajuda/Configurações
+Essas são as hotkeys para alterar configurações do ghidra, além da hotkey para o _Help_, que tem informações e explicações de como utilizar o ghidra.
+
+![Help](https://i.imgur.com/uqw2Vrq.jpg)
+
+Link do Cheatsheet completo:
+https://ghidra-sre.org/CheatSheet.html
