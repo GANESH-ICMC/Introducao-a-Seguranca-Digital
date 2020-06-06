@@ -66,11 +66,11 @@ Pafuntilo é o monge que vivia no templo das 9 colunas e sabe-se que além de cr
 
 aNNn5_{13TT5s0UR1}G40h5LePR
 
-## Dicas:
+### Dicas:
 
 1. Dórica, Jônica, Coríntia, Toscana e Compósita
 
-## Resolução:
+### Resolução:
 
 Como o texto apresenta os caracteres “{” e “}”, que aparecem no formato de flag, inferimos que se trata de uma cifra de transposição. O desafio apresenta a dica “9 colunas” e também verificamos que o nome “Pafuntilo” possui 9 letras. A conclusão é que se trata portanto de uma cifra de transposição colunar cuja chave é “Pafuntilo”, a resposta é imediata e corresponde a:
 
