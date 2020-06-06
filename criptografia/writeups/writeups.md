@@ -435,7 +435,7 @@ Neste desafio a chave não foi fornecida, mas é possível obter uma parte da ke
 
 Sabendo disso, fazemos o XOR dos 2 primeiros bytes do ciphertext \(0x41 e 0xbd\) com os 2 primeiros bytes do suposto plaintext \(código ASCII das letras L e U, de Lucas\), obtendo, como resultado, os 2 primeiros bytes da chave.
 
-Assim, considerando que a PRG em questão é previsível, podemos obter o restante da keystream utilizando a regra descrita no desafio anterior, e conseguimos decriptar a mensagem.
+Em seguida podemos obter o restante da keystream utilizando a regra descrita no desafio anterior e utilizamos essa keystream para decriptar a mensagem.
 
 Caso o plaintext resultante fosse imprimido em formato de bytes, obteríamos o seguinte resultado:
 
@@ -443,7 +443,7 @@ Caso o plaintext resultante fosse imprimido em formato de bytes, obteríamos o s
 b'Lucas, fala pros bixos que essa mensagem est\xc3\xa1 em utf-8 e que a flag \xc3\xa9 Ganesh{Python\xc3\x89MuitoMassa}'
 ```
 
-Neste caso, é possível entender que ela está codificada em utf-8 e que o formato bytes não consegue decodificar os caracteres especiais, para imprimi-los é necessário decodificar o plaintext utilizando o comando `plaintext.decode(‘utf-8’)`, o que resulta em:
+Neste caso, é possível perceber que ela está codificada em utf-8 pois o formato bytes não consegue decodificar caracteres especiais, para imprimi-los é necessário decodificar o plaintext utilizando o comando `plaintext.decode(‘utf-8’)`, o que resulta em:
 
 “Lucas, fala pros bixos que essa mensagem está em utf-8 e que a flag é Ganesh{PythonÉMuitoMassa}”
 
