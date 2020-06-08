@@ -70,4 +70,5 @@
   * [Ghidra](engenharia-reversa/ghidra.md)
 * [Pwning](pwning/README.md)
   * [Buffer Overflow](pwning/buffer-overflow-e-a-stack.md)
+  * [Pwntools](pwning/pwntools.md)
 
