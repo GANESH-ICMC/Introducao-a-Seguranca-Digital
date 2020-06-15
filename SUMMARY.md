@@ -69,6 +69,9 @@
   * [GDB](engenharia-reversa/gdb.md)
   * [Ghidra](engenharia-reversa/ghidra.md)
 * [Pwning](pwning/README.md)
+  * [Integer Overflow](pwning/integer-overflow.md)
   * [Buffer Overflow](pwning/buffer-overflow-e-a-stack.md)
   * [Pwntools](pwning/pwntools.md)
+  * [Shellcode](pwning/shellcode.md)
+  * [Proteções](pwning/protecoes.md)
 
