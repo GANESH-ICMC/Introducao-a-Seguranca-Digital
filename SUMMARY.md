@@ -39,6 +39,7 @@
   * [Write-ups](redes/write-ups/README.md)
     * [Origem das Batatas](redes/write-ups/origem-das-batatas.md)
     * [Bataterro](redes/write-ups/Bataterro.md)
+    * [O castelo de 10000 portas](redes/write-ups/10k-portas.md)
   * [Avançado](redes/avancado.md)
 * [Web](web/README.md)
   * [Semana 1](web/semana-1/README.md)
