@@ -63,7 +63,7 @@
   * [Write-Ups](web/write-ups/README.md)
     * [Intro à web](web/write-ups/chall1_intro-a-web-bem-intro-mesmo.md)
     * [Intro à web (só que um pouco menos)](web/write-ups/chall2_intro-a-web-so-que-um-pouco-menos.md)
-    * [0x0C00(k)1E==](web/write-ups/chall3_0x0C00(k)1E==.md)
+    * [0x0C00(k)1E==](web/write-ups/chall3_0x0C00k1E==.md)
     * [Googlebot, não pegue!](web/write-ups/chall4_google-nao-pegue.md)
     * [Googlebot, pegue?](web/write-ups/chall18_googlebot-pegue.md)
     * [Sopa de letrinhas](web/write-ups/chall5_sopa-de-letrinhas.md)

@@ -1,5 +1,3 @@
-# Ganesh WEB Ping 2020 Write-ups
-
 ## Chall 01 - Intro à web (bem intro mesmo) (PInG 2019)
 #### Guerra:
 **Flag:** `GANESH{G3T_3XP3RT}`

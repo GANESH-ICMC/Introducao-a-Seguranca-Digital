@@ -1,4 +1,4 @@
-## Chall 03 - 0x0C00(k)1E== (PInG 2019)
+## Chall 03 - 0x0C00k1E== (PInG 2019)
 
 #### Alex:
 
