@@ -34,3 +34,17 @@ md5sum * | grep e50522e94
 A saída que você vai ver na tela é o hash do arquivo seguido do nome dele.
 Pronto, agora já sabemos qual é a mensagem correta, é só copiar a flag para
 o site do CTF. 
+
+## Observação
+
+Quando você baixar o arquivo executável, ele pode não ter permissão de
+execução e você não vai conseguir dar `./programa`.
+
+Se esse for seu caso, basta dar o seguinte comando:
+
+```
+chmod +x path/to/program
+```
+
+Em que `path/to/program` é o caminho do arquivo que você quer dar a
+permissão de execução.
