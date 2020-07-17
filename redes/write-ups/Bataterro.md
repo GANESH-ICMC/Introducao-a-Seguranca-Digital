@@ -1,6 +1,6 @@
 # Bataterro
 
-Para completar esse desafio, era necessário achar o mensagem certa enviada no
+Para completar esse desafio, era necessário achar a mensagem certa enviada no
 bataterro. Ainda bem que sabemos qual é o hash MD5 dessa mensagem, ou seja,
 podemos calcular os hashs de todas as mensagens e ver qual é a certa.
 
@@ -11,7 +11,7 @@ Para calcular o hash MD5 de um arquivo, existe um programa no terminal,
 é o `md5sum`.
 
 Como queremos calcular o md5 de todos os arquivos do diretório,
-podemos usar o *wildcard* (`*`) que um caractere especial que o terminal
+podemos usar o *wildcard* (`*`), que é um caractere especial que o terminal
 interpreta como "coloque aqui todos o nome de todos os arquivos desse
 diretório".
 
