@@ -59,12 +59,11 @@ De início, percebemos que o enunciado é, na verdade, uma mensagem criptografad
 
 Com isso, decriptando a mensagem, encontramos: “baconehbomheingurizadaeaflagehganeshsotemlindx”. Portanto, a flag é **ganeshsotemlindx**.
 
-
 ## Pafuntilo, o Criptógrafo
 
 Pafuntilo é o monge que vivia no templo das 9 colunas e sabe-se que além de criptógrafo ele amava o nome que tinha já que o usava para tudo codificar tudo. Ele deixou esta mensagem pra você:
 
-aNNn5_{13TT5s0UR1}G40h5LePR
+aNNn5\_{13TT5s0UR1}G40h5LePR
 
 ### Dicas:
 
@@ -74,21 +73,20 @@ aNNn5_{13TT5s0UR1}G40h5LePR
 
 Como o texto apresenta os caracteres “{” e “}”, que aparecem no formato de flag, inferimos que se trata de uma cifra de transposição. O desafio apresenta a dica “9 colunas” e também verificamos que o nome “Pafuntilo” possui 9 letras. A conclusão é que se trata portanto de uma cifra de transposição colunar cuja chave é “Pafuntilo”, a resposta é imediata e corresponde a:
 
-**Ganesh{TR4N5P051T10N_RUL35}**
-
+**Ganesh{TR4N5P051T10N\_RUL35}**
 
 ## Terra média
 
 Esta mensagem foi encontrada no meio dos trabalhos de um grande e conhecido escritor da língua inglesa, mas infelizmente está criptografada. A flag é o nome do ser ao qual a quarta linha se refere.
 
-VALYY LXPFK SQL VAY YCRYP IXPFK BPUYL VAY KIE,<br>
-KYRYP SQL VAY UONLS CQLUK XP VAYXL ANCCK QS KVQPY,<br>
-PXPY SQL GQLVNC GYP, UQQGYU VQ UXY,<br>
-QPY SQL VAY UNLI CQLU QP AXK UNLI VALQPY<br>
-XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.<br>
-QPY LXPF VQ LBCY VAYG NCC, QPY LXPF VQ SXPU VAYG,<br>
-QPY LXPF VQ MLXPF VAYG NCC NPU XP VAY UNLIPYKK MXPU VAYG.<br>
-XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
+VALYY LXPFK SQL VAY YCRYP IXPFK BPUYL VAY KIE,  
+ KYRYP SQL VAY UONLS CQLUK XP VAYXL ANCCK QS KVQPY,  
+ PXPY SQL GQLVNC GYP, UQQGYU VQ UXY,  
+ QPY SQL VAY UNLI CQLU QP AXK UNLI VALQPY  
+ XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.  
+ QPY LXPF VQ LBCY VAYG NCC, QPY LXPF VQ SXPU VAYG,  
+ QPY LXPF VQ MLXPF VAYG NCC NPU XP VAY UNLIPYKK MXPU VAYG.  
+ XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
 
 ### Dicas:
 
@@ -98,39 +96,38 @@ XP VAY CNPU QS GQLUQL OAYLY VAY KANUQOK CXY.
 
 Pela dica \(escritor inglês\) inferimos que se trata de um fragmento de texto escrito em inglês e pelo tamanho das palavras inferimos que se trata de uma cifra de substituição simples, este chall se baseia então em descobrir o que cada caractere significa com tentativa e erro. Comparando a frequência de cada letra do texto com a frequência de letras da língua inglesa inferimos que a letra “Y” do texto deve corresponder à letra “e”, por ser a letra mais comum do alfabeto inglês. O texto passa a ter a forma:
 
-VALee LXPFK SQL VAe eCReP IXPFK BPUeL VAe KIE,<br>
-KeReP SQL VAe UONLS CQLUK XP VAeXL ANCCK QS KVQPe,<br>
-PXPe SQL GQLVNC GeP, UQQGeU VQ UXe,<br>
-QPe SQL VAe UNLI CQLU QP AXK UNLI VALQPe<br>
-XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.<br>
-QPe LXPF VQ LBCe VAeG NCC, QPe LXPF VQ SXPU VAeG,<br>
-QPe LXPF VQ MLXPF VAeG NCC NPU XP VAe UNLIPeKK MXPU VAeG.<br>
-XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.
+VALee LXPFK SQL VAe eCReP IXPFK BPUeL VAe KIE,  
+ KeReP SQL VAe UONLS CQLUK XP VAeXL ANCCK QS KVQPe,  
+ PXPe SQL GQLVNC GeP, UQQGeU VQ UXe,  
+ QPe SQL VAe UNLI CQLU QP AXK UNLI VALQPe  
+ XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.  
+ QPe LXPF VQ LBCe VAeG NCC, QPe LXPF VQ SXPU VAeG,  
+ QPe LXPF VQ MLXPF VAeG NCC NPU XP VAe UNLIPeKK MXPU VAeG.  
+ XP VAe CNPU QS GQLUQL OAeLe VAe KANUQOK CXe.
 
 Vemos que logo a primeira palavra do texto termina com “ee”. Existem em torno de 40 palavras em inglês que terminam com “ee” porém poquíssimas delas são comumente usadas. Três destas palavras seriam “three”, “agree” e “melee”, todas as outras são muito mais incomuns quando comparadas às 3 listadas. Podemos descartar a palavra “melee” pois a letra “e” já foi substituída, se usarmos a palavra “agree” a palavra de 3 letras “VAe” se torna “age” e se usarmos “three” se torna “the”. Como é uma palavra de 3 letras que ocorre diversas vezes ao longo do texto é mais provável que se trate de “the” e com isso inferimos as seguintes relações: “V” = “t”, “A” = “h”, “L” = “r”. O texto se torna então:
 
-three rXPFK SQr the eCReP IXPFK BPUer the KIE,<br>
-KeReP SQr the UONrS CQrUK XP theXr hNCCK QS KtQPe,<br>
-PXPe SQr GQrtNC GeP, UQQGeU tQ UXe,<br>
-QPe SQr the UNrI CQrU QP hXK UNrI thrQPe<br>
-XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.<br>
-QPe rXPF tQ rBCe theG NCC, QPe rXPF tQ SXPU theG,<br>
-QPe rXPF tQ MrXPF theG NCC NPU XP the UNrIPeKK MXPU theG.<br>
-XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.
+three rXPFK SQr the eCReP IXPFK BPUer the KIE,  
+ KeReP SQr the UONrS CQrUK XP theXr hNCCK QS KtQPe,  
+ PXPe SQr GQrtNC GeP, UQQGeU tQ UXe,  
+ QPe SQr the UNrI CQrU QP hXK UNrI thrQPe  
+ XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.  
+ QPe rXPF tQ rBCe theG NCC, QPe rXPF tQ SXPU theG,  
+ QPe rXPF tQ MrXPF theG NCC NPU XP the UNrIPeKK MXPU theG.  
+ XP the CNPU QS GQrUQr Ohere the KhNUQOK CXe.
 
 Tendo descoberto estas 4 letras é possível inferir várias palavras caso haja familiaridade com a língua inglesa. Alguns exemplos seriam “SQr” = “for”, “QPe” = “one”, “Ohere” = “where”, “thrQPe” = “throne” etc. O texto final deve ser:
 
-three rings for the elven kings under the sky,<br>
-seven for the dwarf lords in their halls of stone,<br>
-nine for mortal men doomed to die,<br>
-one for the dark lord on his dark throne<br>
-in the land of mordor where the shadows lie.<br>
-one ring to rule them all, one ring to find them,<br>
-one ring to bring them all and in the darkness bind them<br>
-in the land of mordor where the shadows lie.
+three rings for the elven kings under the sky,  
+ seven for the dwarf lords in their halls of stone,  
+ nine for mortal men doomed to die,  
+ one for the dark lord on his dark throne  
+ in the land of mordor where the shadows lie.  
+ one ring to rule them all, one ring to find them,  
+ one ring to bring them all and in the darkness bind them  
+ in the land of mordor where the shadows lie.
 
 Basta agora identificar que se trata da epígrafe de “O Senhor dos Anéis” e o escritor ao qual a dica se refere é J. R. R. Tolkien. O personagem referenciado na quarta linha “... dark lord ...” é Sauron, a flag que soluciona o desafio é então **Sauron**.
-
 
 ## Maquininha temporizadora
 
@@ -213,8 +210,7 @@ O título sugere que a mensagem está codificada em uma base diferente da usual.
 
 Parabéns, você realmente é um entendedor de bases numéricas! A flag é **Ganesh{0ct4l}**.
 
-Obs: Percebe-se que a base é 8 = 2<sup>3</sup>. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados.
-
+Obs: Percebe-se que a base é 8 = 23. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados.
 
 ## Visitando novas bases 5
 
@@ -230,8 +226,7 @@ Pelo título do desafio, vemos que estamos diante de uma mensagem codificada em 
 
 Você já entendeu que existem muitas bases numéricas... **Ganesh{4d10s}**
 
-Obs: 32 = 2<sup>5</sup>
-
+Obs: 32 = 25
 
 ## Visitando novas bases 6
 
@@ -247,8 +242,7 @@ Pelo título do desafio, percebemos que estamos tratando de uma mensagem codific
 
 Parabéns, você conhece a base64! A flag é **Ganesh{c0d1f1c4çã0n40é3ncr1pt4çã0}**
 
-Obs: 64 = 2<sup>6</sup>
-
+Obs: 64 = 26
 
 ## Sanduiche-iche
 
@@ -276,7 +270,6 @@ Jamais, em hipotese alguma, deixe um Vogon ler poesias para voce.
 
 A flag é o ser a qual a mensagem se refere e está no formato Ganesh{}, ou seja, é **Ganesh{Vogon}**.
 
-
 ## Ganesher Perfeitamente Secreto
 
 A frente de cripto mandou uma mensagem perfeitamente secreta de 8 caracteres \(2 a mais que o nome ganesh\) para todos os ingressantes do ganesh:
@@ -288,8 +281,7 @@ Apenas um verdadeiro GANESHER conseguirá decriptar a mensagem. Será que você 
 ### Dicas:
 
 1. Tabela ascii
-
-2. Quem entra no ganesh vira um __________
+2. Quem entra no ganesh vira um **\_\_**
 
 ### Resolução:
 
@@ -302,7 +294,6 @@ Calculando o XOR da chave com o ciphertext, achamos:
 01110110 01100011 01100101 01101100 01101001 01101110 01100100 01111000.
 
 Utilizando a tabela ascii para cada byte acima, encontramos a flag: **vcelindx**.
-
 
 ## Planetas, Cometas, Nebulosas e Rotores
 
@@ -323,7 +314,6 @@ A flag é o texto contido entre parênteses.
 ### Dicas:
 
 1. KPA - Crib = Universo
-
 2. Vulnerabilidade do refletor: P =/= C
 
 ### Resolução:
@@ -337,7 +327,6 @@ Portanto, supondo que U foi encriptado para C e utilizando o arquivo enigma.txt 
 A RESPOSTA PARA A VIDA, O UNIVERSO E TUDO MAIS É \(QUARENTA E DOIS\)
 
 Assim, vemos que a flag é **QUARENTA E DOIS**.
-
 
 ## Roda-roda bitzinho
 
@@ -357,15 +346,21 @@ A flag é o ciphertext que o bixo deseja e não está no formato Ganesh{}
 
 Sabemos que o ciphertext disponibilizado é o resultado do XOR entre “criptologias” e uma chave k. Então para obtermos “criptografia” encriptado com a mesma chave k devemos fazer:
 
-	ciphertext XOR “criptologias” XOR “criptografia”
+```text
+ciphertext XOR “criptologias” XOR “criptografia”
+```
 
 Que é a mesma coisa que:
 
-	“criptologias” XOR k XOR “criptologias” XOR “criptografia”
+```text
+“criptologias” XOR k XOR “criptologias” XOR “criptografia”
+```
 
 Isso produzirá como resultado:
 
-	“criptografia” XOR k
+```text
+“criptografia” XOR k
+```
 
 Que é exatamente o que queremos. Um possível código em Python que obtém esse resultado é o seguinte \(supondo que a função “xor” já esteja implementada\):
 
@@ -383,14 +378,13 @@ Outra opção seria utilizar o site [cryptii](https://cryptii.com/) com a opçã
 
 ![](../../.gitbook/assets/image5.png)
 
-
 ## Uma stream-cipher muito insegura
 
 Uma pessoa muito leiga em criptografia criou uma função PRG com a seguinte descrição:
 
 A PRG recebe como entrada uma chave de 2 bytes e produz como saída uma keystream do tamanho da mensagem.
 
-Inicialmente, keystream é formada somente pela chave. Em seguida, para cada posição i >= 2 da keystream, o valor do byte da posição i é calculado pela soma dos bytes das posições \(i - 1\) e \(i - 2\) módulo 256.
+Inicialmente, keystream é formada somente pela chave. Em seguida, para cada posição i &gt;= 2 da keystream, o valor do byte da posição i é calculado pela soma dos bytes das posições \(i - 1\) e \(i - 2\) módulo 256.
 
 Com base nisso, decripte o ciphertext abaixo utilizando a chave `2d3c`. Ambos estão codificados em hexadecimal.
 
@@ -402,18 +396,17 @@ Com base nisso, decripte o ciphertext abaixo utilizando a chave `2d3c`. Ambos es
 
 ### Resolução:
 
-Seguindo a regra determinada para a geração da keystream e conhecendo a chave utilizada, podemos obter a keystream. De acordo com o texto, os primeiros 2 bytes da keystream são iguais aos da chave. Portanto, sabemos que a keystream começa com `2d3c`. O primeiro byte tem valor 2d<sub>16</sub> = 001011012 = 45<sub>10</sub>, ou seja, em hexadecimal é representado por 2d, em binário é representado por 00101101, e em decimal é representado por 45. O segundo byte vale 3c<sub>16</sub> = 001111002 = 60<sub>10</sub>. Para obter o terceiro byte da keystream, utilizamos os 2 bytes anteriores. Logo, o terceiro byte vale \(2d<sub>16</sub> + 3c<sub>16</sub>\) mod 256<sub>10</sub> = 69<sub>16</sub> \(45<sub>10</sub> + 60<sub>10</sub> = 105<sub>10</sub>\). O mesmo vale para o quarto byte, \(3c<sub>16</sub> + 69<sub>16</sub>\) mod 256<sub>10</sub> = a5<sub>16</sub>, e assim por diante. Lembrando que esta operação de módulo resulta no resto da divisão por 256<sub>10</sub>. Sabendo que a keystream tem o mesmo tamanho da mensagem e do ciphertext, encontramos a keystream \(em hexadecimal\):
+Seguindo a regra determinada para a geração da keystream e conhecendo a chave utilizada, podemos obter a keystream. De acordo com o texto, os primeiros 2 bytes da keystream são iguais aos da chave. Portanto, sabemos que a keystream começa com `2d3c`. O primeiro byte tem valor 2d16 = 001011012 = 4510, ou seja, em hexadecimal é representado por 2d, em binário é representado por 00101101, e em decimal é representado por 45. O segundo byte vale 3c16 = 001111002 = 6010. Para obter o terceiro byte da keystream, utilizamos os 2 bytes anteriores. Logo, o terceiro byte vale \(2d16 + 3c16\) mod 25610 = 6916 \(4510 + 6010 = 10510\). O mesmo vale para o quarto byte, \(3c16 + 6916\) mod 25610 = a516, e assim por diante. Lembrando que esta operação de módulo resulta no resto da divisão por 25610. Sabendo que a keystream tem o mesmo tamanho da mensagem e do ciphertext, encontramos a keystream \(em hexadecimal\):
 
-``2d3c69a50eb3c17435a9de8765ec513d8ecb59247da11ebfdd9c79``
+`2d3c69a50eb3c17435a9de8765ec513d8ecb59247da11ebfdd9c79`
 
 Para decriptar o ciphertext e encontrar a mensagem original, basta fazer o XOR da keystream com o ciphertext. Com isso, encontramos o plaintext, em hexadecimal:
 
-``4e756e63612075736520756d20505247207072657669736976656c``
+`4e756e63612075736520756d20505247207072657669736976656c`
 
 Transformando o resultado acima em ASCII, encontramos a flag:
 
 **Nunca use um PRG previsivel**
-
 
 ## Conversa secreta
 
@@ -449,7 +442,6 @@ Neste caso, é possível perceber que ela está codificada em utf-8 pois o forma
 
 Portanto, a flag é **Ganesh{PythonÉMuitoMassa}**.
 
-
 ## Ataque a outras frentes
 
 As duas mensagens a seguir foram interceptadas. Sabe-se que seus autores são membros da frente de Engenharia Reversa do Ganesh e suspeita-se que ambas foram encriptadas com a mesma chave...
@@ -463,7 +455,6 @@ A flag é o texto contido entre parênteses.
 ### Dicas:
 
 1. Many-Time Pad
-
 2. Crib
 
 ### Resolução:
@@ -472,11 +463,15 @@ Trata-se de um ataque ao many-time pad utilizando um crib. O enunciado deixa imp
 
 Para realizar o ataque, começamos obtendo o XOR entre os dois ciphertexts, o que resulta no XOR entre os dois plaintexts \(vamos chamar de m1Xm2\). Supondo que “Engenharia Reversa” está presente no começo de um dos plaintexts, fazemos:
 
-	m1Xm2 XOR “Engenharia Reversa”
+```text
+m1Xm2 XOR “Engenharia Reversa”
+```
 
 Isso resulta na string “Ganesh eh um grupo”, ou seja, a suposição que fizemos estava correta e conseguimos obter o começo de ambas as mensagens. Da string obtida podemos supor um novo crib, ou seja, uma frase que completa a mensagem. Supondo que seja “ de extensao” e que tam é o tamanho do plaintext obtido até agora, fazemos:
 
-	m1Xm2[tam:fim] XOR “ de extensao”
+```text
+m1Xm2[tam:fim] XOR “ de extensao”
+```
 
 Isso resulta na string “ estuda o fu”, que pertence ao plaintext “Engenharia Reversa”, confirmando a nossa última suposição.
 
@@ -489,7 +484,6 @@ Repetindo o mesmo procedimento pelo restante das mensagens, obtemos os plaintext
 O final da segunda mensagem não é possível obter porque a primeira não possui mais caracteres para servir de comparação.
 
 Por fim, a flag desejada é o texto entre parênteses, ou seja, **softwares**.
-
 
 ## Um tempero especial
 
@@ -546,7 +540,6 @@ Sem enrolacao, sua flag eh Ganesh{t3mp3r1nh0}
 
 Portanto, a flag é **Ganesh{t3mp3r1nh0}**.
 
-
 ## Uma Chave e Ela Outra Vez
 
 Os 10 ciphertexts abaixo estão codificados em hexadecimal e foram encriptados com a mesma chave. O programa "ataque.py" talvez possa te ajudar a decriptá-los.
@@ -583,7 +576,7 @@ A existência de 10 ciphertexts encriptados com a mesma chave e sem nenhuma dica
 
 A função **encontraEspaços** disponibilizada em anexo recebe 2 ciphertexts e retorna uma lista com os valores 0 ou 1, onde 0 indica que provavelmente não há um espaço naquela posição de um dos ciphertexts e 1 indica que provavelmente há um espaço naquela posição.
 
-Para descobrirmos as posições dos espaços na primeira mensagem, utilizamos a função acima com todos os pares \(C<sub>1</sub> - C<sub>i</sub>\) com i diferente de 1, onde C<sub>1</sub> é o primeiro e C<sub>i</sub> é o i-ésimo ciphertext. Sendo P o conjunto das posições onde esses espaços foram encontrados, podemos descobrir a chave dessas mesmas posições fazendo o xor do plaintext \(espaço\) com o ciphertext dessa posição.
+Para descobrirmos as posições dos espaços na primeira mensagem, utilizamos a função acima com todos os pares \(C1 - Ci\) com i diferente de 1, onde C1 é o primeiro e Ci é o i-ésimo ciphertext. Sendo P o conjunto das posições onde esses espaços foram encontrados, podemos descobrir a chave dessas mesmas posições fazendo o xor do plaintext \(espaço\) com o ciphertext dessa posição.
 
 Repetindo o procedimento do parágrafo acima para todos as mensagens, obtemos uma quantidade ideal de posições da chave, as quais nos permitem obter uma quantidade considerável de letras dos plaintexts. O código abaixo ilustra a obtenção das posições de espaços:
 
@@ -633,7 +626,7 @@ Executando o código acima, obtemos a seguinte sequência de listas:
 [1, 3, 2, 2, 2, 1, 2, 9, 2, 1, 3, 6, 3, 9, 2, 3, 6, 9, 4, 4, 0, 3, 2, 9, 3, 2, 1, 3, 3, 1, 0, 9, 1, 4, 8, 1, 3, 4, 0, 2, 3, 2, 9, 0, 4, 0, 9, 3, 3, 2, 3, 7]
 ```
 
-Podemos observar, por exemplo, que na 5ª posição da primeira lista \(referente ao C<sub>1</sub>\) temos o valor 9, que é exatamente igual a quantidade de pares entre C<sub>1</sub> e os outros ciphertexts, ou seja, neste caso podemos afirmar que nessa posição existe um espaço, então obtemos o quinto byte da chave fazendo:
+Podemos observar, por exemplo, que na 5ª posição da primeira lista \(referente ao C1\) temos o valor 9, que é exatamente igual a quantidade de pares entre C1 e os outros ciphertexts, ou seja, neste caso podemos afirmar que nessa posição existe um espaço, então obtemos o quinto byte da chave fazendo:
 
 ```python
 # obtem c1 em formato de bytes
@@ -650,7 +643,7 @@ Porém, vale ressaltar que algumas listas são maiores do que as outras, isso si
 
 O mesmo procedimento citado acima poderia ser repetido para todas as posições de todas as listas, e um código poderia ser feito para automatizar todo esse processo. [Este link](https://github.com/GANESH-ICMC/Apresentacoes/blob/master/Aulas/Frentes/Criptografia/One-time%20pad/ataque_manytimepad.py) possui um programa completo em Python que realiza esse ataque de forma automática, ele exige que os ciphertexts estejam disponibilizados em um arquivo “ciphertexts.txt” e possui mais detalhes que não foram mencionados neste texto por serem mais complexos. Após executá-lo com os ciphertexts deste chall, obtemos as seguintes mensagens:
 
-```
+```text
 0. Fala bixos! Como e_t__  t_anqu_l_s?_ S_jam _e_ vindo_
 1. Eu acho que nao pr_c__c n_m fa_a_ m_s _ript_ _h a fr_nt_ _a__ lega_
 2. Mas essa quarenten_ __xa _oda _e_n _en_o te_p_ ate p_a _s_r__er es__s _________
@@ -667,7 +660,7 @@ O programa não é capaz de obter todas as posições e comete alguns poucos err
 
 Por fim, aqui estão as mensagens originais \(perceba que existe um espaço intencional no começo da oitava mensagem\):
 
-```
+```text
 0. Fala bixos! Como estao, tranquilos?! Sejam bem vindos
 1. Eu acho que nao preciso nem falar mas cripto eh a frente mais legal
 2. Mas essa quarentena esta foda hein tenho tempo ate pra escrever essas mensagens
@@ -681,3 +674,4 @@ Por fim, aqui estão as mensagens originais \(perceba que existe um espaço inte
 ```
 
 A flag é a resposta da última pergunta \(Isengard\) e está no formato Ganesh{}, portanto é **Ganesh{Isengard}**.
+

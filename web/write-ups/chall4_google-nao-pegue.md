@@ -1,10 +1,14 @@
-## Chall 04 - Googlebot, não pegue! (Ping 2019):
-###＃ Marucs:
+# Googlebot, não pegue!
+
+## ＃ Marucs:
+
 Flag: `Ganesh{W3B?_345Y_P345Y_L3M0N_5QU33ZY}`
 
-Ao entrar no site, aparentemente não há nada para se ver, sem requisições especiais, nenhum link interno. Me chamou atenção não ter nenhuma página além da '/', então estava quase setando um dirbuster quando lembrei da existência do arquivo robots.txt, mas não achei que fosse realmente ter um. 
-#### /robots.txt:
-```
+Ao entrar no site, aparentemente não há nada para se ver, sem requisições especiais, nenhum link interno. Me chamou atenção não ter nenhuma página além da '/', então estava quase setando um dirbuster quando lembrei da existência do arquivo robots.txt, mas não achei que fosse realmente ter um.
+
+### /robots.txt:
+
+```text
 # Pensando mais a longo prazo, a execuÃ§Ã£o dos pontos do programa nos obriga Ã  anÃ¡lise das regras de conduta normativas. 
 # Acima de tudo, Ã© fundamental ressaltar que a contÃ­nua expansÃ£o de nossa atividade faz parte de um processo de gerenciamento das diretrizes de desenvolvimento para o futuro. 
 # Assim mesmo, a consulta aos diversos militantes aponta para a melhoria dos mÃ©todos utilizados na avaliaÃ§Ã£o de resultados. 
@@ -26,3 +30,4 @@ Disallow: /test/Spesial%3A
 ```
 
 Lá tinha várias rotas proibidas. Uma delas era a /test/ganesh/flag.php, onde estava guardada a flag.
+

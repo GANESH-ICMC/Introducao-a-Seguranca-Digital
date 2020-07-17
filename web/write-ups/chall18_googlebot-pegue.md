@@ -1,4 +1,4 @@
-## Chall 18 - Googlebot, pegue? (made by Guerra - PInG 2020)
+# Googlebot, pegue?
 
 **Flag:** `Ganesh{Cr4wl1nG_!n_My_w3b5ite}`
 
@@ -6,7 +6,7 @@
 
 Neste chall, nos deparamos com um título muito similar ao visto no Chall "Googlebot, não pegue!" e portanto podemos proceder da mesma forma e averiguar o arquivo robots.txt.
 
-```
+```text
 # Atualizado :)
 User-agent: *
 Disallow: /
@@ -27,13 +27,13 @@ Nos deparamos então com a seguinte página mensagem.
 
 ![NOT GOOGLE BOT](https://i.imgur.com/qS7iN24.png)
 
-Precisamos então que a página pense que somos na verdade um dos crawlers do Google. 
+Precisamos então que a página pense que somos na verdade um dos crawlers do Google.
 
-Pesquisando um pouco, encontramos que os bots do google definem algums cabeçalhos na requisição HTTP que permite identificar o tipo de bot por meio do `User-agent` ([Veja aqui](https://support.google.com/webmasters/answer/1061943?hl=pt-BR)).
+Pesquisando um pouco, encontramos que os bots do google definem algums cabeçalhos na requisição HTTP que permite identificar o tipo de bot por meio do `User-agent` \([Veja aqui](https://support.google.com/webmasters/answer/1061943?hl=pt-BR)\).
 
 Vamos então forjar uma requisição utilizando a ferramenta curl do console:
 
-```html
+```markup
 $ curl -v -H "User-agent: Googlebot" http://url.chall/test/ganesh/flag.php
 ...
 <h1> Olá Googlebot! </h1> 
@@ -43,3 +43,4 @@ $ curl -v -H "User-agent: Googlebot" http://url.chall/test/ganesh/flag.php
 ```
 
 PRONTO! O site acreditou que eramos o GoogleBot e nos retornou a flag.
+

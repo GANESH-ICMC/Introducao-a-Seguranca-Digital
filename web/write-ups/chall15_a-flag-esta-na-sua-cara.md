@@ -1,4 +1,4 @@
-## Chall 15 - A Flag está na sua cara (made by Marucs - PInG 2020)
+# A flag está na sua cara
 
 **Flag:** `GANESH{Fl4G_D3_ScHR0d1NG3r}`
 
@@ -13,3 +13,4 @@ Fazendo a troca para algo aleatório como `?file=X.txt` vemos que ocorre um erro
 Apenas por caráter de teste, vamos tentar fazer o arquivo a ser incluido seja à própria `index.php` uma vez que podemos inferir que esse arquivo é o que está sendo executado na raiz do site.
 
 Sucesso!!! Apesar da página estar vazia, ao analizarmos o HTML por meio das DevTools do navegador podemos ver que o código PHP utilizado foi exposto como texto comum para nós e dentro dele, em um comentário PHP, encontramos a nossa desejada flag.
+

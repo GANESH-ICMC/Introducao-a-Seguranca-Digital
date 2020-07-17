@@ -36,36 +36,38 @@ Clicando duas vezes em uma função entra-se no código dela e Alt+Left volta pa
 Caso queira desfazer alguma operação, o clássico Ctrl+Z é utilizado.
 
 ## Cheatsheet
-Abaixo estão algumas imagens de um cheatsheet (uma "colinha") com as hotkeys mais importantes.
 
-### Load/Import 
+Abaixo estão algumas imagens de um cheatsheet \(uma "colinha"\) com as hotkeys mais importantes.
+
+### Load/Import
+
 Essa tabela apresenta as hotkeys para criar, abrir e salvar projetos, além de importar e exportar binários.
 
 ![Load Project](https://i.imgur.com/OBrbE8a.png)
 
-
 ### Navegação
-Essas são as hotkeys para se movimentar pelo código. (menção pra Alt+Left/Right para voltar ou avançar para locais onde estava anteriormente)
+
+Essas são as hotkeys para se movimentar pelo código. \(menção pra Alt+Left/Right para voltar ou avançar para locais onde estava anteriormente\)
 
 ![Navigation](https://i.imgur.com/kYmuMpU.png)
 
+### Marcação \(Markup\)
 
-### Marcação (Markup)
 Essas hotkeys são muito importantes para deixar o código mais organizado e legível, alterar nome e tipo de variáveis pode deixar um trecho de código bem mais claro.
 
-![Markup1](https://i.imgur.com/YqylOj9.png)
-![Markup2](https://i.imgur.com/8e3xSW9.png)
-
+![Markup1](https://i.imgur.com/YqylOj9.png) ![Markup2](https://i.imgur.com/8e3xSW9.png)
 
 ### Pesquisa/Busca
-Essas hotkeys são utilizados para fazer buscas no programa, tanto no código (texto), quanto na memória.
+
+Essas hotkeys são utilizados para fazer buscas no programa, tanto no código \(texto\), quanto na memória.
 
 ![Search](https://i.imgur.com/npi0O8u.png)
 
 ### Ajuda/Configurações
+
 Essas são as hotkeys para alterar configurações do ghidra, além da hotkey para o _Help_, que tem informações e explicações de como utilizar o ghidra.
 
 ![Help](https://i.imgur.com/OOKxuXA.png)
 
-Link do Cheatsheet completo:
-https://ghidra-sre.org/CheatSheet.html
+Link do Cheatsheet completo: [https://ghidra-sre.org/CheatSheet.html](https://ghidra-sre.org/CheatSheet.html)
+

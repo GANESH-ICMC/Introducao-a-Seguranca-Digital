@@ -1,5 +1,7 @@
 # Buffer Overflow
 
+## Buffer Overflow
+
 Buffer Overflow, também chamado de _Buffer Overrun_, é uma anomalia em um programa em que, ao escrever dados em um buffer \(armazenamento temporário de dados\), a escrita ultrapassa o tamanho do buffer e começa a escrever nos espaços adjacentes.
 
 Quando começamos a programar em C, é muito comum usarmos o seguinte _statement_ para ler strings:
@@ -10,7 +12,7 @@ Porém, quando usamos dessa forma, não especificamos quantos caracteres devemos
 
 Se lermos uma quantidade de caracteres maior que o tamanho da alocação que fizemos para o buffer da string, nosso programa pode se comportar de formas estranhas, como por exemplo causar um erro chamado **segmentation fault**.
 
-## Segmentation Fault
+### Segmentation Fault
 
 Segmentation fault \(falha de segmentação\), também conhecido como _segfault_ ou _access violation_, é uma falha causada por um acesso indevido a uma posição de memória protegida.
 
@@ -24,7 +26,7 @@ Caso o programa tente acessar um segmento da memória sem a devida permissão, o
 
 Por exemplo, digamos que uma certa região da memória está marcada para apenas leitura. Se o programa tentar escrever algo nessa região da memória, será causado o _segmentation fault_.
 
-## Algumas funções comuns em C que permitem Buffer Overflow
+### Algumas funções comuns em C que permitem Buffer Overflow
 
 * scanf\(\) com %s e suas variações
 * gets\(\)
@@ -34,28 +36,28 @@ Por exemplo, digamos que uma certa região da memória está marcada para apenas
 
 Lembrando também que funções supostamente seguras como fgets\(\) com um limite de caracteres errado também pode causar buffer overflow.
 
-## Tipos de Buffer Overflow
+### Tipos de Buffer Overflow
 
 Há certas peculiaridades do local da memória em que o buffer está armazenado que podem causar comportamentos especiais em um buffer overflow. Note que a organização desses locais pode variar dependendo da implementação.
 
-### Stack Buffer Overflow
+#### Stack Buffer Overflow
 
 Um ataque de buffer overflow na stack costuma utilizar certas características da stack, como por exemplo ela crescer para baixo e possuir o endereço de retorno da função salvo na chamada da função. Essa última característica pode permitir que um ataque de buffer overflow possa mudar o fluxo do programa e até executar código arbitrário.
 
-### Heap Overflow
+#### Heap Overflow
 
 Heap Overflow, conhecido também como _Heap Overrun_, é um buffer overflow na memória Heap. Ataques de heap overflow costumam involver a corrupção de valores do cabeçalho de chunks \(regiões de memória alocadas ou desalocadas\) da heap.
 
-# Stack Buffer Overflow
+## Stack Buffer Overflow
 
 Vamos ver o que um buffer overflow na stack pode causar de comportamento anômalo.
 
-```
+```text
 int var1 = 500;
 char var2[4];
 ```
 
-```
+```text
 +------------------+        
 |    0x000001f4    | <-- RSP 
 |    0xffff0ffc    |         
@@ -72,12 +74,12 @@ char var2[4];
 |    RBP antigo    |        
 +------------------+        
 |    RIP antigo    |        
-+------------------+        
++------------------+
 ```
 
 Utilizando essa chamada como exemplo, em que `RBP = 0x7fffffffffff1000` e `RSP = 0x7fffffffffff0ff0`, se antes da função retornar, fosse lido um valor para a string, a stack estaria assim:
 
-```
+```text
 Leitura de 3 caracteres 'A' (0x41) finalizado com '\0'
 +------------------+        
 |    0x000001f4    | <-- RSP 
@@ -95,12 +97,12 @@ Leitura de 3 caracteres 'A' (0x41) finalizado com '\0'
 |    RBP antigo    |        
 +------------------+        
 |    RIP antigo    |        
-+------------------+        
++------------------+
 ```
 
 O espaço de memória para a string que havia sido alocada e continha lixo agora passa a guardar 3 'A' e um '\0', ou seja, 0x00414141.
 
-Mas se estivermos lendo com o seguinte *statement*:
+Mas se estivermos lendo com o seguinte _statement_:
 
 `scanf("%s", var2);`
 
@@ -111,19 +113,19 @@ O que aconteceria se alguem digitasse "ABCDEFG"?
 **Tabela ASCII:**
 
 | Caractere | Hexadecimal |
-|:---------:|:-----------:|
-|   '\0'    |    0x00     |
-|    'A'    |    0x41     |
-|    'B'    |    0x42     |
-|    'C'    |    0x43     |
-|    'D'    |    0x44     |
-|    'E'    |    0x45     |
-|    'F'    |    0x46     |
-|    'G'    |    0x47     |
+| :---: | :---: |
+| '\0' | 0x00 |
+| 'A' | 0x41 |
+| 'B' | 0x42 |
+| 'C' | 0x43 |
+| 'D' | 0x44 |
+| 'E' | 0x45 |
+| 'F' | 0x46 |
+| 'G' | 0x47 |
 
 Memória:
 
-```
+```text
 +------------------+        
 |    0x000001f4    | <-- RSP 
 |    0xffff0ffc    |         
@@ -140,14 +142,14 @@ Memória:
 |    RBP antigo    |        
 +------------------+        
 |    RIP antigo    |        
-+------------------+        
++------------------+
 ```
 
 Como podemos ver, a posição de memória que guardava o RBP anterior foi corrompida. Se retornassemos da função, o RBP iria para a posição `0x00474645`, o que talvez possa causar problemas na execução do programa.
 
 E se colocassemos mais 4 caracteres? Para a string "ABCDEFGHIJK", teriamos:
 
-```
+```text
 +------------------+        
 |    0x000001f4    | <-- RSP 
 |    0xffff0ffc    |         
@@ -164,10 +166,10 @@ E se colocassemos mais 4 caracteres? Para a string "ABCDEFGHIJK", teriamos:
 |    RBP antigo    |        
 +------------------+        
 |    RIP antigo    |        
-+------------------+        
++------------------+
 ```
 
-Nós corrompemos agora o endereço de retorno (RIP anterior) também. Mas espera, então após retornar dessa função, será executado a instrução com o endereço `0x00515049`? **Exatamente.** Mas e se essa região não for uma região com permissões para execução? **Nesse caso, teremos um `segmentation fault`.**
+Nós corrompemos agora o endereço de retorno \(RIP anterior\) também. Mas espera, então após retornar dessa função, será executado a instrução com o endereço `0x00515049`? **Exatamente.** Mas e se essa região não for uma região com permissões para execução? **Nesse caso, teremos um `segmentation fault`.**
 
 Agora vamos pensar por outro lado, e se a região para qual o RIP foi mandado for uma região executável, como por exemplo a região de uma função? **Nesse caso, as instruções nessa região seriam executadas.**
 
@@ -203,17 +205,17 @@ No exemplo anterior, se quisessemos que o endereço de retorno fosse `0x01234567
 
 `echo -ne 'AAAAAAAA\x67\x45\x23\x01'`
 
-Para redirecionar a saida do echo para a entrada do programa (stdin), poderiamos usar o `|`. Assim:
+Para redirecionar a saida do echo para a entrada do programa \(stdin\), poderiamos usar o `|`. Assim:
 
 `echo -ne 'AAAAAAAA\x67\x45\x23\x01' | ./meuprograma`
 
-Ou também escrever esses dados a serem enviados (payload) em um arquivo e redirecioná-lo para o programa:
+Ou também escrever esses dados a serem enviados \(payload\) em um arquivo e redirecioná-lo para o programa:
 
-`echo -ne 'AAAAAAAA\x67\x45\x23\x01' > payload.txt`
-`./meuprograma < payload.txt`
+`echo -ne 'AAAAAAAA\x67\x45\x23\x01' > payload.txt` `./meuprograma < payload.txt`
 
-Esse segundo método é especialmente útil quando estamos usando o gdb, já que não conseguimos usar o | dentro dele. No gdb, o comando para redirecionar esse `payload.txt` seria:
+Esse segundo método é especialmente útil quando estamos usando o gdb, já que não conseguimos usar o \| dentro dele. No gdb, o comando para redirecionar esse `payload.txt` seria:
 
 `run < payload.txt`
 
 Dessa forma, temos todas as ferramentas necessárias para explorar um stack buffer overflow.
+
