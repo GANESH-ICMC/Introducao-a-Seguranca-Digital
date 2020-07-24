@@ -14,7 +14,7 @@ Na maioria das distribuições, o programa está nos repositórios padrões, ent
 
 ### Debian/Ubuntu
 
-Aqui é o exemplo de instalação no Debian:
+Aqui é o exemplo de instalação no Debian (execute o comando como superusuário - root):
 
 ```text
 # apt install wireshark
