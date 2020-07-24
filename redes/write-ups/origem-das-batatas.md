@@ -16,7 +16,7 @@ Como já sabemos qual porta está sendo escutada \(dada pelo código\), rodamos 
 
 $ nc localhost < NUMERO DA PORTA > 
 
-:ballot_box_with_check: Dessa forma obtemos a flag.
+Dessa forma obtemos a flag.
 
 ## PARTE 2.1
 
@@ -36,7 +36,7 @@ $ netstat -at -p Mostra também o programa que está sendo executado em cada por
 
 Com esse último comando é possivel ver quais portas TCP estão abertas e verificar qual é a porta que esta ouvindo \(na qual o programa está rodando\).
 
-:ballot_box_with_check: Sabendo qual a porta que está ouvindo podemos fazer a mesma coisa que foi feita na parte 1 \(com o netcat\) para obtermos mais uma flag.
+Sabendo qual a porta que está ouvindo podemos fazer a mesma coisa que foi feita na parte 1 \(com o netcat\) para obtermos mais uma flag.
 
 ## PARTE 2.2
 
