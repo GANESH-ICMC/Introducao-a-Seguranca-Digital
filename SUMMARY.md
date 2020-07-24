@@ -38,6 +38,8 @@
   * [Slow Loris](redes/slowloris.md)
   * [Write-ups](redes/write-ups/README.md)
     * [Origem das Batatas](redes/write-ups/origem-das-batatas.md)
+    * [Na Casa de Câmbio](redes/write-ups/na-casa-de-cambio.md)
+    * [Tubarão no Fio](redes/write-ups/tubarao-no-fio.md)
     * [Bataterro](redes/write-ups/Bataterro.md)
     * [O castelo de 10000 portas](redes/write-ups/10k-portas.md)
   * [Avançado](redes/avancado.md)
