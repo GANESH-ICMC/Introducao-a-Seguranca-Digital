@@ -2,7 +2,7 @@
 
 ## Guerra:
 
-**Flag:** `GANESH{RhoY8v9ZOFhQkTyI3WP}`
+**Flag:** `GANESH{RhoY8fv9ZOFhQkTyI3WP}`
 
 Ao acessar a página do chall, recebemos uma página de acesso não autorizado.
 
