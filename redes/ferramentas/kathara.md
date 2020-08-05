@@ -48,7 +48,7 @@ Agora teremos que instalar as bibliotecas Python utilizadas. Vá para o
 diretório com o código e digite:
 
 ```
-sudo python -m pip install -r requirements.txt
+sudo python -m pip install -r src/requirements.txt
 ```
 
 Em seguida, você já poderá usar o kathará. Para testar a instalação, pode usar
@@ -62,7 +62,7 @@ E ele checará se consegue rodar um exemplo, pode demorar alguns minutos
 a depender de sua conexão.
 
 Se ele apresentar erro, pode ser que seja necessário habilitar e iniciar
-o script responsável por iniciar o docker, para isso:
+o serviço responsável por iniciar o docker, para isso:
 
 ```
 sudo systemctl enable docker.service
