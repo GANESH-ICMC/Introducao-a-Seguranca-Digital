@@ -34,6 +34,7 @@
     * [Netcat](redes/ferramentas/netcat.md)
     * [Nmap](redes/ferramentas/nmap.md)
     * [Netstat](redes/ferramentas/netstat.md)
+    * [Kathará](redes/ferramentas/kathara.md)
   * [SYN Flood](redes/syn-flood.md)
   * [Slow Loris](redes/slowloris.md)
   * [Write-ups](redes/write-ups/README.md)
