@@ -26,6 +26,7 @@
   * [Guia de Python para criptografia](criptografia/guia-de-python-para-criptografia.md)
   * [Write-Ups](criptografia/writeups/README.md)
     * [Chall](criptografia/writeups/writeups.md)
+* [Hardware](hardware/README.md)
 * [Redes](redes/README.md)
   * [Pacote & Protocolo](redes/pacote-and-protocolo.md)
   * [Three-way Handshake](redes/three-way-handshake.md)
