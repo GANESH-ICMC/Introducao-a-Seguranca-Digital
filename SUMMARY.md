@@ -36,6 +36,7 @@
     * [Netstat](redes/ferramentas/netstat.md)
     * [Kathará](redes/ferramentas/kathara.md)
   * [SYN Flood](redes/syn-flood.md)
+  * [DHCP](redes/dhcp.md)
   * [Slow Loris](redes/slowloris.md)
   * [Arp Cache Poisoning](redes/arp-cache-poisoning.md)
   * [Write-ups](redes/write-ups/README.md)
