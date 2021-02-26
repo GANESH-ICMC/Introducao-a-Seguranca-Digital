@@ -9,3 +9,12 @@ O tipo mais básico de NAT provavelmente utilizamos todos os dias. Trata-se das 
 Primeiramente, vale entender que a faixa de endereços 192.168.0.0/24 é reservada justamente para uso em redes locais. Então os servidores [DHCP](dhcp.md) configuram
 
 ## Como é feita a tradução de endereços
+
+O gateway que realiza a NAT possui uma tabela interna, que armazena a relação entre saída e os cientes.
+
+## Exemplo de comunicação através de NAT
+
+### Rede hipotética
+
+![Rede](../.gitbook/assets/redes/nat.png)
+

@@ -10,6 +10,14 @@ Em redes domésticas, tipicamente o roteador assume todas as funções possívei
 Portanto, o que chamamos de roteador é, ao mesmo tempo: modem(no caso de o dispositivo que se conecta à fibra óptica ou cabo coaxial e ele prover a conexão WAN), roteador, servidor DHCP, entre outros.
 No entanto, não há problema nenhum em utilizar um outro servidor DHCP na rede, o que geralmente é necessário quando se tem uma rede mais complexa ou customizada, como é o caso do [Pi-hole](https://pi-hole.net/), que permite ser tanto um servidor DHCP quanto um servidor DNS.
 
+## Parâmetros configurados
+
+- Endereço IP do cliente
+- Gateway da rede: roteador por onde sai a informação.
+- Servidores DN:
+- Máscara da sub-rede: o "tamanho" da rede
+- Tempo de concessão do endereço (Lease time): O tempo que o servidor DHCP "empresta" o endereço.
+
 ## Processo de configuração.
 
 O processo é realizado através de pacotes UDP. As portas padrão para isso são 67
@@ -18,9 +26,7 @@ no servidor e 68 no cliente.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/DHCP_session.svg/260px-DHCP_session.svg.png)
 
 1. Discovery: O cliente envia um pacote de descoberta para toda a rede.
-2. Offer: Um (ou mais) servidores DHCP oferecem a configuração, consistindo
-   tipicamente de endereço IP, servidores DNS, lease time e gateway padrão.
+2. Offer: Um (ou mais) servidores DHCP oferecem a configuração, consistindo tipicamente de endereço IP, servidores DNS, lease time e gateway padrão.
 3. Request: O cliente pede a oferta ao servidor DHCP.
-4. Acknowledgement: O servidor reconhece a oferta, e envia a mensagem encerrando
-   o processo.
+4. Acknowledgement: O servidor reconhece a oferta, e envia a mensagem encerrando o processo.
 

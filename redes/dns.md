@@ -18,3 +18,7 @@ Mas agora, já se perguntou a quantidade de domínios que existem? Não seria mu
 Para isso, o sistema de domínios é arquitetado de uma forma distribuída. Os servidores DNS têm uma lista de quais são outros servidores que podem ter o domínio procurado.
 Ao fazer uma requisição DNS para o servidor, se ele não possui a entrada (par domínio:ip) ele delega para outro servidor que está em sua lista.
 
+## Referências
+
+- [Cloudflare](https://www.cloudflare.com/learning/dns/what-is-dns/)
+
