@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introdução à Segurança Digital](README.md)
-* [Introdução à Linux](introducao_linux/README.md)
+* [Introdução a Linux](introducao_linux/README.md)
   * [Write-ups](introducao_linux/writeups/README.md)
     * [Nível 00](introducao_linux/writeups/lvl00.md)
     * [Nível 01](introducao_linux/writeups/lvl01.md)
@@ -28,6 +28,7 @@
     * [Chall](criptografia/writeups/writeups.md)
 * [Redes](redes/README.md)
   * [Pacote & Protocolo](redes/pacote-and-protocolo.md)
+  * [IANA](redes/iana.md)
   * [Three-way Handshake](redes/three-way-handshake.md)
   * [Ferramentas](redes/ferramentas/README.md)
     * [Wireshark](redes/ferramentas/wireshark.md)
@@ -37,6 +38,8 @@
     * [Kathará](redes/ferramentas/kathara.md)
   * [SYN Flood](redes/syn-flood.md)
   * [DHCP](redes/dhcp.md)
+  * [DNS](redes/dns.md)
+  * [NAT](redes/nat.md)
   * [Slow Loris](redes/slowloris.md)
   * [Arp Cache Poisoning](redes/arp-cache-poisoning.md)
   * [Write-ups](redes/write-ups/README.md)
