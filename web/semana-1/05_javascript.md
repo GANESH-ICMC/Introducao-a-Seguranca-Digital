@@ -1,5 +1,7 @@
 # Introdução ao Javascript
 
+## Visão Geral
+
 Javascript \(ou ECMAScript\) é uma linguagem de programção muito utilizada no desenvolvimento Web. Com ela, é possível programar o comportamento das páginas HTML - alterar conteúdo e atributos HTML, CSS e mais.
 
 O JavaScript nasceu como uma linguagem voltada para processamento no navegador. Entretanto, com a chegada do Node.js, que permite a execução de Javascript fora do navegador, _back-ends_ de websites e aplicações feitas majoritariamente em Javascript \(como o Discord\) também passaram a utilizar amplamente a linguagem.
@@ -16,7 +18,27 @@ Praticamente todas as páginas na internet usam Javascript para fazer operaçõe
 </html>
 ```
 
-## Script interno e externo
+### Engines
+
+Uma Engine Javascript ou Interpretador Javascript é um programa especializado em ler e processar código Javascript, todos os mais populares navegadores modernos utilizam interpretadores mas a engine especifica depende de qual navegador está sendo utilizadas, sendo possivel que diferentes interpretadores entendam código de formas diferentes. Alguns exemplos de engines e navegadores diferentes são:
+
+| Engine        | Navegador    |
+| ------------- |:-------------|
+|  [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine))         | Google Chrome e Opera |
+|  [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey)         | FireFox  |
+|  [Chakra](https://en.wikipedia.org/wiki/Chakra_(JavaScript_engine)) | Internet Explorer |
+|  [WebKit](https://en.wikipedia.org/wiki/WebKit)                     | Safari |
+
+Por consequência é importante sempre verificar quais features são tem suporte em quais engines, para isso você pode verificar em tabelas de compatibilidade:
+
+* <https://caniuse.com/>
+* <https://kangax.github.io/compat-table/es6/>
+
+É importante lembrar que mesmo navegadores sendo o principal uso de Engines qualquer software que precisa processar Javascript utiliza uma engine de forma ou outra.
+
+## Estrutura e sintaxe do JS
+
+### Script interno e externo
 
 O código Javascript pode estar dentro ou fora de um documento HTML. Em ambos os casos, o Javascript fica dentro de uma tag `<script></script>`.
 
@@ -55,9 +77,28 @@ O código Javascript pode estar dentro ou fora de um documento HTML. Em ambos os
   </html>
   ```
 
-## Estrutura e sintaxe do JS
+### Comentários
 
-### Variáveis e constantes:
+Você pode adicionar comentários no seu código para mante-lo organizado sem afetar a execução, comentários são linhas de codigo que são ignoradas pelo interpretador.
+
+* Utilizando duas barras você comenta até o fim da linha
+
+``` javascript
+// Essa linha está comentada
+
+let variavel = "valor"; // Metade da linha está comentada
+```
+
+* Utilizando uma barra e um asterisco você pode comentar multiplas linhas de código
+
+``` javascript
+/* 
+  Esse é um comentário multilinha
+  Tudo aqui está comentado
+*/
+```
+
+### Variáveis e constantes
 
 **Variáveis** são usadas para armazenar dados que podem ser modificados a qualquer momento. Em JS, as variáveis são declaradas com `var` ou `let`e elas podem ser praticamente qualquer coisa: números, palavras, funções etc.
 
@@ -114,7 +155,7 @@ Já ao usar `let`, a variável sempre será _block scoped_, ou seja, ela está l
     }; // isso não é permitido! ERRO!!
 ```
 
-### Operadores e comparadores:
+### Operadores e comparadores
 
 * **Operadores aritméticos**: são os operadores que realizam operações aritméticas em números \(e variáveis com valores numéricos\). Entretanto, em certos casos, é possível usar esses operadores com outros tipos de variáveis, como no caso de "soma" de strings \(`"Nome " + "Sobrenome" -> "Nome Sobrenome"`\).
 
@@ -128,6 +169,8 @@ Já ao usar `let`, a variável sempre será _block scoped_, ou seja, ela está l
 | % | Módulo \(resto\) | `let x = 10 % 3; // x = 1` |
 | ++ | Incremento \(+1\) | `let x = 1; x++; // x = 2` |
 | -- | Decremento \(-1\) | `let x = 1/ x--; // x = 0` |
+
+> **Operações matematicas são "seguras" no JavaScript** isso significa que você pode fazer qualquer conta e não vai gerar um erro fatal que mata o programa, no máximo retornando *NaN* (Not-a-Number), um valor númerico que não existe.
 
 * **Comparadores**:
 
@@ -143,20 +186,38 @@ Já ao usar `let`, a variável sempre será _block scoped_, ou seja, ela está l
 | &lt;= | Menor ou igual que | `4 <= 3 (false)` |
 
 * Ainda há os **comparadores lógicos**. São eles:
-  * `&&` \(and\): `(2 < 10 && 0 > 1)` --&gt; verdade **E** mentira é **mentira** 
-  * `||` \(or\): `(5 == 5 || 3 == 5)` --&gt; verdade **OU** mentira é **verdade**    
+  * `&&` \(and\): `(2 < 10 && 0 > 1)` --&gt; verdade **E** mentira é **mentira**
+  * `||` \(or\): `(5 == 5 || 3 == 5)` --&gt; verdade **OU** mentira é **verdade**
   * `!` \(not\): `!(1 == 1)` --&gt; **NÃO** verdade é **mentira**
 * E, por último, também é importante conhecer o **comparador ternário**, que atua como um comparador IF:
 
-  \`\`\` javascript // Comparador ternário: variablename = \(condition\) ? value1 : value2; var voteable = \(age &lt; 18\) ? "Too young" : "Old enough";
+``` javascript
+// Comparador ternário: 
+// variablename = (condition) ? value1 : value2;
+var voteable = (age < 18) ? "Too young" : "Old enough";
 
 // Isso é igual a:
+if (age < 18) {
+  voteable = "Too young";
+} else {
+  voteable = "Old Enough";
+}
+```
 
-voteable = \(\)\(age\) =&gt; { if \(age &lt; 18\) { return "Too young"; } else { return "Old enough"; } }
+### Tipos de dados
 
-```text
-### Tipos de dados:
-De forma simplificada, podemos resumir os tipos de dados em primitivos e complexos. Os **tipos primitivos** são: *string* (basicamente, caractéres e palavras - sempre entre aspas), *boolean* (verdadeiro ou falso), *number* (número inteiro, real) e *undefined* (variáveis sem valor definido). Já os **tipos complexos** são: *object* (listas, JSON, XML, vetores, dados inexistentes etc.) e *function* (funções).
+De forma simplificada, podemos resumir os tipos de dados em primitivos e complexos. Os **tipos primitivos** são:
+
+* *string* \(basicamente, caractéres e palavras - sempre entre aspas\).
+* *boolean* \(verdadeiro ou falso\).
+* *number* \(número inteiro, real\).
+* *undefined* \(variáveis sem valor definido\).
+
+Já os **tipos complexos** são:
+
+* *object* \(listas, JSON, XML, vetores, dados inexistentes etc.\).
+* *function* \(funções\).
+
 ``` javascript
 typeof "" // String
 typeof "Marcelo Batata" // String
@@ -188,7 +249,7 @@ null === undefined // retorna false
 null == undefined // retorna true (loose comparison)
 ```
 
-### Funções:
+### Funções
 
 Funções são blocos de códigos que executam uma tarefa. Algo deve invocar a função para ela ser executada \(ela precisa de algum "gatilho", nem que seja outra parte do código "chamando" ela - ou até ela própria se invocando\). Ou seja, a execução do código dentro da função ocorre quando:
 
@@ -196,7 +257,7 @@ Funções são blocos de códigos que executam uma tarefa. Algo deve invocar a f
 * A função é invocada por outro trecho de código Javascript;
 * A própria função invoca-se e é executada automaticamente.
 
-#### Sintaxe:
+#### Sintaxe
 
 ```javascript
 function nome_funcao(parametro1, parametro2, parametro3) {
@@ -215,9 +276,9 @@ var multiplicacao = function(x, y) {
 const multiplicacao2 = (x, y) => { return x * y };
 ```
 
-### Exemplo comentado:
+### Exemplo comentado
 
-Para ajudar no entendimento da sintaxe da linguagem é bom analisar um trecho de código comentado: _Obs.: `//` representa um comentário._
+Para ajudar no entendimento da sintaxe da linguagem é bom analisar um trecho de código comentado.
 
 ```javascript
 // o bloco de código da função 'requisitarDadosPessoais()' começa aqui e quando ela for chamada, tudo que está aqui dentro será executado (linha por linha, de cima para baixo)
@@ -243,3 +304,8 @@ async function requisitarDadosPessoais(userID) {
 }
 ```
 
+## Leitura adicional
+
+* [Guias detalhados do JavaScript básico ao avançado](https://javascript.info>)
+* [Manual - Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference)
+* [Especificação do JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)

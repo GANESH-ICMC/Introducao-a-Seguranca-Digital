@@ -4,26 +4,29 @@
 
 ### Conceitos iniciais:
 
-* [Servidores Web, o que são?](servidores_web.md)
-* [Ports e Serviços](ports_e_servicos.md)
+* [Servidores Web, o que são?](08_servidores_web.md)
+* [Portas e Serviços](ports_e_servicos.md)
 
 ### Estrutura back-end de uma página Web dinámica:
 
-* [Linguagens de Programação \(Server Side\)](linguagens_server_side.md)
-* [API's e Serviços Rest](apis_e_rest.md)
+* [PHP e programação server-side](09_PHP.md)
+* [APIs e Serviços Rest](apis_e_rest.md)
 
 ### Bancos de dados, o que são:
 
-* [Introdução aos Bancos de Dados](bancos_de_dados.md)
+* [Introdução aos Bancos de Dados](13_bancos_de_dados.md)
 
 ### Algumas vulnerabilidades:
 
-* [SQL Injection](sql_injection.md)
-* [Command Injection](command_injection.md)
-* [Insecure Direct Object Reference](https://github.com/GANESH-ICMC/Introducao-a-Seguranca-Digital/tree/aef5855a076613fffed104ab8318ea1a266f0720/web/semana-2/IDOR.md)
+* [Command Injection](10_command_injection.md)
+* [Cookie Poisoning](12_cookie_poisoning.md)
+* [SQL Injection](14_sql_injection.md)
+* [Insecure Direct Object Reference](15_IDOR.md)
 
 #### Autores do material:
 
 * [Gabriel Van Loon](https://github.com/GabrielVanLoon)
 * [Alexandre Junior](https://github.com/alexandregjr)
+* [Pedro Guerra Lourenço](https://github.com/Haltz01)
+* Adicionar outros autores que ajudaram em 2021!
 

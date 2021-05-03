@@ -2,7 +2,7 @@
 
 É uma vulnerabilidade web que permite ao atacante interferir nas _queries_ \(consultas\) feitas para o banco de dados de certa aplicação.
 
-Em geral, o atacante consegue visualizar dados armazenados no bando de dados que não pertencem a ele \(informação de outros usuários, dados da aplicação, senhas etc.\). Além disso, pode ser que o atacante consiga modificar e deletar dados do DB e, em casos mais extremos, escalar o ataque para comprometer o funcionamento do _back-end_ da aplicação ou performar um ataque DoS. De forma similar, ele pode subverter a lógica de certas aplicações e, por exemplo, passar pelo portal de login de algum site sem ter uma conta.
+Em geral, o atacante consegue visualizar dados armazenados no banco de dados que ele não deveria poder ver \(informação de outros usuários, dados da aplicação, senhas etc.\). Além disso, pode ser que o atacante consiga modificar e deletar dados do DB e, em casos mais extremos, escalar o ataque para comprometer o funcionamento do _back-end_ da aplicação ou performar um ataque DoS. De forma similar, ele pode subverter a lógica de certas aplicações e, por exemplo, passar pelo portal de login de algum site sem ter uma conta.
 
 ## Exemplos de SQL Injections
 
@@ -40,7 +40,7 @@ SELECT * FROM products WHERE category = 'Gifts' OR 1=1--'
 
 _Obs.: o `+` transforma-se em espaço_
 
-Nesse caso, a consulta quer obter todas as informações \(_\) da tabela de produtos \("products"\), mas só da categoria "Gifts" **ou 1 = 1**. Num primeiro momento isso pode parecer estranho, mas essa query está buscando todas as informações da tabela de produtos de **todos** os produtos, porque a condição para um produto ser selecionado pela consulta é que ele deve ser da categoria "Gifts" ou \*1 deve ser igual à 1, o que sempre é verdade!_. Dessa forma, o atacante recebe como resposta todas as entradas da tabela produtos.
+Nesse caso, a consulta quer obter todas as informações \(\*\) da tabela de produtos \("products"\), mas só da categoria "Gifts" **ou 1 = 1**. Num primeiro momento isso pode parecer estranho, mas essa query está buscando todas as informações da tabela de produtos de **todos** os produtos, porque a condição para um produto ser selecionado pela consulta é que ele deve ser da categoria "Gifts" ou _1 deve ser igual à 1, o que sempre é verdade!_. Dessa forma, o atacante recebe como resposta todas as entradas da tabela produtos.
 
 Além disso, note que há um `--` ao final da entrada do atacante. Isso representa, em certos bancos de dados \(e nesse caso\), um comentário. Logo, tudo que estiver escrito após isso será considerado um comentário. Isso é necessário para que a _query_ termine com o código do atacante e ignore todo o resto. Por exemplo, se a consulta fosse
 
@@ -174,4 +174,6 @@ Ferramentas como Burpsuite ou Sqlmap são capazes de detectar diversas vulnerabi
 * [Portswigger](https://portswigger.net/web-security/sql-injection)
 * [OWASP](https://owasp.org/www-community/attacks/SQL_Injection)
 * [Acunetix](https://www.acunetix.com/websitesecurity/sql-injection/)
+
+* [Slides](https://docs.google.com/presentation/d/1b4_fIMaTUPHAttJusjnAbkdXcLSwSJiV9X3IfRGP0yI/edit?usp=sharing)
 

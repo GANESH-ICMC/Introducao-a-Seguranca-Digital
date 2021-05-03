@@ -10,7 +10,7 @@ Já a Web \(World Wide Web\) representa um conjunto de informações acessadas v
 
 Os recursos na Web costumam ser apresentados na forma de _web pages_ - que formam _websites_. Essas páginas são criadas e estilizadas por meio de linguagens como HTML, CSS e Javascript - sendo possível utilizar também outras, como PHP e Python.
 
-## Arquitetura de uma aplicação Web
+## A Arquitetura
 
 ![Arquitetura de um web app](../../.gitbook/assets/arquitetura_web_back_front.png)
 
@@ -26,11 +26,11 @@ Esses componentes englobam:
 * Servidor da aplicação web -&gt; _server-side_
 * Servidor do banco de dados -&gt; _server-side_
 
-  \_Obs.: o servidor da aplicação e do banco de dados podem ser a mesma máquina.
+  _Obs.: o servidor da aplicação e do banco de dados podem ser a mesma máquina._:w
 
 #### Navegador e páginas web
 
-O navagador permite que o usuário interaja com as funções das aplicações web. Além disso, as páginas por ele exibidas são geralmente desenvolvidas usando HTML, CSS e Javascript.
+O navegador recebe e processa o código das páginas web, geralmente desenvolvidas usando HTML, CSS e Javascript, e então mostrar o resultado para o usuário e permitir que ele interaja com a página já pronta.
 
 #### Servidor da aplicação Web
 
@@ -49,4 +49,3 @@ Em seguida, o navegador fará uma requisição para o servidor para o qual o end
 Como resposta, o servidor \(_back-end_\) enviará arquivos e informações do tipo HTML, CSS, JS, PHP, JSON, JPG e, possivelmente, outros. Esses arquivos são tratados pelo navegador, que é responsável por exibi-los ao usuário, e pelo código da página web presente no _front-end_. Além disso, podem haver _headers_ importantes nesses arquivos, contendo, por exemplo, informações sobre a sessão atual.
 
 Vale destacar que o sistema operacional do cliente é responsável por fazer as requisições "saírem" do navegador em direção à Internet e por recuperar as respostas vindas do servidor \(pela Internet\). O sistema operacional expõe o computador à rede por meio de portas, que permitem a troca de informação via certos protocolos, como o HTTP \(comumente porta 80\) e o HTTPS \(comumente porta 443\).
-
