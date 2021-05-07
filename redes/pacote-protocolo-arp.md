@@ -14,28 +14,18 @@ Além de ditar como um pacote deve ser interpretado, o protocolo vai muito além
 
 No exemplo abaixo, mostramos como um protocolo descreve um pacote de dados. Cada conjunto de bits do pacote representa alguma informação para compreender aquilo que está sendo transmitido.
 
-<figure align="center">
-  <img src="https://i.imgur.com/8NAiV0T.png">
-  <figcaption>Imagem mostrando como seria a estrutura simples de um pacote</figcaption>
-</figure>
-
-<!---![](https://i.imgur.com/8NAiV0T.png)-->
+![Imagem mostrando como seria a estrutura simples de um pacote](https://i.imgur.com/8NAiV0T.png)
 
 ## Pacote
 Quando queremos transmitir uma informação através de uma rede, o que acontece é que temos que dividir essa informação em diversos fragmentos para que seja possível transmitir esses dados, pois existe um limite de dados que pode percorrer uma rede. Dessa forma, podemos definir pacote como:
 
 >Unidade básica de informação em uma rede
 
-<figure align="center">
-  <img src="https://i.imgur.com/X39WHVB.png">
-</figure>
+![](https://i.imgur.com/X39WHVB.png)
 
 A estrutura de um pacote é definida pelo tipo de pacote e pelo protocolo. Geralmente um pacote tem um cabeçalho e uma carga útil. O cabeçalho mantém informações gerais sobre o pacote, o serviço e outros dados relacionados à transmissão. Assim, contém diversas informações como a origem e destino do pacote, a numeração do pacote dentro de uma sequência, tipo de serviço, flags, entre outras informações técnicas.
 
-<figure align="center">
-  <img src="https://i.imgur.com/w3OmZ8S.jpg">
-  <figcaption>Exemplo da estrutura do cabeçalho de um pacote IP (Internet Protocol)</figcaption>
-</figure>
+![Exemplo da estrutura do cabeçalho de um pacote IP (Internet Protocol)](https://i.imgur.com/w3OmZ8S.jpg)
 
 > Caso tenha se interessado, veja um vídeo acerca do envio dos dois primeiros pacotes da Internet: https://www.youtube.com/watch?v=uY7dUJT7OsU
 
@@ -44,25 +34,16 @@ Aprofundando no conceito de distribuição dos pacotes na rede, há dois conceit
 ### Encapsulamento
 Agora que foi introduzido os conceitos básicos de pacotes e protocolos, deve-se olhar para como funciona o envio de dados através da rede como um todo. Toda camada do modelo OSI possui um protocolo que dita as regras de comunicação e de funcionamento para ela. Como um mesmo pacote passa por mais de uma camada, ou seja, mais de um protocolo é aplicado nele, é necessário haver uma forma desse pacote carregar os dados e informações relativas a cada protocolo sem interferir na integridade do resto do pacote. É aí que o conceito de **encapsulamento** aparece.
 
-<figure align="center">
-  <img src="https://i.imgur.com/cykFTSK.png">
-  <figcaption>Exemplo do trajeto dos pacotes no modelo OSI</figcaption>
-</figure>
+![Exemplo do trajeto dos pacotes no modelo OSI](https://i.imgur.com/cykFTSK.png")
 
 Para cada protocolo, ele considera o pacote recebido como "data" e aplica um cabeçalho(header) do protocolo em cima do pacote, sem comprometer sua integridade. Na medida que o host receptor vai recebendo os pacotes por cada uma das camadas, o header relativo a ela é interpretado e retirado do pacote. Isso se chama desencapsulamento e é semelhante a uma cebola sendo descascada de cada uma das suas camadas.
 
-<figure align="center">
-  <img src="https://i.imgur.com/h7uTIt9.png">
-  <figcaption>Demonstração do encapsulamento (payroll: carga útil)</figcaption>
-</figure>
+![Demonstração do encapsulamento (payroll: carga útil)](https://i.imgur.com/h7uTIt9.png)
 
 ### Comutação de Pacotes
 Comutação de pacotes se refere a tecnologia de comunicação utilizada no núcleo da rede em redes de computadores. Quando um computador deseja enviar uma informação a outro computador, ele encapsula a informação em vários **pacotes de dados**, encaminhando de roteador em roteador em função do endereço do destino. Nisso, ocorre um compartilhamento de recursos na forma de uma **multiplexação estatística** (os pacotes podem trafegar pela rede ocupando o mesmo espaço), ou seja, os pacotes trafegam pela rede por diversos equipamentos até chegarem ao seu destino, onde serão recolhidos e ordenados. 
 
-<figure align="center">
-  <img src="https://i.imgur.com/iXZssAh.jpg">
-  <figcaption>Exemplo de Comutação de pacotes</figcaption>
-</figure>
+![Exemplo de Comutação de pacotes](https://i.imgur.com/iXZssAh.jpg)
 
 A comutação de pacotes existe em contraponto à comutação de circuitos onde uma conexão exclusiva é criada para cada comunicação, como por exemplo linha telefônica. Na de pacotes, não há reserva de recursos, mas sim um compartilhamento da estrutura da rede que é trafegada a partir do uso de pacotes endereçados.
 
