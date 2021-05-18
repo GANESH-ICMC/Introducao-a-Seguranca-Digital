@@ -68,4 +68,4 @@ Outra forma de garantir que a página não sofrerá de vulnerabilidades XSS, mes
 * [https://pt.pmgacademy.com/blog/artigos/tudo-sobre-xss](https://pt.pmgacademy.com/blog/artigos/tudo-sobre-xss)
 * [https://littlemaninmyhead.wordpress.com/2018/06/24/demonstrating-reflected-versus-dom-based-xss/](https://littlemaninmyhead.wordpress.com/2018/06/24/demonstrating-reflected-versus-dom-based-xss/)
 
-* [Slides](https://docs.google.com/presentation/d/13nax37vFi-T5ZyQp0VmpsP1NDS1LUkGkYBeg5cP4TUw/edit?usp=sharing)
+* [Slides](https://drive.google.com/file/d/1-vz9dA5RHaV8idx8_TT31x9StyBKl6MU/view?usp=sharing)
