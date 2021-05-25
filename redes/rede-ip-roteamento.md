@@ -34,9 +34,9 @@ Concebido em 1983, o IPv4 (Internet Protocol version 4) foi o primeiro
 protocolo amplamente adotado para endereçamento lógico. Ele descreve cada
 endereço usando 32 bits dividos em 4 seções de 1 byte, ou seja **4 octetos**. 
 
-Dessa forma, permite 2³² = 4.294.967.296 endereços únicos, o que rapidamente se
-tornou insuficiente para acomodar a grande quantidade de aparelhos com acesso a
-internet. 
+Dessa forma, permite 2³² = 4.294.967.296 (4 bilhões) endereços únicos, o que
+rapidamente se tornou insuficiente para acomodar a grande quantidade de
+aparelhos com acesso a internet. 
 
 ![Exemplo de endereço IPv4](img/IPv4-example.png)
 
@@ -69,10 +69,12 @@ As máscaras de rede ou Network masks são, também, uma sequencia formada
 por 4 octetos e servem para dividir um IP em duas porções:
 
 -	Rede
--	Hosts
+-	Host
 
 Para descobrimos a porção da rede a partir de um IP, realiza-se um bitwise
-& (AND) entre o IP e a máscara
+& (AND) entre o IP e a máscara. Vamos exemplificar o procedimento abaixo
+usando uma máscara de 24 bits (3 octetos), mas lembre-se que ela pode ter
+outros tamanhos a depender da configuração da rede.
 
 ```
 	11000000 00000000 00000010 00001100   (192.0.2.12)      IP
@@ -85,12 +87,16 @@ Efetivamente, selecionamos apenas os 3 primeiros octetos para endereçar nossa
 rede e separamos o octeto restante para identificar os 256 (ou 2⁸) possíveis
 hosts nessa rede. Dessa forma teremos, nessa rede, os hosts:
 
--	192.0.2.0
 -	192.0.2.1
 -	192.0.2.2
 -	192.0.2.3
 -	...
--	192.0.2.255
+-	192.0.2.254
+
+Você deve ter percebido que falamos 256 hosts possíveis, mas somente listamos
+254. Isto acontece porque o primeiro endereço é reservado como endereço de
+rede (neste caso, 192.0.2.0) e o último, como endereço de _broadcast_ ou
+difusão (neste caso, 192.0.2.255).
 
 Porém, como a tradução de uma máscara para sua forma binária não é algo tão
 natural, existe uma notação muito mais amigável:
@@ -99,7 +105,7 @@ natural, existe uma notação muito mais amigável:
 -	2001:db8::/32
 
 Nessa notação, teremos um IP seguido de quantos bits estão reservados para
-o endereço (no caso acima 24 bits e 32 bits, respectivamente).
+o endereço de rede (no caso acima 24 bits e 32 bits, respectivamente).
 
 ## Roteamento
 

@@ -34,7 +34,7 @@ Aprofundando no conceito de distribuição dos pacotes na rede, há dois conceit
 ### Encapsulamento
 Agora que foi introduzido os conceitos básicos de pacotes e protocolos, deve-se olhar para como funciona o envio de dados através da rede como um todo. Toda camada do modelo OSI possui um protocolo que dita as regras de comunicação e de funcionamento para ela. Como um mesmo pacote passa por mais de uma camada, ou seja, mais de um protocolo é aplicado nele, é necessário haver uma forma desse pacote carregar os dados e informações relativas a cada protocolo sem interferir na integridade do resto do pacote. É aí que o conceito de **encapsulamento** aparece.
 
-![Exemplo do trajeto dos pacotes no modelo OSI](https://i.imgur.com/cykFTSK.png")
+![Exemplo do trajeto dos pacotes no modelo OSI](https://i.imgur.com/cykFTSK.png)
 
 Para cada protocolo, ele considera o pacote recebido como "data" e aplica um cabeçalho(header) do protocolo em cima do pacote, sem comprometer sua integridade. Na medida que o host receptor vai recebendo os pacotes por cada uma das camadas, o header relativo a ela é interpretado e retirado do pacote. Isso se chama desencapsulamento e é semelhante a uma cebola sendo descascada de cada uma das suas camadas.
 
