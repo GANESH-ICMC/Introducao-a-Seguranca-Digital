@@ -10,7 +10,7 @@ Vimos há algumas aulas sobre o protocolo ARP e como ele funciona, mas aqui vai 
 
 Os hosts da rede mantêm uma tabela que mapeia um endereço IP a um endereço MAC em cada linha \(temporária\), que é preenchida quando acontece uma resolução de um IP que não consta na ARP cache. Com esse mapeamento, enquanto houver comunicação entre dois hosts, não é necessário fazer novas resoluções de IP através de ARP requests.
 
-![Nesse caso, a ARP Cache do Host A possui a linha do IP do Host C preenchida com o MAC dele, então é possível estabelecer uma conexão direta de A para C sem que haja um novo ARP request.](https://i.imgur.com/uOJ3Rhz.png)
+![Nesse caso, a ARP Cache do Host A possui a linha do IP do Host C preenchida com o MAC dele, então é possível estabelecer uma conexão direta de A para C sem que haja um novo ARP request.](.gitbook/assets/arp_broadcast.png)
 
 ### Ataque Man In the Middle \(MITM\)
 

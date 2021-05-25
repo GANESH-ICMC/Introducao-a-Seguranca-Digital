@@ -4,7 +4,7 @@
 
 Quando a gente acessa, por exemplo, o [_https://ganesh.icmc.usp.br/_](https://ganesh.icmc.usp.br/), o nosso navegador precisa saber, na verdade, o endereço IP do site que estamos tentando acessar. Para isso, ele manda uma requisição para o DNS Server - que faz um _match_ da URL com o IP. Com isso em mãos, o resultado fica guardado temporariamente na DNS Cache do navegador, ou até do sistema operacional, para que o IP daquele domínio fique salvo e possa ser reutilizado.
 
-![Resolução do domínio pelo DNS Server.](https://i.imgur.com/9cjvG6Q.png)
+![Resolução do domínio pelo DNS Server](.gitbook/assets/dns.png)
 
 ### Fazendo uma resolução DNS manual
 
@@ -32,7 +32,7 @@ google.com.br.          0       IN      A       216.58.202.195
 ;; MSG SIZE  rcvd: 60
 ```
 
-Observe que no campo `QUESTION` está o domínio do qual queremos saber o IP e no campo `ANSWER` temos o próprio IP do domínio que estamos consultando.
+Observe que no campo `QUESTION` está o domínio do qual __queremos saber o IP e no campo `ANSWER` __temos o próprio IP do domínio que estamos consultando.
 
 ### Como  funciona o DNS Cache Poisoning
 
