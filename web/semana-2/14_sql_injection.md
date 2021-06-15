@@ -175,5 +175,5 @@ Ferramentas como Burpsuite ou Sqlmap são capazes de detectar diversas vulnerabi
 * [OWASP](https://owasp.org/www-community/attacks/SQL_Injection)
 * [Acunetix](https://www.acunetix.com/websitesecurity/sql-injection/)
 
-* [Slides](https://docs.google.com/presentation/d/1b4_fIMaTUPHAttJusjnAbkdXcLSwSJiV9X3IfRGP0yI/edit?usp=sharing)
+* [Slides](https://drive.google.com/file/d/1iPbPaBBKDgMYDQBkbK2r1FNOClk6h5vV/view?usp=sharing)
 
