@@ -72,4 +72,7 @@
   * [Pwntools](pwning/pwntools.md)
   * [Shellcode](pwning/shellcode.md)
   * [Proteções](pwning/protecoes.md)
+* [Hardware](hardware/README.md)
+  * [Introdução ao Hardware Hacking](hardware/introdução-ao-hardware-hacking.md)
+  * [Introdução ao Infravermelho](hardware/introducao-ao-infravermelho.md)
 
