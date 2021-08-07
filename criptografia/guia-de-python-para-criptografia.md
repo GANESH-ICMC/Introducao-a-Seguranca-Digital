@@ -16,7 +16,7 @@ No primeiro caso, utilizando um terminal localizado no mesmo diretório onde se 
 python nomedoarquivo.py
 ```
 
-No segundo caso, simplesmente executamos python e inserimos os comandos desejados no terminal, os quais são executados em tempo real. Neste caso, funções e variáveis chamadas mas não atribuídas imprimem seu conteúdo diretamente no terminal.
+No segundo caso, simplesmente executamos `python` e inserimos os comandos desejados no terminal, os quais são interpretados em tempo real. Neste caso, funções e variáveis chamadas mas não atribuídas imprimem seu conteúdo diretamente no terminal.
 
 No terceiro caso, executamos:
 
@@ -26,7 +26,7 @@ python -i nomedoarquivo.py
 
 e inserimos comandos da mesma forma do modo anterior, porém com a vantagem de já possuirmos disponível todo o código declarado no referido arquivo.
 
-**Observação**: No Ubuntu e distribuições Linux derivadas dele, a versão padrão do Python é o 2, portanto os comandos acima executariam o Python 2. Para utilizar a versão 3 \(mais recomendada\) é necessário utilizar o comando “python3”. Muitos dos exemplos listados neste guia não funcionarão caso executados na versão 2!
+**Observação**: No Ubuntu e distribuições Linux derivadas dele, a versão padrão do Python é a 2, portanto os comandos acima executariam o Python 2. Para utilizar a versão 3 \(mais recomendada\) é necessário utilizar o comando “python3”. Muitos dos exemplos listados neste guia não funcionarão caso executados na versão 2!
 
 ## **Escopos**
 
