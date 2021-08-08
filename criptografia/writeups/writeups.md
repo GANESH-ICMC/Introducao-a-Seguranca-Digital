@@ -444,7 +444,7 @@ Será que você ainda consegue quebrá-lo?
 
 ### Resolução:
 
-Após resolver 2 desafios semelhantes onde o plaintext começava com o texto "Fala ai Lucas!", podemos supor com segurança que o plaintext deste desafio também segue o mesmo padrão. Com isso, podemos obter os 14 primeiros bytes da keystream simplesmente fazendo XOR entre o texto "Fala ai Lucas!" e os 14 primeiros bytes do ciphertext, e o resultado será:
+Após resolver 2 desafios semelhantes onde o plaintext começava com o texto "Fala ai Lucas!", vamos supor que o plaintext deste desafio também segue o mesmo padrão, utilizaremos essa frase como um ***crib***. Com isso, podemos obter os 14 primeiros bytes da keystream simplesmente fazendo XOR entre o crib "Fala ai Lucas!" e os 14 primeiros bytes do ciphertext, e o resultado será:
 
 `130d1ea25c208faf9bc502b54029`
 
