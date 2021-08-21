@@ -176,13 +176,7 @@ Decriptação:
 Tendo acesso às primeiras 3 letras do texto plano, podemos continuar preenchendo a chave a fim de decriptar o texto cifrado.
 ```
 
-## Cifras contemporâneas
-
-Até o século XX, criptografia estava focada com linguística e padrões lexicográficos. Desde então, houve uma alteração na ênfase, pois, atualmente, criptografia utiliza de artifícios matemáticos para garantir a segurança de suas cifras, o que é possível devido ao grande desenvolvimento dos computadores, que são capazes realizar diversos processos em um curto intervalo de tempo.
-
-Além disso, também há pesquisas baseadas no relacionamento entre problemas criptográficos e física quântica.
-
-### Esteganografia.
+## Esteganografia.
 
 A esteganografia \(do grego ‘escrita escondida’\) é o uso de de técnicas para ocultar a existência de uma mensagem dentro da outra, uma forma de segurança por obscurantismo. A diferença entre esteganografia e criptografia é que a primeira preocupa-se em ocultar a existência da mensagem, e a segunda o seu significado.
 
@@ -190,3 +184,8 @@ A esteganografia \(do grego ‘escrita escondida’\) é o uso de de técnicas p
 
 A simples representação também remete à esteganografia, que é uma técnica para omitir uma mensagem dentro de outra, com o objeto de fazer com que uma forma escrita seja camuflada em outra a fim de mascarar sua própria existência. Uma técnica simples de esteganografia é o método NULL, no qual a letra do meio de cada palavra da mensagem original compõe a mensagem que se deseja esconder.
 
+## Cifras contemporâneas
+
+Até o século XX, criptografia estava focada com linguística e padrões lexicográficos. Desde então, houve uma alteração na ênfase, pois, atualmente, criptografia utiliza de artifícios matemáticos para garantir a segurança de suas cifras, o que é possível devido ao grande desenvolvimento dos computadores, que são capazes realizar diversos processos em um curto intervalo de tempo.
+
+Além disso, também há pesquisas baseadas no relacionamento entre problemas criptográficos e física quântica.

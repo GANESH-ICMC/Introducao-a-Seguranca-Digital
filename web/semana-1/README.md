@@ -4,28 +4,29 @@
 
 ### Conceitos iniciais:
 
-* [Arquitetura de uma aplicação Web \(e a diferença entre Internet e Web\)](arquitetura_web.md)
+* [Introduoção à Web \(e arquitetura de uma aplicação Web\)](01_introducao_a_web.md)
 
 ### Estrutura do front-end de uma página Web:
 
-* [Introdução ao HTML](html.md)
-* [Introdução ao CSS](css.md)
-* [Introdução ao Javascript](javascript.md)
+* [Introdução ao HTML e ao CSS](03_html_css.md)
+* [Introdução ao Javascript](05_javascript.md)
 
 ### Comunicação na Web:
 
-* [Entendendo as URLs](urls.md)
+* [Entendendo as URLs](02_urls.md)
 * [Protocolo HTTP](protocolo_http.md)
 * [Protocolo HTTPS](protocolo_https.md)
-* [Cookies e sessões](cookies_e_sessoes.md)
+* [Cookies e sessões](11_cookies_e_sessoes.md)
 
 ### Algumas vulnerabilidades:
 
-* [Cross Site Scripting \(XSS\)](xss.md)
+* [Directory Traversal](04_directory_traversal.md)
+* [Cross Site Scripting \(XSS\)](06_xss.md)
 * [XML External Entities \(XML\) Injection](xxe.md)
 
 #### Autores do material:
 
 * [Marcus Vinícius Castelo Branco](https://github.com/marcuscastelo)
 * [Pedro Guerra Lourenço](https://github.com/Haltz01)
+* Adicionar autores que ajudaram em 2021!
 

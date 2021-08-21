@@ -1,22 +1,4 @@
-# Chall
-
-## A luz sempre tem as respostas
-
-A luz lhe diz tudo, basta confiar nela e então a mensagem se revela por si só.
-
-Gibz spxiawih, d jfal ph meuksuemaoexmyqe.
-
-### Dicas:
-
-1. Auto, do gregos autós. Por si mesmo.
-
-### Resolução:
-
-O desafio consiste em usar a cifra AutoKey com a chave “luz”, a resposta é imediata e corresponde a:
-
-Voce entendeu, a flag eh **ganeshautokeyomg**.
-
-Basta então usar **ganeshautokeyomg** para completar o desafio.
+# Challs de cripto
 
 ## Hmmmm Bacon
 
@@ -75,7 +57,7 @@ Como o texto apresenta os caracteres “{” e “}”, que aparecem no formato 
 
 **Ganesh{TR4N5P051T10N\_RUL35}**
 
-## Terra média
+## Literatura inglesa
 
 Esta mensagem foi encontrada no meio dos trabalhos de um grande e conhecido escritor da língua inglesa, mas infelizmente está criptografada. A flag é o nome do ser ao qual a quarta linha se refere.
 
@@ -170,32 +152,6 @@ Ao separar as letras possíveis para cada letra encriptada, além de utilizar um
 
 Parabens! A flag eh **criptoehmassa**.
 
-## Purê de Mary
-
-No século XVI, criptografia era utilizada por governantes para enviar mensagens sem que elas tivessem seu conteúdo descoberto. Mary, Rainha da Escócia, usou uma forma de encriptação para se comunicar com seus apoiadores enquanto estava presa na Inglaterra. Em um episódio conhecido como Babington Plot, ao utilizar análise de frequência, foi possível descobrir o significado real de cada caractere na carta.
-
-Com as informações acima, decifre o trecho abaixo e descubra a flag constituída pelo objeto que representa o sinal utilizado por Mary:
-
-![](../../.gitbook/assets/image2.png)
-
-### Dicas:
-
-Nenhuma
-
-### Resolução:
-
-Como dito no enunciado, foi utilizado uma cifra de substituição simples, portanto é necessário fazer uma análise de frequência sobre cada símbolo e substituí-los pelos caracteres mais frequentes do **inglês** até obter um texto plausível. Por fim, obtendo:
-
-To anthony babbington,  
-i agree that you  
-can murder queen  
-elizabeth after  
-getting the signal  
-represented by potato.  
-From Mary.
-
-Assim, vemos que a flag é **potato**.
-
 ## Visitando novas bases 3
 
 120 141 162 141 142 303 251 156 163 054 040 166 157 143 303 252 040 162 145 141 154 155 145 156 164 145 040 303 251 040 165 155 040 145 156 164 145 156 144 145 144 157 162 040 144 145 040 142 141 163 145 163 040 156 165 155 303 251 162 151 143 141 163 041 040 101 040 146 154 141 147 040 303 251 040 107 141 156 145 163 150 173 060 143 164 064 154 175
@@ -210,7 +166,7 @@ O título sugere que a mensagem está codificada em uma base diferente da usual.
 
 Parabéns, você realmente é um entendedor de bases numéricas! A flag é **Ganesh{0ct4l}**.
 
-Obs: Percebe-se que a base é 8 = 23. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados.
+Obs: Percebe-se que a base é 8 = 2<sup>3</sup>. Ou seja, o título do desafio se refere ao expoente da potência. Esse raciocínio pode ser utilizado para facilitar a resolução dos outros desafios relacionados.
 
 ## Visitando novas bases 5
 
@@ -226,7 +182,7 @@ Pelo título do desafio, vemos que estamos diante de uma mensagem codificada em 
 
 Você já entendeu que existem muitas bases numéricas... **Ganesh{4d10s}**
 
-Obs: 32 = 25
+Obs: 32 = 2<sup>5</sup>
 
 ## Visitando novas bases 6
 
@@ -242,7 +198,7 @@ Pelo título do desafio, percebemos que estamos tratando de uma mensagem codific
 
 Parabéns, você conhece a base64! A flag é **Ganesh{c0d1f1c4çã0n40é3ncr1pt4çã0}**
 
-Obs: 64 = 26
+Obs: 64 = 2<sup>6</sup>
 
 ## Sanduiche-iche
 
@@ -309,12 +265,11 @@ Além disso, a fim de que mais pessoas auxiliassem em sua tarefa, ele desenvolve
 
 Será que você consegue ajudá-lo?
 
-A flag é o texto contido entre parênteses.
+A flag é o texto contido entre parênteses e está no formato Ganesh{}.
 
 ### Dicas:
 
-1. KPA - Crib = Universo
-2. Vulnerabilidade do refletor: P =/= C
+1. Qual é a vulnerabilidade causada pelo refletor?
 
 ### Resolução:
 
@@ -326,7 +281,7 @@ Portanto, supondo que U foi encriptado para C e utilizando o arquivo enigma.txt 
 
 A RESPOSTA PARA A VIDA, O UNIVERSO E TUDO MAIS É \(QUARENTA E DOIS\)
 
-Assim, vemos que a flag é **QUARENTA E DOIS**.
+Assim, vemos que a flag é **Ganesh{QUARENTA E DOIS}**.
 
 ## Roda-roda bitzinho
 
@@ -378,41 +333,58 @@ Outra opção seria utilizar o site [cryptii](https://cryptii.com/) com a opçã
 
 ![](../../.gitbook/assets/image5.png)
 
-## Uma stream-cipher muito insegura
+## Uma stream-cipher muito insegura 1
 
 Uma pessoa muito leiga em criptografia criou uma função PRG com a seguinte descrição:
 
-A PRG recebe como entrada uma chave de 2 bytes e produz como saída uma keystream do tamanho da mensagem.
+O PRG recebe como entrada uma chave de 2 bytes e produz como saída uma keystream do tamanho da mensagem.
 
-Inicialmente, keystream é formada somente pela chave. Em seguida, para cada posição i &gt;= 2 da keystream, o valor do byte da posição i é calculado pela soma dos bytes das posições \(i - 1\) e \(i - 2\) módulo 256.
+Inicialmente, keystream é formada somente pela chave. Em seguida, para cada posição i >= 2 da keystream, o valor do byte da posição i é calculado pela soma dos bytes das posições (i - 1) e (i - 2) módulo 256.
+Aqui estamos considerando a primeira posição da keystream como 1.
 
-Com base nisso, decripte o ciphertext abaixo utilizando a chave `2d3c`. Ambos estão codificados em hexadecimal.
+*Obs: o operador "módulo" é representado pelo símbolo % na maioria das linguagens de programação.*
 
-`634907c66f93b4075089abea45bc037aaebb2b410bc86dd6abf915`
+Utilizando esse PRG, ela enviou o ciphertext abaixo ao amigo dela, Lucas, mas não foi capaz de manter sua chave em segredo: `2d3c`.
+Ambos estão codificados em hexadecimal.
 
-### Dicas:
+`6b5d05c42ed2a85479dcbde616cd7178fbeb38471cc37bd6fdf81c35edd158b577f9abdab51cb36a2e5628f7ed307d07e2dcf8f06bb3c014b661bf91a08c146efa6898c47074776b527ce990fff674fac415fe619a6fc2a72e7a4a2c0c916fba889cc6162e11e88c1a1afe34e6cffeddedea69c5c7046d5ff97999a4fb06932624ebe15705a353cd6b9578716c7f6a40615caf24623241c467a8fec2e949c2fdff1e9c443ce178b39cbbf976276396758b9cadbfceca2ebfcd7c8886df046aeed0`
 
-1. plaintext = \(ciphertext\) XOR \(keystream\)
+A flag está contida na mensagem.
 
 ### Resolução:
 
-Seguindo a regra determinada para a geração da keystream e conhecendo a chave utilizada, podemos obter a keystream. De acordo com o texto, os primeiros 2 bytes da keystream são iguais aos da chave. Portanto, sabemos que a keystream começa com `2d3c`. O primeiro byte tem valor 2d16 = 001011012 = 4510, ou seja, em hexadecimal é representado por 2d, em binário é representado por 00101101, e em decimal é representado por 45. O segundo byte vale 3c16 = 001111002 = 6010. Para obter o terceiro byte da keystream, utilizamos os 2 bytes anteriores. Logo, o terceiro byte vale \(2d16 + 3c16\) mod 25610 = 6916 \(4510 + 6010 = 10510\). O mesmo vale para o quarto byte, \(3c16 + 6916\) mod 25610 = a516, e assim por diante. Lembrando que esta operação de módulo resulta no resto da divisão por 25610. Sabendo que a keystream tem o mesmo tamanho da mensagem e do ciphertext, encontramos a keystream \(em hexadecimal\):
+Seguindo o algoritmo do PRG e conhecendo a chave utilizada, podemos obter a keystream. De acordo com o texto, os primeiros 2 bytes da keystream são iguais aos da chave, portanto sabemos que a keystream começa com `2d3c`. O primeiro byte tem valor 2d<sub>16</sub> = 001011012 = 45<sub>10</sub>, ou seja, em hexadecimal é representado por 2d, em binário é representado por 00101101, e em decimal é representado por 45. O segundo byte vale 3c<sub>16</sub> = 001111002 = 60<sub>10</sub>. Para obter o terceiro byte da keystream, utilizamos os 2 bytes anteriores. Logo, o terceiro byte vale \(2d<sub>16</sub> + 3c<sub>16</sub>\) mod 256<sub>10</sub> = 69<sub>16</sub> \(45<sub>10</sub> + 60<sub>10</sub> = 105<sub>10</sub>\). O mesmo vale para o quarto byte, \(3c<sub>16</sub> + 69<sub>16</sub>\) mod 256<sub>10</sub> = a5<sub>16</sub>, e assim por diante. Lembrando que esta operação de módulo resulta no resto da divisão por 256<sub>10</sub>.
 
-`2d3c69a50eb3c17435a9de8765ec513d8ecb59247da11ebfdd9c79`
+Uma possível função em Python que retorna uma keystream de tamanho "tam" de uma determinada chave utilizando o PRG descrito é a seguinte:
+
+```python
+def prg(chave, tam):
+    keystream = chave[:]
+    while len(keystream) < tam:
+        soma = (keystream[-1] + keystream[-2]) % 256
+        keystream += bytes([soma])
+    return keystream
+```
+
+Sabendo que a keystream tem o mesmo tamanho da mensagem e do ciphertext, encontramos a keystream \(em hexadecimal\):
+
+`2d3c69a50eb3c17435a9de8765ec513d8ecb59247da11ebfdd9c79158ea331d405d9deb7954ce12d0e3b4984cd511e6f8dfc89850e93a134d509dee7c5ac711d8eab39e41d011e1f3d5c99f58e831194a539de17f50c010d0e1b29446db11ecfedbca9650e7381f47569de47256c91fd8e8b19a4bd611e7f9d1cb9d58e63f1544599de7755cc21ed0efb09040d111e2f4d7cc9450e5361b415c9dea7852cb1dd8e6bf9645dc11edffddcd9b58e43d114e5f9ded7b58c41cd0edbe9c4ad711e8fad`
 
 Para decriptar o ciphertext e encontrar a mensagem original, basta fazer o XOR da keystream com o ciphertext. Com isso, encontramos o plaintext, em hexadecimal:
 
-`4e756e63612075736520756d20505247207072657669736976656c`
+`46616c61206169204c75636173212045752061636162656920646520637269617220756d20505247206d6173206163686f20717565206120636861766520657374c3a1206d7569746f2070657175656e612c20766f63c3aa206163686120717565206f73206269786f732073c3a36f20636170617a657320646520717565627261723f20506f7220656e7175616e746f2c2066616c612070726120656c657320717565206120666c616720c3a92047616e6573687b466f72c3a76142727574617d`
 
-Transformando o resultado acima em ASCII, encontramos a flag:
+Transformando o resultado acima em UTF-8, encontramos o plaintext:
 
-**Nunca use um PRG previsivel**
+Fala ai Lucas! Eu acabei de criar um PRG mas acho que a chave está muito pequena, você acha que os bixos são capazes de quebrar? Por enquanto, fala pra eles que a flag é Ganesh{ForçaBruta}
 
-## Conversa secreta
+Portanto, a flag é **Ganesh{ForçaBruta}**
 
-O ciphertext abaixo foi interceptado da mesma pessoa que criou a PRG do desafio "Uma stream-cipher muito insegura" e estava destinado ao amigo dela, Lucas.
+## Uma stream-cipher muito insegura 2
 
-`41bdb6fc0123a1f670cdd373752a32c632a5b0d8166ab2da488d0568414c10904cb49cb0d41f48c8f2123ab4ca68f2fe00280009944259f05421434600b89cb5f44bd887b9babbabda49ab88c1f72aa038451acc7b7b44c827be5d6f64482108ac35`
+O ciphertext abaixo foi interceptado da mesma pessoa que criou a PRG do desafio "Uma stream-cipher muito insegura 1" e também estava destinado ao amigo dela, Lucas.
+
+`b97b75526c1ea26a592a17b2343b413ea97740ebdf2e656b3eef8ca3039c7b28cc97fbf037f9de258f2224ffa4254d1af23ac8a6e93d992b475fd5138a7f6f687d5036e7fc4709ca9cbafa46de0cda6ab47ab1c3d4f53ccb494a02aa8e1f05ad5a3a3412a550796a30f391e0a779ced52f7214ff98eabb2bdff55be389c1ea3f8441602c7bba97ea1066a3fa7ff6845eb37f8a337d6a4e6a149f529f467d619835d7d4eb73c2b70354d0a80e4de6c81f762a01cea7c8d67bce82d5e35ede92fe1367`
 
 Porém, desta vez ela foi mais cuidadosa e conseguiu manter a sua chave em segredo.
 
@@ -420,27 +392,71 @@ Será que você ainda consegue decriptá-lo?
 
 ### Dicas:
 
-1. chave = plaintext XOR ciphertext
+1. Ataque por força bruta
 
 ### Resolução:
 
-Neste desafio a chave não foi fornecida, mas é possível obter uma parte da keystream sabendo que a string “Lucas” provavelmente está presente em alguma posição do plaintext, então começamos supondo que ela está no começo.
+Existem diferentes modos de resolver esse desafio, mas provavelmente o mais fácil é aproveitar o fato de que a chave é muito pequena (apenas 2 bytes) e fazer um ataque por força bruta. Como cada byte possui 256 possíveis valores, existem 256<sup>2</sup> = 65536 possibilidades para a chave.
 
-Sabendo disso, fazemos o XOR dos 2 primeiros bytes do ciphertext \(0x41 e 0xbd\) com os 2 primeiros bytes do suposto plaintext \(código ASCII das letras L e U, de Lucas\), obtendo, como resultado, os 2 primeiros bytes da chave.
-
-Em seguida podemos obter o restante da keystream utilizando a regra descrita no desafio anterior e utilizamos essa keystream para decriptar a mensagem.
-
-Caso o plaintext resultante fosse imprimido em formato de bytes, obteríamos o seguinte resultado:
+Da mesma forma, existem diferentes modos de, durante o ataque por força bruta, verificar se uma determinada chave é a correta. Uma das formas é conferir se o plaintext resultante possui alguma palavra conhecida em seu contexto (neste desafio, poderia ser "Lucas"). Porém a forma mais genérica e programática é avaliar se o plaintext resultante pode ser decodificado para UTF-8, pois a grande maioria das chaves produzirão plaintexts onde pelo menos 1 byte estará fora do intervalo imprimível do UTF-8, permitindo restringir muito as possibilidades.
+O código em Python abaixo executa a segunda abordagem. Aqui, reutilizamos a função "prg" do desafio anterior, e estamos utilizando o conceito de "Exceptions" presente em linguagens modernas. Caso a decodificação do plaintext para UTF-8 gere algum erro (exception), pulamos para a próxima chave; caso contrário, imprimimos o resultado e encerramos a execução.
 
 ```python
-b'Lucas, fala pros bixos que essa mensagem est\xc3\xa1 em utf-8 e que a flag \xc3\xa9 Ganesh{Python\xc3\x89MuitoMassa}'
+def xor(a, b):
+    return bytes(x^y for x, y in zip(a, b))
+
+for i in range(256):
+    for j in range(256):
+        chave = bytes([i, j])
+        keystream = prg(chave, len(ciphertext))
+        try:
+            plaintext = xor(keystream, ciphertext).decode('utf-8')
+            print(f"Chave: {chave.hex()}.\nPlaintext: {plaintext}")
+            break
+        except Exception:
+            pass
+    else:
+        continue
+    break
 ```
 
-Neste caso, é possível perceber que ela está codificada em utf-8 pois o formato bytes não consegue decodificar caracteres especiais, para imprimi-los é necessário decodificar o plaintext utilizando o comando `plaintext.decode(‘utf-8’)`, o que resulta em:
+Executando o código acima para o ciphertext fornecido, encontramos o seguinte plaintext para a chave `ff1a`:
 
-“Lucas, fala pros bixos que essa mensagem está em utf-8 e que a flag é Ganesh{PythonÉMuitoMassa}”
+Fala ai Lucas! Eu sabia que os bixos conseguiriam quebrar a mensagem! Mas será que com uma chave maior eles conseguem? Por enquanto, fala pra eles que a flag é Ganesh{JamaisUseUmPRGPrevisivel}
 
-Portanto, a flag é **Ganesh{PythonÉMuitoMassa}**.
+Portanto, a flag é **Ganesh{JamaisUseUmPRGPrevisivel}**
+
+## Uma stream-cipher muito insegura 3
+
+Após perceber que a chave utilizada para encriptar as mensagens anteriores era muito pequena e facilmente quebrável por força bruta, o criador do PRG do desafio "Uma stream-cipher muito insegura" passou a utilizar chaves maiores, de tamanho igual a 14 bytes. A função PRG foi levemente alterada para considerar os 14 bytes anteriores no cálculo do próximo byte:
+
+*Para cada posição i >= 15 da keystream, o valor do byte da posição i é calculado pela soma dos 14 bytes anteriores módulo 256, ou seja, (i - 1) + (i - 2) + ... + (1 - 14) módulo 256.*
+
+Imaginando que agora a sua Stream-Cipher seria inquebrável e querendo novamente se comunicar com o amigo dela, **Lucas**, da maneira habitual, ela enviou ao seu amigo o seguinte ciphertext:
+
+`556c72c37c41e68fd7b061d433083a6e466c94f9781e40eba26328b9a38ec55844396f1892aeb8a885659c989b363c13824b775cb7166c79c77147010dc0ee9dbee1a163ce75f4521ac08f698e6d6e111a94a82ae1b6c2b27a742fa3f72ec9949e501bc40f34e40ca6cbe51d8d089b181f04b0469a496ff33049977197f7e6ab13714a2003edcb9fc12df474f30c`
+
+Será que você ainda consegue quebrá-lo?
+
+### Dicas:
+
+1. Utilize um *crib* para calcular a keystream
+
+### Resolução:
+
+Após resolver 2 desafios semelhantes onde o plaintext começava com o texto "Fala ai Lucas!", vamos supor que o plaintext deste desafio também segue o mesmo padrão, utilizaremos essa frase como um ***crib***. Com isso, podemos obter os 14 primeiros bytes da keystream simplesmente fazendo XOR entre o crib "Fala ai Lucas!" e os 14 primeiros bytes do ciphertext, e o resultado será:
+
+`130d1ea25c208faf9bc502b54029`
+
+Expandindo essa keystream para ocupar o tamanho total do ciphertext utilizando a função PRG do desafio, obtemos:
+
+`130d1ea25c208faf9bc502b540291a21354cf690007133cbd1a08bd683ecb73926561c38ffcbcbc5ea49bcf5fe45517ca228183197630118e7122f607ba5cefacc80cf07ab55923d68a1e249ed0c1e7060f1db0bc1f0a3de1b545fd1960eacf8ff233bb57a51c46d86ad897cea2858b13f43d128ff3a0788633dfe12fca08fdf7b2522455099aaf1a54c86108071`
+
+Com isso podemos recuperar o plaintext:
+
+Fala ai Lucas! Os bixos são brabos mesmo, mesmo com uma chave grande foram capazes! Fala pra elas que a flag é Ganesh{StickWithTheStandards}
+
+Portanto, a flag é **Ganesh{StickWithTheStandards}**
 
 ## Ataque a outras frentes
 
