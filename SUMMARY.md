@@ -41,7 +41,7 @@
     * [Da água pro Vinho](redes/write-ups/da_agua_pro_vinho.md)
     * [O Miranha chegou?](redes/write-ups/miranha_chegou.md)
     * [Hora do Toddynho](redes/write-ups/hora_do_toddynho.md)
-    * [Os de verdade eu sei quem são](redes/write-ups/ os_de_verdade_eu_sei_quem_sao.md)
+    * [Os de verdade eu sei quem são](redes/write-ups/os_de_verdade_eu_sei_quem_sao.md)
     * [Consulta Marcada](redes/write-ups/consulta_marcada.md)
     * [Não era uma brincadeira](redes/write-ups/nao_era_uma_brincadeira.md)
     * [FTP do Charlão](redes/write-ups/ftp_do_charlao.md)
