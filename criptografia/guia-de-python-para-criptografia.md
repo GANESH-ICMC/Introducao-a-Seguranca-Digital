@@ -292,7 +292,7 @@ Tuplas são os equivalentes imutáveis das listas, ou seja, podem ser vistas com
 t = 1, 2, 'b', [5, 3]
 
 # sintaxe alternativa para tuplas
-# as aspas duplas são necessárias pois essa função recebe apenas 1 elemento como argumento
+# os parênteses duplos são necessários pois essa função recebe apenas 1 elemento como argumento
 t = tuple((1, 2, 'b', [5,3]))
 
 # imprime 'b'
