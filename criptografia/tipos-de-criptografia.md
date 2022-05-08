@@ -54,9 +54,8 @@ Nas cifras de substituição, ao substituirmos qualquer letra, há uma alta prob
 
 Uma das primeiras cifras de substituição. É vista em passagens da bíblia como em \[Jeremias 25:26 - "O rei de Sheshach beberá depois deles" - Sheshach, que significa Babilônia em Atbash \(בבל bbl → ששך ššk\)\].
 
-```text
 Trata-se de uma substituição monoalfabética de deslocamento 0 com o alfabeto do texto cifrado na ordem inversa do alfabeto do texto plano. Exemplo com o alfabeto latino:
-```
+
 
 A \|B \|C \|D \|E \|F \|G \|H \|I \|J \|K \|L \|M \|N \|O \|P \|Q \|R \|S \|T \|U \|V \|W \|X \|Y \|Z
 
@@ -66,9 +65,9 @@ Ganesh -&gt; Tzmvhs
 
 ### Cifra de César
 
-```text
+
 Foi uma cifra de substituição monoalfabética utilizada pelo general Julio César em Roma. 
-```
+
 
 Exemplo com o alfabeto latino:
 
@@ -136,17 +135,18 @@ Encriptação: Para encriptar a primeira letra, olhamos a primeira linha e encon
 
 \|c\|r\|i\|p\|t\|o\|c\|r\|i\|p\|t\|o\|
 
-```text
+
 Texto cifrado: UfudlCIrvtlv
 
 Decriptação: O processo é semelhante ao da encriptação, porém utilizando o texto cifrado e a chave.
-```
+
 
 ### A cifra AutoKey
 
-```text
-É uma melhoria da cifra de Vigenère de modo a garantir que a chave sempre tenha o mesmo tamanho do texto plano, a fim de prover maior segurança (com essa cifra não é possível realizar ataques estatísticos). Para isso, utilizamos uma palavra de C caracteres que será usada para compor o início da chave, sendo o restante da chave composta pelos primeiros N-C caracteres do texto plano (que possui tamanho N). 
 
+É uma melhoria da cifra de Vigenère de modo a garantir que a chave sempre tenha o mesmo tamanho do texto plano, a fim de prover maior segurança (com essa cifra não é possível realizar ataques estatísticos). Para isso, utilizamos uma palavra de C caracteres que será usada para compor o início da chave, sendo o restante da chave composta pelos primeiros N-C caracteres do texto plano (que possui tamanho N).
+
+```text
 **Exemplo:**
 
 Texto: SomosOGanesh
@@ -160,10 +160,9 @@ Encriptação:
                |S|o|m|o|s|O|G|a|n|e|s|h|
 
                |K|e|y|S|o|m|o|s|O|G|a|n|
+
+Texto cifrado: |C|s|k|g|g|A|U|s|b|k|s|u|
 ```
-
-Texto cifrado:\|C\|s\|k\|g\|g\|A\|U\|s\|b\|k\|s\|u\|
-
 ```text
 Decriptação:
 
@@ -172,9 +171,9 @@ Decriptação:
              |K|e|y|[...]
 
  Texto plano:|S|o|m|[...]
-
-Tendo acesso às primeiras 3 letras do texto plano, podemos continuar preenchendo a chave a fim de decriptar o texto cifrado.
 ```
+Tendo acesso às primeiras 3 letras do texto plano, podemos continuar preenchendo a chave a fim de decriptar o texto cifrado.
+
 
 ## Esteganografia.
 
