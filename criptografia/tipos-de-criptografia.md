@@ -146,9 +146,8 @@ Decriptação: O processo é semelhante ao da encriptação, porém utilizando o
 
 É uma melhoria da cifra de Vigenère de modo a garantir que a chave sempre tenha o mesmo tamanho do texto plano, a fim de prover maior segurança (com essa cifra não é possível realizar ataques estatísticos). Para isso, utilizamos uma palavra de C caracteres que será usada para compor o início da chave, sendo o restante da chave composta pelos primeiros N-C caracteres do texto plano (que possui tamanho N).
 
-```text
 **Exemplo:**
-
+```text
 Texto: SomosOGanesh
 
 Palavra: Key
