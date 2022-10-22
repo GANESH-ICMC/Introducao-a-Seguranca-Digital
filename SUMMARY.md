@@ -14,6 +14,7 @@
     * [Slow Loris](redes/ataques/slowloris.md)
     * [Syn Flood](redes/ataques/syn-flood.md)
     * [WPA Cracking](redes/ataques/WPA_Cracking_Attack.md)
+    * [Deauth](redes/ataques/deauth.md)
   * [Ferramentas](redes/ferramentas/README.md)
     * [Resumo das Ferramentas](redes/ferramentas/ferramentas_resumos.md)
     * [Suíte Aircrack](redes/ferramentas/aircrack_suite.md)
