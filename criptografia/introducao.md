@@ -6,6 +6,8 @@ Do latim cryptographia, formado de cript\(o\) - \(kruptós 'oculto, secreto, obs
 
 Os métodos criptográficos desenvolvem-se conforme a necessidade e tecnologia disponível no período, durante a antiguidade as cifras limitavam-se a substituições e transposições e eram empregadas com diversas finalidades como enviar mensagens estratégicas em tempos de guerra, permitir a conversa entre dois amantes, guardar segredos comerciais ou simplesmente por estética.
 
+adlkjshfiujpakdhfgniopajdfnihpgipudhsafig
+
 > ### Em todo método criptográfico há sempre três fatores:
 >
 > * O **texto** plano que é o texto a ser criptografado; **O domínio**.
