@@ -14,7 +14,7 @@ Os recursos na Web costumam ser apresentados na forma de _web pages_ - que forma
 
 ![Arquitetura de um web app](../../.gitbook/assets/arquitetura_web_back_front.png)
 
-Em uma aplicação Web, há dois tipos de "sub-programas", um _client-side_ e outro _server-side_. O código _client-side_ \(HTML, CSS e Javascript\) é o que está na página do navegador e que interage diretamente com as entradas do usuário. Já o código _server-side_ está em um servidor e responde às requisições HTTP que chegam até ele. Para o código _client-side_, pode-se utilizar C\#, Java, Javascript, Python, PHP, Ruby e mais - basicamente, qualquer linguagem que entenda e responda requisições HTTP.
+Em uma aplicação Web, há dois tipos de "sub-programas", um _client-side_ e outro _server-side_. O código _client-side_ \(HTML, CSS e Javascript\) é o que está na página do navegador e que interage diretamente com as entradas do usuário. Já o código _server-side_ está em um servidor e responde às requisições HTTP que chegam até ele. Para o código _server-side_, pode-se utilizar C\#, Java, Javascript, Python, PHP, Ruby e mais - basicamente, qualquer linguagem que entenda e responda requisições HTTP.
 
 ### Componentes estruturais
 
