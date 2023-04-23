@@ -21,3 +21,16 @@ Para decriptar, basta deslocar cada letra do ciphertext no sentido contrário. U
 É possível quebrar as cifras de substituição monoalfabética por meio da análise de frequência das letras do ciphertext, desde que se conheça o idioma utilizado. Acontece que nas cifras monoalfabéticas cada letra do plaintext é encriptada sempre para a mesma letra do ciphertext. No exemplo que vimos acima, a letra L será sempre encriptada para a letra I, a letra M será sempre encriptada para a letra H, e assim sucessivamente.
 
 Por exemplo, no idioma inglês a letra E é a mais frequente de todas, aparecendo em 12,70% do total de letras em um texto, seguida dela vem a letra T, que aparece 9,05% das vezes. Sabendo disso, em posse de um ciphertext escrito em inglês, se a letra mais frequente encontrada for a letra K, provavelmente ela corresponde à letra E do plaintext. E se a segunda letra mais frequente for a letra W, provavelmente ela corresponde à letra T do plaintext.
+
+## Cifra de Vigenère
+
+Trata-se de uma cifra de substituição polialfabética em que a palavra chave é responsável por especificar o deslocamento de cada letra do plaintext. Desse modo, é impossível realizar diretamente um ataque de frequência como o utilizado nas cifras de substituição monoalfabética, já que uma mesma letra do plaintext pode ser encriptada para diferentes letras no ciphertext, a depender do seu “match” com a palavra chave ao longo do texto.
+
+Quando a palavra chave for menor do que o plaintext, ela deve ser repetida até completar o tamanho do plaintext. A encriptação pode ser descrita algebricamente: se as letras A-Z correspondem aos números 0-25, soma-se o valor numérico da letra no plaintext com o valor numérico de sua letra pareada na chave e aplica-se o resto da divisão por 26, encontrando o valor numérico da letra do ciphertext. Exemplo de encriptação com a chave LEMON:
+
+Plaintext:
+A|T|T|A|C|K|A|T|D|A|W|N
+Chave:	
+L|E|M|O|N|L|E|M|O|N|L|E
+Ciphertext:	
+L|X|F|O|P|V|E|F|R|N|H|R
