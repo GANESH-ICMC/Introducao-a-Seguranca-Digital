@@ -6,10 +6,10 @@ Dois tipos principais de cifra abrangeram a história da criptografia clássica:
 
 Trata-se de uma cifra em que cada unidade do texto plano é substituída por uma única unidade do texto cifrado em razão de um deslocamento constante para todas unidades. Exemplo de uma cifra com deslocamento 2:
 
-Alfabeto do plaintext:
+Alfabeto do plaintext: </br>
 A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z
 
-Alfabeto do ciphertext:	
+Alfabeto do ciphertext:	</br>
 D|G|U|A|S|M|Z|E|R|B|C|I|H|V|Y|P|K|X|Q|N|T|F|W|L|O|J
 
 Ex: GANESH -> ZDVSQE
