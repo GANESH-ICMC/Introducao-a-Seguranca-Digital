@@ -131,9 +131,9 @@ Criada para substituir os métodos "papel e caneta" que eram utilizados até ent
 > Pressionar uma tecla faz com que o primeiro rotor rotacione uma posição. Como são três rotores em série o simples fato de o rotor girar uma posição faz com que o mapeamento de letras mude completamente.
 > Além disso, o anel de cada rotor possui um entalhe que serve para definir quando ele vai provocar uma rotação no rotor à sua esquerda. Posicionar esse entalhe no número 18, por exemplo, faz com que quando esse número alcança a parte de trás da máquina, o rotor à esquerda rotaciona uma posição, e a partir daí, a cada ciclo de 26 teclas pressionadas o primeiro rotor completará uma volta completa, fazendo com que o segundo rotor rotacione uma posição. Quando o entalhe do segundo rotor alcança a parte de trás da máquina, o terceiro rotor rotaciona uma posição, e a partir daí, a cada volta completa do segundo rotor (26x26 = 676 teclas pressionadas) o terceiro rotor ira rotacionar mais uma posição.
 > A imagem a seguir mostra o entalhe do primeiro rotor posicionado no número 18.
-> 
-> ![entalhe_rotor_enigma](https://user-images.githubusercontent.com/96321435/233819125-b5b9708a-5fcb-4ee9-a720-3e99166b7f8d.png)
-> 
+
+![entalhe_rotor_enigma](https://user-images.githubusercontent.com/96321435/233819125-b5b9708a-5fcb-4ee9-a720-3e99166b7f8d.png)
+
 > * **Plugboard:** posicionado na frente da máquina, também é responsável pela permutação das letras e aumenta consideravelmente o número de configurações possíveis da máquina. Ao se conectar o plugue da letra A com o da letra U, por exemplo, toda vez que a letra A é pressionada no keyboard, ela é permutada para a letra U antes de passar pela permutação dos rotores. Se um determinado plugue não está conectado com nenhum outro, então a sua letra correspondente não sofre nenhuma permutação no plugboard, sofrendo apenas as permutações dos rotores.
 
 ### Funcionamento do circuito
