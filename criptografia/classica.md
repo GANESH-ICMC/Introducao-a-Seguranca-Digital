@@ -121,9 +121,12 @@ Criada para substituir os métodos "papel e caneta" que eram utilizados até ent
 ![regioes_enigma](https://user-images.githubusercontent.com/96321435/233818836-3eaa34b0-6d90-4316-804f-099035c14176.png)
 
 > **Keyboard:** é o input. Composto pelas teclas que serão digitadas quando se quer encriptar ou decriptar uma mensagem.
+> 
 > **Lightboard:** é o output. Cada vez que uma tecla é pressionada, fecha-se um circuito elétrico e uma das lâmpadas da lightboard se acende. Na encriptação, o keyboard corresponde ao plaintext enquanto que a lightboard fornece o ciphertext. Na decriptação, os papéis se invertem.
+> 
 > **Rotor:** responsável pela permutação das letras. Em uma face do rotor existem 26 pinos por onde a corrente elétrica pode entrar e na outra face existem 26 pinos por onde a corrente pode sair. No interior de cada rotor, há fios que fazem as trocas de uma letra por outra. A sequência de imagens a seguir mostra como um rotor faz a permutação de uma letra por outra três posições a frente no alfabeto.
 > ![fios_rotores_enigma](https://user-images.githubusercontent.com/96321435/233818989-080de46a-a0c5-4527-ac42-05fc76843313.png)
+> 
 > Pressionar uma tecla faz com que o primeiro rotor rotacione uma posição. Como são três rotores em série o simples fato de o rotor girar uma posição faz com que o mapeamento de letras mude completamente.
 > Além disso, o anel de cada rotor possui um entalhe que serve para definir quando ele vai provocar uma rotação no rotor à sua esquerda. Posicionar esse entalhe no número 18, por exemplo, faz com que quando esse número alcança a parte de trás da máquina, o rotor à esquerda rotaciona uma posição, e a partir daí, a cada ciclo de 26 teclas pressionadas o primeiro rotor completará uma volta completa, fazendo com que o segundo rotor rotacione uma posição. Quando o entalhe do segundo rotor alcança a parte de trás da máquina, o terceiro rotor rotaciona uma posição, e a partir daí, a cada volta completa do segundo rotor (26x26 = 676 teclas pressionadas) o terceiro rotor ira rotacionar mais uma posição.
 > A imagem a seguir mostra o entalhe do primeiro rotor posicionado no número 18.
