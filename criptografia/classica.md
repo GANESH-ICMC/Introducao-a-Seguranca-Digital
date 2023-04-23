@@ -45,12 +45,12 @@ A tabela a seguir é utilizada para facilitar a encriptação e a decriptaçao, 
 
 Como já vimos anteriormente, a Cifra de Vigenère foi considerada inquebrável por três séculos, até que em 1863 Friedrich Kasiski propôs um ataque que funciona quando o tamanho da chave é menor do que o do plaintext. Para entendermos o Teste de Kasiski, vamos utilizar o mesmo exemplo anterior e considerar que o atacante já saiba o tamanho da chave:
 
-Plaintext:
-A|T|T|A|C|K|A|T|D|A|W|N
-Chave:	
-L|E|M|O|N|L|E|M|O|N|L|E
-Ciphertext:	
-**L**|X|F|O|P|**V**|E|F|R|N|**H**|R
+Plaintext:</br>
+A|T|T|A|C|K|A|T|D|A|W|N</br>
+Chave:</br>	
+L|E|M|O|N|L|E|M|O|N|L|E</br>
+Ciphertext:</br>
+**L**|X|F|O|P|**V**|E|F|R|N|**H**|R</br>
 
 Como o tamanho da chave já é conhecido (5 letras), sabemos que a cada cinco letras do ciphertext o deslocamento realizado para obter tais letras foi exatamente o mesmo. Note que as letras L, V e H, destacadas acima, foram todas obtidas a partir de um mesmo deslocamento. Agora, se temos um conjunto de letras e todas foram obtidas a partir de um mesmo deslocamento, temos diante de nós uma cifra de substituição simples, que é passível de ataque por análise de frequência.
 
