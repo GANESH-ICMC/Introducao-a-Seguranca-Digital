@@ -120,11 +120,11 @@ Criada para substituir os métodos "papel e caneta" que eram utilizados até ent
 
 ![regioes_enigma](https://user-images.githubusercontent.com/96321435/233818836-3eaa34b0-6d90-4316-804f-099035c14176.png)
 
-> **Keyboard:** é o input. Composto pelas teclas que serão digitadas quando se quer encriptar ou decriptar uma mensagem.
+> * **Keyboard:** é o input. Composto pelas teclas que serão digitadas quando se quer encriptar ou decriptar uma mensagem.
 > 
-> **Lightboard:** é o output. Cada vez que uma tecla é pressionada, fecha-se um circuito elétrico e uma das lâmpadas da lightboard se acende. Na encriptação, o keyboard corresponde ao plaintext enquanto que a lightboard fornece o ciphertext. Na decriptação, os papéis se invertem.
+> * **Lightboard:** é o output. Cada vez que uma tecla é pressionada, fecha-se um circuito elétrico e uma das lâmpadas da lightboard se acende. Na encriptação, o keyboard corresponde ao plaintext enquanto que a lightboard fornece o ciphertext. Na decriptação, os papéis se invertem.
 > 
-> **Rotor:** responsável pela permutação das letras. Em uma face do rotor existem 26 pinos por onde a corrente elétrica pode entrar e na outra face existem 26 pinos por onde a corrente pode sair. No interior de cada rotor, há fios que fazem as trocas de uma letra por outra. A sequência de imagens a seguir mostra como um rotor faz a permutação de uma letra por outra três posições a frente no alfabeto.
+> * **Rotor:** responsável pela permutação das letras. Em uma face do rotor existem 26 pinos por onde a corrente elétrica pode entrar e na outra face existem 26 pinos por onde a corrente pode sair. No interior de cada rotor, há fios que fazem as trocas de uma letra por outra. A sequência de imagens a seguir mostra como um rotor faz a permutação de uma letra por outra três posições a frente no alfabeto.
 > 
 > ![fios_rotores_enigma](https://user-images.githubusercontent.com/96321435/233818989-080de46a-a0c5-4527-ac42-05fc76843313.png)
 > 
@@ -134,4 +134,52 @@ Criada para substituir os métodos "papel e caneta" que eram utilizados até ent
 > 
 > ![entalhe_rotor_enigma](https://user-images.githubusercontent.com/96321435/233819125-b5b9708a-5fcb-4ee9-a720-3e99166b7f8d.png)
 > 
-> **Plugboard:** posicionado na frente da máquina, também é responsável pela permutação das letras e aumenta consideravelmente o número de configurações possíveis da máquina. Ao se conectar o plugue da letra A com o da letra U, por exemplo, toda vez que a letra A é pressionada no keyboard, ela é permutada para a letra U antes de passar pela permutação dos rotores. Se um determinado plugue não está conectado com nenhum outro, então a sua letra correspondente não sofre nenhuma permutação no plugboard, sofrendo apenas as permutações dos rotores.
+> * **Plugboard:** posicionado na frente da máquina, também é responsável pela permutação das letras e aumenta consideravelmente o número de configurações possíveis da máquina. Ao se conectar o plugue da letra A com o da letra U, por exemplo, toda vez que a letra A é pressionada no keyboard, ela é permutada para a letra U antes de passar pela permutação dos rotores. Se um determinado plugue não está conectado com nenhum outro, então a sua letra correspondente não sofre nenhuma permutação no plugboard, sofrendo apenas as permutações dos rotores.
+
+### Funcionamento do circuito
+
+O caminho percorrido entre o pressionamento de uma tecla no keyboard e o acendimento de uma lâmpada na lightboard é o seguinte: keyboard -> plugboard -> rotores -> refletor -> rotores -> plugboard -> lightboard. O vídeo a seguir mostra a letra A sendo encriptada para a letra H. Repare que os plugues A e M estão conectados na plugboard, assim como os plugues H e O.
+
+Ao se pressionar a tecla A, ela é permutada para M na plugboard, que segue em direção aos rotores. O primeiro rotor permuta M para B, o segundo rotor permuta B para J e o terceiro rotor permuta J para F. Então o refletor permuta F para P. Na volta, o terceiro rotor permuta P para N, o segundo rotor permuta N para X e o primeiro rotor permuta X para O. Finalmente, a plugboard permuta O para H e a lightboard acende a lâmpada da letra H.
+
+[colocar video do cipher history aqui]
+
+Note que se a tecla H tivesse sido pressionada nessas mesmas configurações, a lâmpada da letra A teria sido acesa.
+
+### Quantas configurações da Enigma são possíveis?
+
+Para responder essa pergunta, vamos considerar o modelo de configuração mais usado durante a Segunda Guerra Mundial: os operadores dispunham de 5 rotores, sendo que 3 eram selecionados para serem utilizados em cada dia. Utilizava-se sempre 10 cabos na plugboard, o que significa que 20 letras sofriam permutação na plugboard, enquanto 6 não sofriam.
+
+> * Dos 5 rotores, selecionar 3 significa: 5 x 4 x 3 = 60
+> * Posição inicial dos rotores: 26 x 26 x 26 = 17.576
+> * Posição do entalhe em cada rotor 26 x 26 = 676 (a posição do entalhe do terceiro rotor é irrelevante já que ele não provoca giro em nenhum rotor)
+> * Formas diferentes de se conectar os 10 cabos da plugboard: 150.738.274.937.250
+
+O produto das combinações acima resulta em 107.458.687.327.250.619.360.000 ou 1,07 x 10²³. Para se testar 1,07 x 10²³ configurações, se reuníssemos 100.000 voluntários e cada um testasse uma configuração por segundo, ainda levaríamos o dobro da idade do universo para se testar todas as possibilidades.
+
+### Protocolo de encriptação
+
+Mensalmente, os operadores das máquinas Enigma recebiam os “codebooks”, que eram instruções para a configuração da máquina para cada dia do mês. A imagem a seguir mostra um codebook obtido pelos Aliados.
+
+![codebook_enigma](https://user-images.githubusercontent.com/96321435/233819473-74141da8-78c0-4632-81da-2b6099a8592d.png)
+
+No dia 31, por exemplo, as configurações seriam as seguintes:
+
+> * A segunda coluna mostra que os rotores I, II e V seriam usados naquele dia
+> * A terceira coluna mostra que o entalhe em cada rotor seria nas posições 10, 14 e 02 respectivamente
+> * A quarta coluna mostra os pares de conexões na plugboard
+> * A quinta coluna mostra os grupos indicadores, que são enviados junto ao ciphertext para identificar em qual dia a mensagem foi enviada.
+
+Acontece que se uma grande quantidade de mensagens fossem encriptadas utilizando a mesma configuração a Enigma ainda seria passível de ataques por frequência. Por exemplo, imagine que os Aliados interceptassem muitas mensagens encriptadas com a mesma configuração inicial. Uma análise de frequência na primeira letra de cada ciphertext obtido permitiria concluir que a letra mais frequente foi encriptada a partir da letra E (no idioma alemão a letra E é a mais comum, assim como no inglês). Portanto, a cada mensagem a ser encriptada os operadores da Enigma eram instruídos a seguir os seguintes passos:
+
+> * Posicionar os rotores na ordem, conforme codebook;
+> * Posicionar o entalhe de cada rotor conforme codebook;
+> * Conectar os cabos da plugboard conforme codebook;
+> * Escolher um grupo indicador para enviar junto ao ciphertext;
+> *	Escolher a posição inicial dos rotores (ex: HTX);
+> *	Escolher uma chave de três letras (ex: RZU);
+> *	Digitar a chave escolhida duas vezes. Ex:
+> Plaintext:    RZURZU
+> Ciphertext: JIOWQP
+> *	Resetar a posição inicial dos rotores para a chave escolhida (RZU);
+> *	Encriptar a mensagem com as novas configurações.
