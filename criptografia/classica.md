@@ -50,7 +50,7 @@ A|T|T|A|C|K|A|T|D|A|W|N</br>
 Chave:</br>	
 L|E|M|O|N|L|E|M|O|N|L|E</br>
 Ciphertext:</br>
-**L**|X|F|O|P|**V**|E|F|R|N|**H**|R</br>
+**L**|X|F|O|P|**V**|E|F|R|N|**H**|R
 
 Como o tamanho da chave já é conhecido (5 letras), sabemos que a cada cinco letras do ciphertext o deslocamento realizado para obter tais letras foi exatamente o mesmo. Note que as letras L, V e H, destacadas acima, foram todas obtidas a partir de um mesmo deslocamento. Agora, se temos um conjunto de letras e todas foram obtidas a partir de um mesmo deslocamento, temos diante de nós uma cifra de substituição simples, que é passível de ataque por análise de frequência.
 
@@ -75,7 +75,7 @@ A|T|T|A|C|K|A|T|D|A|W|N</br>
 Chave:</br>	
 Q|U|E|E|N|L|Y|A|T|T|A|C|K|A|T|D|A|W|N</br>
 Ciphertext:</br>	
-Q|N|X|V|P|V|Y|T|W|T|W|P</br>
+Q|N|X|V|P|V|Y|T|W|T|W|P
 
 Para decriptar a mensagem, o receptor começaria utilizando a keyword previamente definida (QUEENLY), obtendo assim as primeiras 7 letras do plaintext (ATTACKA). Depois, essas 7 letras são concatenadas ao final da keyword e novas letras serão obtidas. O ciclo é repetido até se obter o plaintext final. A Cifra Autokey é mais segura do que as cifras polialfabéticas que usam chaves fixas, já que na Autokey a chave não é repetida dentro de uma mesma mensagem. Portanto, métodos de ataque como o Teste de Kasiski não se aplicam nessa cifra.
 
@@ -92,7 +92,7 @@ A tabela a seguir é utilizada para encriptar e decriptar mensagens, note que co
 Plaintext:</br>
 G |A |N |E |S |H</br>
 Ciphertext:</br>
-22|11|33|15|43|23</br>
+22|11|33|15|43|23
 
 ## Cifra Homófona
 
@@ -103,4 +103,4 @@ Trata-se de uma cifra em que os símbolos mais frequentes do plaintext são corr
 Plaintext:</br>
 **A**br**a**c**a**d**a**br**a**</br>
 Ciphertext:</br>	
-**8**Fb**z**H**K**G**7**FR**i**</br>
+**8**Fb**z**H**K**G**7**FR**i**
