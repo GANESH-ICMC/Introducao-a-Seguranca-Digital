@@ -4,7 +4,7 @@
 * [Introdução a Linux](introducao_linux/README.md)
 * [Criptografia](criptografia/README.md)
   * [Introdução](criptografia/introducao.md)
-  * [Definições](criptografia/definicoes.md)
+  * [Definições e Objetivos](criptografia/definicoes.md)
   * [Tipos de Criptografia](criptografia/tipos-de-criptografia.md)
   * [Guia de Python para criptografia](criptografia/guia-de-python-para-criptografia.md)
 * [Redes](redes/README.md)
