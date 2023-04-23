@@ -28,9 +28,9 @@ Trata-se de uma cifra de substituição polialfabética em que a palavra chave �
 
 Quando a palavra chave for menor do que o plaintext, ela deve ser repetida até completar o tamanho do plaintext. A encriptação pode ser descrita algebricamente: se as letras A-Z correspondem aos números 0-25, soma-se o valor numérico da letra no plaintext com o valor numérico de sua letra pareada na chave e aplica-se o resto da divisão por 26, encontrando o valor numérico da letra do ciphertext. Exemplo de encriptação com a chave LEMON:
 
-Plaintext:
-A|T|T|A|C|K|A|T|D|A|W|N
-Chave:	
-L|E|M|O|N|L|E|M|O|N|L|E
-Ciphertext:	
+Plaintext:</br>
+A|T|T|A|C|K|A|T|D|A|W|N</br>
+Chave:</br>
+L|E|M|O|N|L|E|M|O|N|L|E</br>
+Ciphertext:</br>	
 L|X|F|O|P|V|E|F|R|N|H|R
