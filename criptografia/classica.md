@@ -97,3 +97,10 @@ Ciphertext:</br>
 ## Cifra Homófona
 
 Trata-se de uma cifra em que os símbolos mais frequentes do plaintext são correspondidos para mais de um símbolo no ciphertext. Foi criada para dificultar a análise estatística baseada em frequência. Observe o mapeamento da imagem a seguir, note que na primeira vez que a letra A aparece, ela é encriptada para 8. Na segunda vez para z, e assim sucessivamente. 
+
+![homofona](https://user-images.githubusercontent.com/96321435/233818401-80f2d053-f320-4423-99a4-1e35dd93224e.png)
+
+Plaintext:</br>
+**A**br**a**c**a**d**a**br**a**</br>
+Ciphertext:</br>	
+**8**Fb**z**H**K**G**7**FR**i**</br>
