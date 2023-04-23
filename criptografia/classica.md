@@ -60,6 +60,30 @@ Assim, descobrimos a primeira letra da chave. Para descobrir a próxima letra, b
 
 Observe a imagem com o ciphertext a seguir e repare na repetição da sequência U-S-E diversas vezes ao longo do texto.
 
+![kasiski_mdc](https://user-images.githubusercontent.com/96321435/233818154-8d59781e-4eb8-4bf2-a03c-0992a9ca341c.png)
 
+Como o distanciamento dessas repetições é sempre um número múltiplo de 8, um bom palpite para o tamanho da chave seria 8 caracteres. Mas também é possível que o tamanho da chave seja de 4 caracteres. De qualquer forma, com o tamanho da chave em mãos, basta aplicar o Teste de Kasiski para descobrir a chave utilizada e assim quebrar a cifra.
 
+## Cifra Autokey
+
+Vimos que a Cifra de Vigenère é quebrável quando o tamanho da chave é menor do que o tamanho do plaintext. A Cifra Autokey foi criada justamente de modo a garantir que o tamanho da chave seja sempre superior ao do plaintext. Para isso, é feito a concatenação entre uma keyword relativamente pequena e o plaintext. O resultado dessa operação é a chave que será utilizada na encriptação.
+
+Por exemplo, se a keyword for QUEENLY e a mensagem for “attack at dawn”, então a chave seria QUEENLYATTACKATDAWN. A partir disso, basta aplicar a Cifra de Vigenère.
+
+Plaintext:</br>
+A|T|T|A|C|K|A|T|D|A|W|N</br>
+Chave:</br>	
+Q|U|E|E|N|L|Y|A|T|T|A|C|K|A|T|D|A|W|N</br>
+Ciphertext:</br>	
+Q|N|X|V|P|V|Y|T|W|T|W|P</br>
+
+Para decriptar a mensagem, o receptor começaria utilizando a keyword previamente definida (QUEENLY), obtendo assim as primeiras 7 letras do plaintext (ATTACKA). Depois, essas 7 letras são concatenadas ao final da keyword e novas letras serão obtidas. O ciclo é repetido até se obter o plaintext final. A Cifra Autokey é mais segura do que as cifras polialfabéticas que usam chaves fixas, já que na Autokey a chave não é repetida dentro de uma mesma mensagem. Portanto, métodos de ataque como o Teste de Kasiski não se aplicam nessa cifra.
+
+Uma grande vulnerabilidade dessa cifra, no entanto, é que o plaintext faz parte da chave. Isso significa que a chave vai certamente conter palavras comuns em diversas posições (ON, AT, IN, THE no inglês ou DE, DO, DA, UMA, SUA, QUE no português). A chave pode ser atacada usando palavras comuns através de tentativas de decriptar a mensagem movendo a palavra pela chave até que textos legíveis apareçam.
+
+## Polybus Square
+
+Trata-se de um dispositivo inventado pelos gregos Cleoxenus e Democlitus e aperfeiçoado por Polybius, cujo propósito era dividir os símbolos do texto plano para que pudessem ser representados por um conjunto menor de símbolos. Inicialmente, Polybius sugeriu que os símbolos poderiam ser usados para transmitir mensagens com pares de tochas. Além disso, também foi usada na forma de "knock code" para transmitir mensagens em prisões a partir de barulhos em canos e paredes.
+
+A tabela a seguir é utilizada para encriptar e decriptar mensagens, note que com apenas cinco números é possível representar todas as letras do alfabeto.
 
