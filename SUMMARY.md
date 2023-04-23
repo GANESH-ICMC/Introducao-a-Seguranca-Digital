@@ -6,6 +6,7 @@
   * [Introdução](criptografia/introducao.md)
   * [Definições e Objetivos](criptografia/definicoes.md)
   * [Criptografia Clássica](criptografia/classica.md)
+  * [Criptografia Moderna](criptografia/moderna.md)
   * [Guia de Python para criptografia](criptografia/guia-de-python-para-criptografia.md)
 * [Redes](redes/README.md)
   * [Ataques](redes/ataques/README.md)
