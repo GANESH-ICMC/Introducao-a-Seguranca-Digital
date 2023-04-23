@@ -4,7 +4,7 @@ Dois tipos principais de cifra abrangeram a história da criptografia clássica:
 
 ## Cifra de substiuição simples (monoalfabética)
 
-Trata-se de uma cifra em que cada unidade do texto plano é substituída por uma única unidade do texto cifrado em razão de um deslocamento constante para todas unidades. Exemplo de uma cifra com deslocamento 2:
+Trata-se de uma cifra em que cada unidade do texto plano é substituída por uma única unidade do texto cifrado, de acordo com um mapeamento entre os alfabetos do plaintext e do ciphertext, por exemplo:
 
 Alfabeto do plaintext: 
 
