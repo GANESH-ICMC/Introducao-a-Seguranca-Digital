@@ -215,4 +215,14 @@ Ciphertext: S nm ssa ooeoGH
 
 Para decriptar, escrevemos o texto cifrado na tabela na direção vertical seguindo a ordem alfabética das letras da chave, em seguida lemos o texto na horizontal na direção usual.
 
+## Rail Fence
 
+Na cifra Rain Fence, o plaintext é escrito para baixo diagonalmente em "trilhos" sucessivos de uma cerca imaginária, movendo-se para cima quando o trilho inferior é alcançado, e para baixo novamente quando o trilho superior é alcançado e assim por diante até que todo o plaintext seja escrito. O ciphertext é então obtido lendo-se por linhas. A imagem a seguir mostra um exemplo para três trilhos.
+
+![rail_fence_1](https://user-images.githubusercontent.com/96321435/233820215-35d0da23-83a1-4a4f-a841-6f2f4b91f538.png)
+
+Para decriptar, basta construir uma matriz em que o número de colunas é igual ao tamanho do ciphertext e o número de linhas é igual à chave (número de trilhos). Depois basta percorrer a matriz em zigzag, marcando com asterisco as células que receberão letras:
+
+![rail_fence_2](https://user-images.githubusercontent.com/96321435/233820220-c7693f8c-1d67-4eab-b59a-69574cfdb4d2.png)
+
+Por fim, basta preencher a matriz horizontalmente com as letras do ciphertext e lê-la de acordo com o zigzag.
