@@ -12,3 +12,7 @@ Na literatura, é muito comum encontrarmos três personagens que representam o c
 
 À medida que as exigências de segurança avançaram, o campo da criptografia também se aperfeiçoou, buscando atingir uma gama mais ampla de objetivos de segurança, sendo eles:
 
+> * **Confidencialidade** da mensagem: só o destinatário autorizado deve ser capaz de extrair o conteúdo da mensagem da sua forma cifrada. Além disso, a obtenção de informação sobre o conteúdo da mensagem (como uma distribuição estatística de certos caracteres) não deve ser possível, uma vez que, se o for, torna mais fácil a análise criptográfica;
+> * **Integridade** da mensagem: o destinatário deverá ser capaz de verificar se a mensagem foi alterada durante a transmissão;
+> * **Autenticação** do remetente: o destinatário deverá ser capaz de verificar se o remetente é realmente quem diz ser;
+> * **Não repúdio** do remetente: não deverá ser possível ao remetente negar a autoria de sua mensagem.
