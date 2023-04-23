@@ -238,7 +238,7 @@ Suponha que o plaintext seja por exemplo apenas a letra “f”, cujo valor deci
 m^e ≡ c mod n</br>
 102^7 ≡ c mod 143
 
-O resto da divisão de 1027 por 143 é 119. Portanto o ciphertext é **c = 119**. Para decriptar, Bob deve utilizar outra potenciação modular:
+O resto da divisão de 102^7 por 143 é 119. Portanto o ciphertext é **c = 119**. Para decriptar, Bob deve utilizar outra potenciação modular:
 
 c^d ≡ m mod n</br>
 119^103 ≡ m mod 143
