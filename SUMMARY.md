@@ -5,7 +5,7 @@
 * [Criptografia](criptografia/README.md)
   * [Introdução](criptografia/introducao.md)
   * [Definições e Objetivos](criptografia/definicoes.md)
-  * [Tipos de Criptografia](criptografia/tipos-de-criptografia.md)
+  * [Criptografia Clássica](criptografia/classica.md)
   * [Guia de Python para criptografia](criptografia/guia-de-python-para-criptografia.md)
 * [Redes](redes/README.md)
   * [Ataques](redes/ataques/README.md)
