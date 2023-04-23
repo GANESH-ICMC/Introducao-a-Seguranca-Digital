@@ -87,3 +87,13 @@ Trata-se de um dispositivo inventado pelos gregos Cleoxenus e Democlitus e aperf
 
 A tabela a seguir é utilizada para encriptar e decriptar mensagens, note que com apenas cinco números é possível representar todas as letras do alfabeto.
 
+![polybus](https://user-images.githubusercontent.com/96321435/233818325-75983ec1-e73e-4701-8682-575725e295c9.jpg)
+
+Plaintext:</br>
+G |A |N |E |S |H</br>
+Ciphertext:</br>
+22|11|33|15|43|23</br>
+
+## Cifra Homófona
+
+Trata-se de uma cifra em que os símbolos mais frequentes do plaintext são correspondidos para mais de um símbolo no ciphertext. Foi criada para dificultar a análise estatística baseada em frequência. Observe o mapeamento da imagem a seguir, note que na primeira vez que a letra A aparece, ela é encriptada para 8. Na segunda vez para z, e assim sucessivamente. 
