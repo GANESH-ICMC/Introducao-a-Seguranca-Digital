@@ -104,3 +104,17 @@ Plaintext:</br>
 **A**br**a**c**a**d**a**br**a**</br>
 Ciphertext:</br>	
 **8**Fb**z**H**K**G**7**FR**i**
+
+## Cifra Poligráfica
+
+Trata-se de uma cifra em que a substituição se dá mapeando um caractere para um grupo de símbolos, por exemplo:
+
+Alfabeto do plaintext:</br>
+A|B|C|D...</br>
+Alfabeto do ciphertext:</br>	
+&A|789|CVD|ZDFG...
+
+## Enigma
+
+Criada para substituir os métodos "papel e caneta" que eram utilizados até então, a Enigma foi amplamente utilizada pela Alemanha nazista na Segunda Guerra Mundial. Sua quebra teve um grande impacto na história da guerra e na história da computação. Para entender o funcionamento da Enigma, precisamos olhar por dentro para identificar as quatro principais regiões da máquina.
+
