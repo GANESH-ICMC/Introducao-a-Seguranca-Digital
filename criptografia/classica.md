@@ -179,7 +179,7 @@ Acontece que se uma grande quantidade de mensagens fossem encriptadas utilizando
 > *	Escolher a posição inicial dos rotores (ex: HTX);
 > *	Escolher uma chave de três letras (ex: RZU);
 > *	Digitar a chave escolhida duas vezes. Ex:</br>
-> Plaintext:    RZURZU</br>
+> Plaintext:  RZURZU</br>
 > Ciphertext: JIOWQP</br>
 > *	Resetar a posição inicial dos rotores para a chave escolhida (RZU);
 > *	Encriptar a mensagem com as novas configurações.
