@@ -209,4 +209,10 @@ Para encriptar por meio da cifra de transposição por coluna, deve-se escrever 
 Plaintext: Somos o Ganesh</br>
 Chave: CRIVO
 
+![colunar](https://user-images.githubusercontent.com/96321435/233820030-28b3c537-eba1-433a-aff1-2e9776493940.PNG)
+
+Ciphertext: S nm ssa ooeoGH
+
+Para decriptar, escrevemos o texto cifrado na tabela na direção vertical seguindo a ordem alfabética das letras da chave, em seguida lemos o texto na horizontal na direção usual.
+
 
