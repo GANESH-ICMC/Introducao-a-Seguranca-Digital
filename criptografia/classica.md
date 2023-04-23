@@ -126,7 +126,7 @@ Criada para substituir os métodos "papel e caneta" que eram utilizados até ent
 > 
 > * **Rotor:** responsável pela permutação das letras. Em uma face do rotor existem 26 pinos por onde a corrente elétrica pode entrar e na outra face existem 26 pinos por onde a corrente pode sair. No interior de cada rotor, há fios que fazem as trocas de uma letra por outra. A sequência de imagens a seguir mostra como um rotor faz a permutação de uma letra por outra três posições a frente no alfabeto.
 
-> ![fios_rotores_enigma](https://user-images.githubusercontent.com/96321435/233818989-080de46a-a0c5-4527-ac42-05fc76843313.png)
+![fios_rotores_enigma](https://user-images.githubusercontent.com/96321435/233818989-080de46a-a0c5-4527-ac42-05fc76843313.png)
 
 > Pressionar uma tecla faz com que o primeiro rotor rotacione uma posição. Como são três rotores em série o simples fato de o rotor girar uma posição faz com que o mapeamento de letras mude completamente.
 > Além disso, o anel de cada rotor possui um entalhe que serve para definir quando ele vai provocar uma rotação no rotor à sua esquerda. Posicionar esse entalhe no número 18, por exemplo, faz com que quando esse número alcança a parte de trás da máquina, o rotor à esquerda rotaciona uma posição, e a partir daí, a cada ciclo de 26 teclas pressionadas o primeiro rotor completará uma volta completa, fazendo com que o segundo rotor rotacione uma posição. Quando o entalhe do segundo rotor alcança a parte de trás da máquina, o terceiro rotor rotaciona uma posição, e a partir daí, a cada volta completa do segundo rotor (26x26 = 676 teclas pressionadas) o terceiro rotor ira rotacionar mais uma posição.
