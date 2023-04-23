@@ -190,5 +190,23 @@ Você deve estar se perguntando o porquê de digitar a chave escolhida duas veze
 
 Se a chave escolhida fosse digitada apenas uma vez, sempre que houvesse interferência na transmissão o receptor iria obter uma chave inútil, sendo incapaz de decriptar a mensagem e precisaria que o emissor enviasse a mensagem novamente, causando atrasos na comunicação. Contudo, a repetição de chave era uma vulnerabilidade que os poloneses exploraram, sendo capazes inclusive de quebrar a Enigma antes do início da guerra, quando os alemães ainda utilizavam um conjunto de apenas 3 rotores e somente 6 cabos na plugboard. 
 
-Liderados pelo matemático Marian Rejewski e com a ajuda de espiões franceses, os polonoses foram capazes de deduzir os fios internos dos rotores por meio da aplicação de álgebra abstrata e ainda construíram a primeira máquina elétrico-mecânica capaz de sistematicamente quebrar a Enigma, batizada de “Bombe”. ![rejewski](https://user-images.githubusercontent.com/96321435/233819811-fe5d0460-9ccb-4df8-a041-e8890d73a6dd.jpg)
+Liderados pelo matemático Marian Rejewski e com a ajuda de espiões franceses, os polonoses foram capazes de deduzir os fios internos dos rotores por meio da aplicação de álgebra abstrata e ainda construíram a primeira máquina elétrico-mecânica capaz de sistematicamente quebrar a Enigma, batizada de “Bombe”.
+
+Com o início da guerra, os alemães aumentaram consideravelmente o número de configurações possíveis da Enigma, além de abortarem o protocolo de digitar a chave escolhida duas vezes, fazendo com que a bombe polonesa se tornasse ineficiente. Porém, o trabalho secreto dos poloneses mostrou aos aliados ingleses que a Enigma era quebrável. Sem esse pontapé inicial, o trabalho de Alan Turing e dos criptógrafos do Bletchley Park seria muito mais difícil.
+
+### Vulnerabilidades da Enigma
+
+A cada mensagem enviada, o operador escolhia 6 letras para encriptá-la, sendo as três primeiras para a posição inicial dos rotores e as três últimas seriam a chave que seria de fato utilizada. Os operadores eram orientados a escolher 6 letras aleatórias, mas muitos deles eram negligentes e facilitavam o trabalho dos aliados ao escolherem sequencias de letras como LON-DON, BER-LIN ou até mesmo teclas vizinhas do keyboard como ASD-FGH. Um caso muito famoso foi o de um soldado alemão que frequentemente utilizava o nome da namorada dele CIL-LIE, então esse método de codebreaking foi batizado de “Cillies”.
+
+Outra vulnerabilidade muito explorada eram os relatórios diários cujo formato do texto raramente mudava. Muitos submarinos, por exemplo, enviavam relatórios de previsão do tempo tão padronizados de modo que os analistas podiam dar palpites certeiros de qual posição estaria o plaintext “clima”. Em regiões menos movimentadas, era comum unidades militares enviarem mensagens como “nada incomum” ou “nada a reportar” – outra frequente repetição que os britânicos usaram a seu favor.
+
+# Cifras de Transposição
+
+## Transposição Colunar
+
+Para encriptar por meio da cifra de transposição por coluna, deve-se escrever a chave na primeira linha de uma tabela. Em seguida, escreve-se o texto da esquerba para a direita e de cima pra baixo, e lê-se o texto na vertical, seguindo a ordem alfabética das letras da chave. Exemplo de encriptação com a chave CRIVO:
+
+Plaintext: Somos o Ganesh</br>
+Chave: CRIVO
+
 
