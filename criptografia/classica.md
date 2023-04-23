@@ -7,11 +7,9 @@ Dois tipos principais de cifra abrangeram a história da criptografia clássica:
 Trata-se de uma cifra em que cada unidade do texto plano é substituída por uma única unidade do texto cifrado, de acordo com um mapeamento entre os alfabetos do plaintext e do ciphertext, por exemplo:
 
 Alfabeto do plaintext: 
-
 A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z
 
 Alfabeto do ciphertext:
-
 D|G|U|A|S|M|Z|E|R|B|C|I|H|V|Y|P|K|X|Q|N|T|F|W|L|O|J
 
 Ex: GANESH -> ZDVSQE
