@@ -19,5 +19,5 @@ Para decriptar, basta deslocar cada letra do ciphertext no sentido contrário. U
 ### Quebrando a Cifra de substituição simples
 
 É possível quebrar as cifras de substituição monoalfabética por meio da análise de frequência das letras do ciphertext, desde que se conheça o idioma utilizado. Acontece que nas cifras monoalfabéticas cada letra do plaintext é encriptada sempre para a mesma letra do ciphertext. No exemplo que vimos acima, a letra L será sempre encriptada para a letra I, a letra M será sempre encriptada para a letra H, e assim sucessivamente.
-Por exemplo, no idioma inglês a letra E é a mais frequente de todas, aparecendo em 12,70% do total de letras em um texto, seguida dela vem a letra T, que aparece 9,05% das vezes. 
-Sabendo disso, em posse de um ciphertext escrito em inglês, se a letra mais frequente encontrada for a letra K, provavelmente ela corresponde à letra E do plaintext. E se a segunda letra mais frequente for a letra W, provavelmente ela corresponde à letra T do plaintext.
+
+Por exemplo, no idioma inglês a letra E é a mais frequente de todas, aparecendo em 12,70% do total de letras em um texto, seguida dela vem a letra T, que aparece 9,05% das vezes. Sabendo disso, em posse de um ciphertext escrito em inglês, se a letra mais frequente encontrada for a letra K, provavelmente ela corresponde à letra E do plaintext. E se a segunda letra mais frequente for a letra W, provavelmente ela corresponde à letra T do plaintext.
