@@ -35,6 +35,6 @@ L|E|M|O|N|L|E|M|O|N|L|E</br>
 Ciphertext:</br>	
 L|X|F|O|P|V|E|F|R|N|H|R
 
-Note que a primeira letra T foi encriptada para X, enquanto que a segunda letra T foi encriptada para F. Ou seja, a mesma letra do plaintext resultou em letras diferentes no ciphertext.Para decriptar, basta subtrair o valor numérico de cada letra do ciphertext do valor numérico do seu par na chave. Caso resulte em um número negativo, basta somar 26. O resultado dessa operação será o valor numérico da letra no plaintext.
+Note que a primeira letra T foi encriptada para X, enquanto que a segunda letra T foi encriptada para F. Ou seja, a mesma letra do plaintext resultou em letras diferentes no ciphertext. Para decriptar, basta subtrair o valor numérico de cada letra do ciphertext do valor numérico do seu par na chave. Caso resulte em um número negativo, basta somar 26. O resultado dessa operação será o valor numérico da letra no plaintext.
 
 A tabela a seguir é utilizada para facilitar a encriptação e a decriptaçao, dado um plaintext e uma chave.
