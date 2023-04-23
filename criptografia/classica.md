@@ -180,6 +180,14 @@ Acontece que se uma grande quantidade de mensagens fossem encriptadas utilizando
 > *	Escolher uma chave de três letras (ex: RZU);
 > *	Digitar a chave escolhida duas vezes. Ex:</br>
 > Plaintext:  RZURZU</br>
-> Ciphertext: JIOWQP</br>
+> Ciphertext: JIOWQP
 > *	Resetar a posição inicial dos rotores para a chave escolhida (RZU);
 > *	Encriptar a mensagem com as novas configurações.
+
+Esse protocolo eliminava qualquer chance de análise por frequência, já que agora cada mensagem enviada tinha sua própria configuração, definida pelo operador. Para decriptar, o receptor da mensagem não sabia a chave RZU escolhida pelo emissor, mas a posição inicial dos rotores (HTX) era transmitida na mensagem. Então bastava ele repetir os primeiros três passos da encriptação, posicionar os rotores (HTX) e digitar JIOWQP em sua Enigma que a lightboard acenderia RZURZU. Assim, o receptor ajustaria a posição dos rotores para RZU e seria capaz de decriptar a mensagem.
+
+Você deve estar se perguntando o porquê de digitar a chave escolhida duas vezes, visto que o protocolo funcionaria da mesma forma se a chave escolhida fosse digitada apenas uma vez. Imagine que durante a transmissão do ciphertext JIOWQP o tempo estava ruim e houve interferências de modo que o receptor recebeu JIOWQT. Ao digitar esse ciphertext na Enigma ele obteve RZURZH e pode concluir que a chave escolhida pelo emissor foi RZU ou RZH. 
+
+Se a chave escolhida fosse digitada apenas uma vez, sempre que houvesse interferência na transmissão o receptor iria obter uma chave inútil, sendo incapaz de decriptar a mensagem e precisaria que o emissor enviasse a mensagem novamente, causando atrasos na comunicação. Contudo, a repetição de chave era uma vulnerabilidade que os poloneses exploraram, sendo capazes inclusive de quebrar a Enigma antes do início da guerra, quando os alemães ainda utilizavam um conjunto de apenas 3 rotores e somente 6 cabos na plugboard. 
+
+Liderados pelo matemático Marian Rejewski e com a ajuda de espiões franceses, os polonoses foram capazes de deduzir os fios internos dos rotores por meio da aplicação de álgebra abstrata e ainda construíram a primeira máquina elétrico-mecânica capaz de sistematicamente quebrar a Enigma, batizada de “Bombe”. ![alt text](https://github.com/GANESH-ICMC/Introducao-a-Seguranca-Digital/blob/master/criptografia/rejewski.jpg "Rejewski")
