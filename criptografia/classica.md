@@ -38,3 +38,28 @@ L|X|F|O|P|V|E|F|R|N|H|R
 Note que a primeira letra T foi encriptada para X, enquanto que a segunda letra T foi encriptada para F. Ou seja, a mesma letra do plaintext resultou em letras diferentes no ciphertext. Para decriptar, basta subtrair o valor numérico de cada letra do ciphertext do valor numérico do seu par na chave. Caso resulte em um número negativo, basta somar 26. O resultado dessa operação será o valor numérico da letra no plaintext.
 
 A tabela a seguir é utilizada para facilitar a encriptação e a decriptaçao, dado um plaintext e uma chave.
+
+![tableau_vigenere](https://user-images.githubusercontent.com/96321435/233817957-ed57a13f-fc6d-4260-b8bf-56f37dc89a77.png)
+
+### Quebrando a Cifra de Vigenère (Teste de Kasiski)
+
+Como já vimos anteriormente, a Cifra de Vigenère foi considerada inquebrável por três séculos, até que em 1863 Friedrich Kasiski propôs um ataque que funciona quando o tamanho da chave é menor do que o do plaintext. Para entendermos o Teste de Kasiski, vamos utilizar o mesmo exemplo anterior e considerar que o atacante já saiba o tamanho da chave:
+
+Plaintext:
+A|T|T|A|C|K|A|T|D|A|W|N
+Chave:	
+L|E|M|O|N|L|E|M|O|N|L|E
+Ciphertext:	
+**L**|X|F|O|P|**V**|E|F|R|N|**H**|R
+
+Como o tamanho da chave já é conhecido (5 letras), sabemos que a cada cinco letras do ciphertext o deslocamento realizado para obter tais letras foi exatamente o mesmo. Note que as letras L, V e H, destacadas acima, foram todas obtidas a partir de um mesmo deslocamento. Agora, se temos um conjunto de letras e todas foram obtidas a partir de um mesmo deslocamento, temos diante de nós uma cifra de substituição simples, que é passível de ataque por análise de frequência.
+
+Suponha que o texto do exemplo acima seja muito maior, logo o conjunto que possui as letras L, V e H possui ainda muito mais letras, muitas delas vão se repetindo dentro do conjunto. Como o texto é escrito em inglês, é provável que a letra que mais se repetir dentro desse conjunto foi obtida a partir da encriptação da letra E. Logo, em posse de uma letra do plaintext e de uma letra do ciphertext, é possível descobrir qual a letra da chave que gerou tal deslocamento.
+
+Assim, descobrimos a primeira letra da chave. Para descobrir a próxima letra, basta repetir o processo para formar um novo conjunto (formado pelas letras X, E, R...) e supor que a letra mais abundante desse conjunto foi obtida a partir da encriptação da letra E. Note que isso tudo só é possível quando soubermos o tamanho exato da chave. Na prática, para descobrirmos o tamanho da chave é preciso encontrar padrões de repetições ao longo do ciphertext e a partir do distanciamento dessas repetições obter o tamanho da chave.
+
+Observe a imagem com o ciphertext a seguir e repare na repetição da sequência U-S-E diversas vezes ao longo do texto.
+
+
+
+
