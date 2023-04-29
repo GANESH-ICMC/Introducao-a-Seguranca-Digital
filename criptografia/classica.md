@@ -168,7 +168,9 @@ O caminho percorrido entre o pressionamento de uma tecla no keyboard e o acendim
 
 Ao se pressionar a tecla A, ela é permutada para M na plugboard, que segue em direção aos rotores. O primeiro rotor permuta M para B, o segundo rotor permuta B para J e o terceiro rotor permuta J para F. Então o refletor permuta F para P. Na volta, o terceiro rotor permuta P para N, o segundo rotor permuta N para X e o primeiro rotor permuta X para O. Finalmente, a plugboard permuta O para H e a lightboard acende a lâmpada da letra H.
 
-[colocar video do cipher history aqui]
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HeTIRlS32Sk
+" target="_blank"><img src="http://img.youtube.com/vi/HeTIRlS32Sk/0.jpg" 
+alt="Enigma Wiring Animation" width="240" height="180" border="10" /></a>
 
 Note que se a tecla H tivesse sido pressionada nessas mesmas configurações, a lâmpada da letra A teria sido acesa.
 
