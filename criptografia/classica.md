@@ -2,6 +2,19 @@ Dois tipos principais de cifra abrangeram a história da criptografia clássica:
 
 # Cifras de Substituição
 
+### Atbash
+
+Uma das primeiras cifras de substituição. É vista em passagens da bíblia como em \[Jeremias 25:26 - "O rei de Sheshach beberá depois deles" - Sheshach, que significa Babilônia em Atbash \(בבל bbl → ששך ššk\)\].
+
+Trata-se de uma substituição monoalfabética de deslocamento 0 com o alfabeto do texto cifrado na ordem inversa do alfabeto do texto plano. Exemplo com o alfabeto latino:
+
+
+A \|B \|C \|D \|E \|F \|G \|H \|I \|J \|K \|L \|M \|N \|O \|P \|Q \|R \|S \|T \|U \|V \|W \|X \|Y \|Z
+
+Z \|Y \|X \|W \|V \|U \|T \|S \|R \|Q \|P \|O \|N \|M \|L \|K \|J \|I \|H \|G \|F \|E \|D \|C \|B \|A
+
+Ganesh -&gt; Tzmvhs
+
 ## Cifra de substituição simples (monoalfabética)
 
 Trata-se de uma cifra em que cada unidade do texto plano é substituída por uma única unidade do texto cifrado, de acordo com um mapeamento entre os alfabetos do plaintext e do ciphertext, por exemplo:
@@ -14,7 +27,20 @@ D|G|U|A|S|M|Z|E|R|B|C|I|H|V|Y|P|K|X|Q|N|T|F|W|L|O|J
 
 Ex: GANESH -> ZDVSQE
 
-Para decriptar, basta deslocar cada letra do ciphertext no sentido contrário. Uma das cifras mais utilizadas na antiguidade, a Cifra de César era uma cifra monoalfabética em que o alfabeto do ciphertext era o mesmo que o do plaintext, porém deslocado
+### Cifra de César
+
+Foi uma cifra de substituição monoalfabética utilizada pelo general Julio César em Roma. 
+
+
+Exemplo com o alfabeto latino:
+
+A\|B\|C\|D\|E\|F\|G\|H\|I\|J\|K\|L\|M\|N\|O\|P\|Q\|R\|S\|T\|U\|V\|W\|X\|Y\|Z
+
+C\|D\|E\|F\|G\|H\|I\|J\|K\|L\|M\|N\|O\|P\|Q\|R\|S\|T\|U\|V\|W\|X\|Y\|Z\|A\|B
+
+Deslocamento 2
+
+Ganesh -&gt; Icpguj
 
 ### Quebrando a Cifra de substituição simples
 
@@ -226,3 +252,11 @@ Para decriptar, basta construir uma matriz em que o número de colunas é igual 
 ![rail_fence_2](https://user-images.githubusercontent.com/96321435/233820220-c7693f8c-1d67-4eab-b59a-69574cfdb4d2.png)
 
 Por fim, basta preencher a matriz horizontalmente com as letras do ciphertext e lê-la de acordo com o zigzag.
+
+# Esteganografia.
+
+A esteganografia \(do grego ‘escrita escondida’\) é o uso de de técnicas para ocultar a existência de uma mensagem dentro da outra, uma forma de segurança por obscurantismo. A diferença entre esteganografia e criptografia é que a primeira preocupa-se em ocultar a existência da mensagem, e a segunda o seu significado.
+
+## Método NULL
+
+A simples representação também remete à esteganografia, que é uma técnica para omitir uma mensagem dentro de outra, com o objeto de fazer com que uma forma escrita seja camuflada em outra a fim de mascarar sua própria existência. Uma técnica simples de esteganografia é o método NULL, no qual a letra do meio de cada palavra da mensagem original compõe a mensagem que se deseja esconder.
