@@ -170,7 +170,7 @@ Ao se pressionar a tecla A, ela é permutada para M na plugboard, que segue em d
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=HeTIRlS32Sk
 " target="_blank"><img src="http://img.youtube.com/vi/HeTIRlS32Sk/0.jpg" 
-alt="Enigma Wiring Animation" width="240" height="180" border="10" /></a>
+alt="Enigma Wiring Animation" width="720" height="540" border="10" /></a>
 
 Note que se a tecla H tivesse sido pressionada nessas mesmas configurações, a lâmpada da letra A teria sido acesa.
 
